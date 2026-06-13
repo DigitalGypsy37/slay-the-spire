@@ -1,0 +1,440 @@
+<!-- Merchant & Shops - Spire Tome Wiki -->
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Merchant's Bazaar | Spire Tome</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&amp;family=Hanken+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#393333",
+                    "surface-tint": "#b5ccc0",
+                    "secondary": "#e7c442",
+                    "surface": "#171212",
+                    "on-tertiary-container": "#849498",
+                    "on-secondary-fixed-variant": "#564500",
+                    "surface-container-highest": "#393333",
+                    "inverse-primary": "#4e6359",
+                    "tertiary-container": "#1d2c30",
+                    "surface-dim": "#171212",
+                    "primary-fixed-dim": "#b5ccc0",
+                    "on-secondary-container": "#332900",
+                    "on-surface-variant": "#c2c8c3",
+                    "on-error": "#690005",
+                    "surface-container": "#231e1e",
+                    "secondary-container": "#ad8e00",
+                    "primary": "#b5ccc0",
+                    "tertiary-fixed": "#d5e5ea",
+                    "primary-container": "#1a2e26",
+                    "surface-bright": "#3e3838",
+                    "on-primary-fixed-variant": "#374b42",
+                    "on-tertiary-fixed": "#0f1e21",
+                    "surface-container-low": "#1f1a1a",
+                    "error-container": "#93000a",
+                    "on-tertiary-fixed-variant": "#3a494d",
+                    "inverse-surface": "#ebe0e0",
+                    "error": "#ffb4ab",
+                    "secondary-fixed": "#ffe17c",
+                    "on-primary-fixed": "#0b1f18",
+                    "on-primary-container": "#80968b",
+                    "surface-container-lowest": "#110d0d",
+                    "on-primary": "#20342c",
+                    "on-error-container": "#ffdad6",
+                    "tertiary": "#b9c9ce",
+                    "primary-fixed": "#d0e8dc",
+                    "tertiary-fixed-dim": "#b9c9ce",
+                    "secondary-fixed-dim": "#e7c442",
+                    "on-background": "#ebe0e0",
+                    "surface-container-high": "#2e2929",
+                    "on-tertiary": "#243337",
+                    "inverse-on-surface": "#352f2f",
+                    "background": "#171212",
+                    "on-secondary": "#3b2f00",
+                    "outline": "#8c928e",
+                    "on-secondary-fixed": "#231b00",
+                    "on-surface": "#ebe0e0",
+                    "outline-variant": "#424845",
+                    "gold-shimmer": "#FFD000",
+                    "ethereal-white": "#E6E6E6",
+                    "deep-forest": "#0D1A15",
+                    "relic-bronze": "#7A6200"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["EB Garamond"],
+                    "display": ["EB Garamond"],
+                    "body": ["Hanken Grotesk"],
+                    "label": ["Hanken Grotesk"]
+            }
+          },
+        },
+      }
+    </script>
+<style>body {
+    background-color: #171212;
+    color: #ebe0e0;
+    font-family: "Hanken Grotesk", sans-serif;
+    overflow-x: hidden
+    }
+.font-headline {
+    font-family: "EB Garamond", serif
+    }
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.card-glow:hover {
+    box-shadow: 0 0 15px rgba(231, 196, 66, 0.2);
+    border-color: #e7c442 !important
+    }
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem
+    }
+.merchant-bg {
+    background-image: linear-gradient(to bottom, rgba(13, 26, 21, 0.9), rgba(23, 18, 18, 1)), url(https://lh3.googleusercontent.com/aida-public/AB6AXuANgb-a92P0VLfBSM0cYztfxhRAQoxPt4_RpADyhvW8r8-_QJ4VHMHDG514UCrpIQdsiBYbyvzmvZuLgUM3fNoCnMJHB2BlXK5rKCVrcsNW9SY1d71cWg_SYQIpETLU46MSF2dpDE12aixdmLBAHSIsodEcyDqwDXOyfcsPs3FVRIuyGxP0cyGTcgpZD2v0R64wY7YISupR5corujZAcUp4VuaqmtODWZK-wEltgHe2bvy59NOntBIaVsbd_l74uvBpLBykHOb7pIiy);
+    background-size: cover;
+    background-position: center
+    }
+.scroll-mask {
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%)
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface selection:bg-secondary selection:text-on-secondary">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-4 md:px-12 h-16 border-b border-secondary/30 bg-surface dark:bg-surface transition-all duration-300">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+<h1 class="font-headline text-headline-md font-bold text-secondary dark:text-secondary">Spire Tome</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-label text-label-sm font-bold uppercase tracking-widest text-on-surface-variant hover:text-gold-shimmer transition-colors duration-300" href="strategies.html">Archives</a>
+<a class="font-label text-label-sm font-bold uppercase tracking-widest text-gold-shimmer transition-colors duration-300" href="merchant.html">The Bazaar</a>
+<a class="font-label text-label-sm font-bold uppercase tracking-widest text-on-surface-variant hover:text-gold-shimmer transition-colors duration-300" href="bestiary.html">Bestiary</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="active:scale-95 transition-transform"><span class="material-symbols-outlined text-primary">search</span></button>
+<button class="md:hidden"><span class="material-symbols-outlined text-secondary">menu</span></button>
+</div>
+</header>
+<main class="pt-24 pb-32 px-4 md:px-12 max-w-[1280px] mx-auto min-h-screen">
+<!-- Hero Section -->
+<section class="relative mb-16 rounded-xl overflow-hidden p-8 md:p-12 border border-secondary/20 shadow-2xl merchant-bg">
+<div class="relative z-10 max-w-2xl">
+<div class="flex items-center gap-2 mb-4">
+<span class="h-[1px] w-12 bg-secondary"></span>
+<span class="text-secondary font-label text-label-sm uppercase tracking-[0.2em]">Enchanted Commerce</span>
+</div>
+<h2 class="font-headline text-5xl md:text-6xl font-bold mb-6 leading-tight">The Merchant's Bazaar</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-8 font-body">
+                    Deep within the shifting corridors of the Spire, one constant remains: the masked purveyor of relics and arcana. Whether you seek to prune your deck or acquire legendary artifacts, gold is the only tongue spoken here.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-secondary text-on-secondary px-6 py-3 rounded-lg font-bold flex items-center gap-2 hover:bg-gold-shimmer transition-all active:scale-95 shadow-lg">
+<span class="material-symbols-outlined text-lg">payments</span>
+                        View Price Scaling
+                    </button>
+<button class="border border-secondary/50 text-secondary px-6 py-3 rounded-lg font-bold hover:bg-secondary/10 transition-all active:scale-95">
+                        Inventory Guides
+                    </button>
+</div>
+</div>
+<!-- Decorative Mask -->
+<div class="absolute right-[-5%] top-[-10%] opacity-10 pointer-events-none hidden lg:block">
+<span class="material-symbols-outlined text-[400px] text-secondary">shopping_cart</span>
+</div>
+</section>
+<!-- Main Content Bento -->
+<div class="bento-grid">
+<!-- Merchant Services Section -->
+<div class="col-span-12 lg:col-span-8 space-y-6">
+<div class="flex items-center gap-4 mb-2">
+<span class="material-symbols-outlined text-secondary">settings_suggest</span>
+<h3 class="font-headline text-3xl font-semibold">Merchant Services</h3>
+</div>
+<!-- Services Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Card Removal Service -->
+<div class="bg-surface-container border border-secondary/20 p-6 rounded-lg card-glow transition-all">
+<div class="flex justify-between items-start mb-4">
+<div class="bg-primary-container p-3 rounded-lg">
+<span class="material-symbols-outlined text-primary">delete_sweep</span>
+</div>
+<span class="text-gold-shimmer font-bold text-lg">75G+</span>
+</div>
+<h4 class="font-headline text-xl mb-2">Card Removal</h4>
+<p class="text-sm text-on-surface-variant mb-4 font-body leading-relaxed">
+                            A vital service to purge basic Strikes and Defends or burdensome Curses. Costs scale progressively with each purchase.
+                        </p>
+<div class="bg-surface-container-low p-3 rounded-md border border-outline-variant/30">
+<div class="flex justify-between text-xs font-label uppercase tracking-wider mb-2">
+<span>Purchase No.</span>
+<span>Cost</span>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between text-sm"><span>1st Removal</span> <span class="text-secondary">75 Gold</span></div>
+<div class="flex justify-between text-sm"><span>2nd Removal</span> <span class="text-secondary">100 Gold</span></div>
+<div class="flex justify-between text-sm"><span>3rd Removal</span> <span class="text-secondary">125 Gold</span></div>
+<div class="flex justify-between text-sm border-t border-secondary/10 mt-1 pt-1 italic opacity-75"><span>Formula:</span> <span>+25G per use</span></div>
+</div>
+</div>
+</div>
+<!-- Relic Purchasing -->
+<div class="bg-surface-container border border-secondary/20 p-6 rounded-lg card-glow transition-all">
+<div class="flex justify-between items-start mb-4">
+<div class="bg-primary-container p-3 rounded-lg">
+<span class="material-symbols-outlined text-primary">diamond</span>
+</div>
+<div class="flex gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+</div>
+<h4 class="font-headline text-xl mb-2">Relic Acquisition</h4>
+<p class="text-sm text-on-surface-variant mb-4 font-body leading-relaxed">
+                            The merchant offers 3 relics per shop: one Common, one Uncommon, and one Rare (or Boss relic in certain conditions).
+                        </p>
+<ul class="text-sm space-y-2">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary rotate-45"></span> Common: 150G (±10%)</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary rotate-45"></span> Uncommon: 250G (±10%)</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary rotate-45"></span> Rare: 300G (±10%)</li>
+</ul>
+</div>
+<!-- The Courier Synergy -->
+<div class="col-span-1 md:col-span-2 bg-surface-container-high border-l-4 border-secondary p-6 rounded-lg relative overflow-hidden">
+<div class="absolute right-[-20px] bottom-[-20px] opacity-10">
+<span class="material-symbols-outlined text-9xl">move_to_inbox</span>
+</div>
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center border border-secondary shadow-inner">
+<span class="material-symbols-outlined text-on-secondary">inventory_2</span>
+</div>
+<div>
+<h4 class="font-headline text-2xl font-bold text-secondary">Relic Focus: The Courier</h4>
+<p class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Merchant Synergy Breakdown</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
+<div>
+<p class="text-sm text-on-surface italic mb-3">"The merchant is more likely to stock better goods, and items are 20% cheaper."</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface px-2 py-1 text-[10px] rounded border border-secondary/30 font-bold uppercase">Restock Active</span>
+<span class="bg-surface px-2 py-1 text-[10px] rounded border border-secondary/30 font-bold uppercase">Discount applied</span>
+</div>
+</div>
+<div class="text-sm text-on-surface-variant leading-relaxed">
+<p>With <span class="text-secondary font-bold">The Courier</span>, all shop inventory is replenished immediately upon purchase. This allows infinite buying of potions or cards if gold permits, with the 20% discount providing significant late-game scaling.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Shop Inventory Sidebar -->
+<div class="col-span-12 lg:col-span-4 space-y-6">
+<div class="flex items-center gap-4 mb-2">
+<span class="material-symbols-outlined text-secondary">inventory</span>
+<h3 class="font-headline text-3xl font-semibold">Price Guide</h3>
+</div>
+<div class="bg-surface-container border border-secondary/30 rounded-lg overflow-hidden shadow-xl">
+<div class="bg-secondary/10 p-4 border-b border-secondary/30 text-center">
+<span class="font-headline text-xl text-secondary">Standard Card Pricing</span>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex items-center justify-between group">
+<div class="flex items-center gap-3">
+<span class="w-3 h-3 rounded-full bg-on-surface-variant"></span>
+<span class="font-body font-semibold">Common Cards</span>
+</div>
+<span class="text-secondary font-headline">45 - 55 G</span>
+</div>
+<div class="flex items-center justify-between group">
+<div class="flex items-center gap-3">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="font-body font-semibold">Uncommon Cards</span>
+</div>
+<span class="text-secondary font-headline">68 - 82 G</span>
+</div>
+<div class="flex items-center justify-between group">
+<div class="flex items-center gap-3">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span class="font-body font-semibold">Rare Cards</span>
+</div>
+<span class="text-secondary font-headline">135 - 165 G</span>
+</div>
+<div class="pt-4 border-t border-secondary/10">
+<div class="flex items-center justify-between mb-2">
+<span class="font-body font-semibold text-on-surface-variant">Potions</span>
+<span class="text-secondary font-headline">45 - 55 G</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-body font-semibold text-on-surface-variant">Colorless Cards</span>
+<span class="text-secondary font-headline">Varies</span>
+</div>
+</div>
+</div>
+<div class="p-4 bg-surface-container-low text-[11px] text-on-surface-variant font-body italic border-t border-secondary/10">
+                        * Prices are subject to a ±10% variance per shop instance.
+                    </div>
+</div>
+<!-- Act Scaling Card -->
+<div class="bg-primary-container/30 border border-primary/20 p-6 rounded-lg">
+<h4 class="font-headline text-lg text-primary mb-3">Temporal Inflation</h4>
+<p class="text-xs text-on-primary-container leading-loose mb-4">
+                        As you climb the Spire, the value of gold shifts. Prices do not inherently increase by Act, but the Merchant's stock improves. Higher rarity cards appear more frequently in Act 2 and 3 shops.
+                    </p>
+<div class="space-y-2">
+<div class="h-1 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 33%"></div>
+</div>
+<div class="flex justify-between text-[10px] font-label uppercase tracking-tighter opacity-70">
+<span>Act I</span>
+<span>Act II</span>
+<span>Act III</span>
+</div>
+</div>
+</div>
+<!-- Quick Tips -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 p-6 rounded-lg">
+<h4 class="font-headline text-lg mb-3">Merchant Protocol</h4>
+<ul class="space-y-3">
+<li class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-secondary text-sm mt-1">history_edu</span>
+<span class="text-xs text-on-surface-variant font-body">The "Sale" card is always 50% off and chosen randomly from Common/Uncommon slots.</span>
+</li>
+<li class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-secondary text-sm mt-1">history_edu</span>
+<span class="text-xs text-on-surface-variant font-body">Card transformation is only available via Events or specific Relics, never directly in the shop menu.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Shop Visuals / Cards -->
+<section class="mt-16">
+<div class="flex items-center justify-between mb-8">
+<h3 class="font-headline text-3xl">Visual Inventory Reference</h3>
+<div class="h-[1px] flex-grow mx-8 bg-secondary/20"></div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+<!-- Card 1 -->
+<div class="aspect-[2/3] bg-surface-container rounded-lg border border-secondary/30 relative overflow-hidden flex flex-col items-center justify-center p-4 group cursor-pointer transition-all hover:-translate-y-2">
+<img class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-40 transition-opacity" data-alt="A highly detailed illustration of a magical 'Strike' card from Slay the Spire, featuring a dark iron sword glowing with ethereal white light against a deep forest green background. The card has ornate gold filigree along its borders and a rustic parchment texture. The lighting is moody and atmospheric, emphasizing the high-fantasy scholarly aesthetic of the Spire Tome." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlwuRc7ev3YPcqG-Gszpg8x6Vc6kiBmr8wz15GQuSImX406O9qADD9HaXCeCfGaBPD28VncXra7PSv0phnnRQRWViFq6TS24TQjvxbfUdnHZwseGkns_OiDjFDTaHFSwvfx111fPA2_IGoWJ1lM0LXPlltsyhnSZ91qTVHav0J0RyWX_uttpAPcIt26nUGZu19cOhI0bFu42PGAHbAhumalItHMKDVmzZDUaKoN5_J7_Aduvzk9cdOKXOqkV4FELGBeDwzKHyd6EYD"/>
+<span class="material-symbols-outlined text-4xl mb-2 text-secondary">swords</span>
+<span class="font-headline text-lg text-center relative z-10">Common Attack</span>
+<span class="text-secondary font-bold text-sm mt-2 flex items-center gap-1">52 <span class="material-symbols-outlined text-[14px]">monetization_on</span></span>
+</div>
+<!-- Card 2 -->
+<div class="aspect-[2/3] bg-surface-container rounded-lg border border-secondary/30 relative overflow-hidden flex flex-col items-center justify-center p-4 group cursor-pointer transition-all hover:-translate-y-2">
+<img class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-40 transition-opacity" data-alt="A mystical digital painting of an uncommon skill card, depicting a glowing azure shield pulsating with protective energy. The scene is set within a dark, ancient stone chamber illuminated by bioluminescent moss. The card's design features sharp, modern sans-serif typography paired with classic Garamond headers, consistent with a premium fantasy wiki style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD61TNgJLP8JqQRn4aCQjku585_Sgz6ePVHvwE2j8JLfvM5Dz0hUS-DSy7QDYKD3RqoAD7clVPJuYJo1v4Qx_AazEl0gceJljF8oTnKbdMW2xD3rNOz1m_u6WQHVM7TJvWSEslj3kRNZ5ESiIQob8kV32Z72YOnItA0PxzM_x52eyl_s8r7pe4JjA9rW9jCJELu-Au-4LX-JWE6ZsXNDuyYMADG1px7MusMOd_G_OgTurEKxxUJS5Z8SVBgEVAaFEg7BvHdUR3wZ_r3"/>
+<span class="material-symbols-outlined text-4xl mb-2 text-primary">shield</span>
+<span class="font-headline text-lg text-center relative z-10">Uncommon Skill</span>
+<span class="text-secondary font-bold text-sm mt-2 flex items-center gap-1">78 <span class="material-symbols-outlined text-[14px]">monetization_on</span></span>
+</div>
+<!-- Card 3 (Sale) -->
+<div class="aspect-[2/3] bg-surface-container rounded-lg border-2 border-gold-shimmer relative overflow-hidden flex flex-col items-center justify-center p-4 group cursor-pointer transition-all hover:-translate-y-2">
+<div class="absolute top-2 left-2 bg-gold-shimmer text-on-secondary px-2 py-0.5 text-[10px] font-bold rounded-sm z-20">SALE!</div>
+<img class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-50 transition-opacity" data-alt="A rare power card from Slay the Spire showing a burning crown wreathed in gold shimmer flames. The art style is tactile fantasy, with thick brushstrokes and rich deep forest green shadows. The card is displayed with a glowing inner edge to simulate bioluminescence, emphasizing its status as a high-value merchant item." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeld7AlDQcILEFpo8i2H7V32r0kTx3u21CmFapuuxQ9PoXgFjRfa3duAodyLtpRQ_4yZtmJEv166SBrGYRudAIhaURqJ4g1lhweED-CMXzz3Nzea1J63RvWLFRhJPO2L9BmounCRs_TfeydIlh6UBsMhODZgAHGEB6ZKkdllo2e3abMI09ZpkZCjpzbFt9XiRNTY1zIs_TF23ZrxvjYVyrgyd7Ue66u9HSf3tgsIBe6bFihbvoKgdISD5vs0c1WRWI7M206RrsH-Uq"/>
+<span class="material-symbols-outlined text-4xl mb-2 text-gold-shimmer" style="font-variation-settings: 'FILL' 1;">electric_bolt</span>
+<span class="font-headline text-lg text-center relative z-10">Rare Power</span>
+<span class="text-secondary font-bold text-sm mt-2 flex items-center gap-1"><span class="line-through text-on-surface-variant opacity-50 text-[10px]">158</span> 79 <span class="material-symbols-outlined text-[14px]">monetization_on</span></span>
+</div>
+<!-- Card 4 -->
+<div class="aspect-[2/3] bg-surface-container rounded-lg border border-secondary/30 relative overflow-hidden flex flex-col items-center justify-center p-4 group cursor-pointer transition-all hover:-translate-y-2">
+<img class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-40 transition-opacity" data-alt="An intricately detailed potion bottle containing a swirling vortex of purple and gold stardust. The potion sits on a scholar's desk next to an open ancient tome and a brass magnifying glass. The lighting is warm and amber-toned, creating a cozy yet mysterious atmosphere typical of a merchant's shop in a high-fantasy adventure." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkL1Q0wIHMi4QTTblUOMQZyvVlOgYwwp31n2gM_z1u_RHcx5Qq1T8Chrmly2Cg_SD99he3o4z5iTF1wgRq86HlplOhK5mUYaMchVz1VmjV6WxE2plZOP9pyy9wQ3Ff1RsI5ucNfdi8xGqgf7SoE8JAIfiCJmwgrf_rERb6RNIKzPN0ja-AA_j6aFnYAkTW_GmvHdYC15w0Ez4MonlzjOP-gq9K3uxOiP5eyP3UI3mlyys5xQ5HQm47eqE9N1vzokof_JN4KaUGbXlf"/>
+<span class="material-symbols-outlined text-4xl mb-2 text-tertiary">science</span>
+<span class="font-headline text-lg text-center relative z-10">Mystery Potion</span>
+<span class="text-secondary font-bold text-sm mt-2 flex items-center gap-1">50 <span class="material-symbols-outlined text-[14px]">monetization_on</span></span>
+</div>
+<!-- Card 5 -->
+<div class="aspect-[2/3] bg-surface-container rounded-lg border border-secondary/30 relative overflow-hidden flex flex-col items-center justify-center p-4 group cursor-pointer transition-all hover:-translate-y-2">
+<img class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-40 transition-opacity" data-alt="A legendary bronze relic with L-shaped gold brackets on its corners, looking like an ancient astronomical device. It is placed on a dark velvet pedestal with soft white highlighting from above. The aesthetic is clean and organized, presenting the item as a scholarly catalog entry in a luxury gaming wiki." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmcsz-kzR4pb-bRD7kkDSOrRLCkJnTiH_svWOj3duJ4tPHTlTqgssDuA1sL9QmeoaugKh2UL6YckWLKkhO6s6JrKLrPa9_KrYEZY1HmJgCB4gN7mihpquYsgF7z4BwUSaDOzN_cO1h4-rZhbU4gf-RDu-pKPbtjKyBrkCI226yuMxO_ygKKwSCk4S6MMcdpbyl334TD10mgaGq7YSbskA5BejHVGITKyOjNuUApCqpgQE2xzVn6hl84XdMPc9NnTD37AQat7JzwANZ"/>
+<span class="material-symbols-outlined text-4xl mb-2 text-relic-bronze">stat_3</span>
+<span class="font-headline text-lg text-center relative z-10">Common Relic</span>
+<span class="text-secondary font-bold text-sm mt-2 flex items-center gap-1">142 <span class="material-symbols-outlined text-[14px]">monetization_on</span></span>
+</div>
+</div>
+</section>
+</main>
+<!-- NavigationDrawer (Mobile) -->
+<div class="fixed inset-0 bg-background/80 backdrop-blur-sm z-[60] translate-x-full transition-transform duration-500 lg:hidden" id="nav-drawer">
+<div class="h-full w-80 bg-surface-container-low border-r border-secondary/20 shadow-xl flex flex-col py-6">
+<div class="px-6 mb-8 flex justify-between items-center">
+<span class="font-headline text-headline-md text-secondary">Archives</span>
+<button onclick="toggleNav()"><span class="material-symbols-outlined">close</span></button>
+</div>
+<nav class="flex flex-col">
+<a class="px-6 py-4 flex items-center gap-4 text-on-surface-variant hover:bg-surface-container-highest transition-colors" href="characters.html">
+<span class="material-symbols-outlined">person</span> Characters
+                </a>
+<a class="px-6 py-4 flex items-center gap-4 text-on-surface-variant hover:bg-surface-container-highest transition-colors" href="bestiary.html">
+<span class="material-symbols-outlined">skull</span> Bestiary
+                </a>
+<a class="px-6 py-4 flex items-center gap-4 text-on-surface-variant hover:bg-surface-container-highest transition-colors" href="relics.html">
+<span class="material-symbols-outlined">diamond</span> Relics
+                </a>
+<a class="px-6 py-4 flex items-center gap-4 text-on-surface-variant hover:bg-surface-container-highest transition-colors" href="map-events.html">
+<span class="material-symbols-outlined">map</span> Events
+                </a>
+<a class="px-6 py-4 flex items-center gap-4 text-on-surface-variant hover:bg-surface-container-highest transition-colors" href="glossary.html">
+<span class="material-symbols-outlined">key</span> Keywords
+                </a>
+</nav>
+</div>
+</div>
+<!-- BottomNavBar (Mobile) -->
+<footer class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-2 pb-safe bg-surface-container dark:bg-surface-container border-t border-secondary/30 shadow-lg md:hidden">
+<div class="flex flex-col items-center justify-center text-on-surface-variant group">
+<span class="material-symbols-outlined text-secondary">auto_stories</span>
+<span class="font-label text-[10px] font-bold uppercase tracking-wider text-secondary">Library</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-primary-container text-secondary rounded-full px-4 py-1">
+<span class="material-symbols-outlined">history_edu</span>
+<span class="font-label text-[10px] font-bold uppercase tracking-wider">Run Log</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="font-label text-[10px] font-bold uppercase tracking-wider">Compendium</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label text-[10px] font-bold uppercase tracking-wider">Settings</span>
+</div>
+</footer>
+<script>
+        function toggleNav() {
+            const drawer = document.getElementById('nav-drawer');
+            drawer.classList.toggle('translate-x-full');
+        }
+        // Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('bg-surface-container', 'shadow-xl');
+                header.classList.remove('bg-surface');
+            } else {
+                header.classList.remove('bg-surface-container', 'shadow-xl');
+                header.classList.add('bg-surface');
+            }
+        });
+        // Simple click listener for mobile menu button
+        document.querySelector('button.md\\:hidden').addEventListener('click', toggleNav);
+    </script>
+</body></html>

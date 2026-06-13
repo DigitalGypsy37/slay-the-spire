@@ -1,0 +1,367 @@
+<!-- Map & Events - Spire Tome Wiki (Key Added) -->
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Spire Tome | Map &amp; Events</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&amp;family=Hanken+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "tertiary": "#b9c9ce",
+                "surface-tint": "#b5ccc0",
+                "on-secondary-fixed-variant": "#564500",
+                "outline": "#8c928e",
+                "on-tertiary-container": "#849498",
+                "on-secondary": "#3b2f00",
+                "surface-dim": "#171212",
+                "outline-variant": "#424845",
+                "inverse-on-surface": "#352f2f",
+                "surface-container-high": "#2e2929",
+                "on-primary": "#20342c",
+                "on-error": "#690005",
+                "on-primary-fixed-variant": "#374b42",
+                "primary-fixed": "#d0e8dc",
+                "on-secondary-fixed": "#231b00",
+                "secondary-fixed": "#ffe17c",
+                "on-tertiary-fixed-variant": "#3a494d",
+                "on-secondary-container": "#332900",
+                "on-tertiary": "#243337",
+                "surface-container-low": "#1f1a1a",
+                "on-surface-variant": "#c2c8c3",
+                "tertiary-container": "#1d2c30",
+                "on-primary-container": "#80968b",
+                "surface": "#171212",
+                "on-background": "#ebe0e0",
+                "surface-container": "#231e1e",
+                "on-primary-fixed": "#0b1f18",
+                "background": "#171212",
+                "secondary-fixed-dim": "#e7c442",
+                "primary-fixed-dim": "#b5ccc0",
+                "surface-container-highest": "#393333",
+                "primary": "#b5ccc0",
+                "inverse-surface": "#ebe0e0",
+                "secondary": "#e7c442",
+                "on-surface": "#ebe0e0",
+                "on-error-container": "#ffdad6",
+                "secondary-container": "#ad8e00",
+                "on-tertiary-fixed": "#0f1e21",
+                "surface-container-lowest": "#110d0d",
+                "tertiary-fixed": "#d5e5ea",
+                "inverse-primary": "#4e6359",
+                "error-container": "#93000a",
+                "surface-bright": "#3e3838",
+                "tertiary-fixed-dim": "#b9c9ce",
+                "surface-variant": "#393333",
+                "primary-container": "#1a2e26",
+                "error": "#ffb4ab",
+                "gold-shimmer": "#FFD000",
+                "ethereal-white": "#E6E6E6",
+                "deep-forest": "#0D1A15",
+                "relic-bronze": "#7A6200"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "fontFamily": {
+                "headline": ["EB Garamond"],
+                "display": ["EB Garamond"],
+                "body": ["Hanken Grotesk"],
+                "label": ["Hanken Grotesk"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body {
+            background-color: #0D1A15;
+            color: #E6E6E6;
+            font-family: 'Hanken Grotesk', sans-serif;
+        }
+        .font-headline { font-family: 'EB Garamond', serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tome-border {
+            border: 1px solid rgba(231, 196, 66, 0.3);
+        }
+        .tome-border-active {
+            border: 1px solid rgba(255, 208, 0, 1);
+        }
+        .bento-card {
+            background: #1a2e26;
+            transition: all 0.3s ease;
+        }
+        .bento-card:hover {
+            background: #233e33;
+            transform: translateY(-2px);
+        }
+        .custom-scroll::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scroll::-webkit-scrollbar-track {
+            background: #0D1A15;
+        }
+        .custom-scroll::-webkit-scrollbar-thumb {
+            background: #e7c442;
+            border-radius: 10px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-deep-forest text-ethereal-white selection:bg-secondary/30 selection:text-gold-shimmer">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-deep-forest border-b border-secondary/30 fixed top-0 z-50 w-full flex justify-between items-center px-4 py-4">
+<div class="flex items-center gap-4">
+<button class="text-secondary dark:text-secondary hover:bg-primary-container/20 hover:text-gold-shimmer transition-colors p-2 active:scale-95 duration-100 ease-in-out">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-headline text-2xl font-semibold text-secondary dark:text-gold-shimmer">Spire Tome</h1>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-label text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-gold-shimmer transition-colors" href="characters.html">Characters</a>
+<a class="font-label text-label-md text-gold-shimmer font-bold transition-colors" href="symbols.html">Compendium</a>
+<a class="font-label text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-gold-shimmer transition-colors" href="relics.html">Relics</a>
+</nav>
+<button class="text-secondary dark:text-secondary hover:bg-primary-container/20 hover:text-gold-shimmer transition-colors p-2 active:scale-95 duration-100 ease-in-out">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+</div>
+</header>
+<main class="max-w-[1280px] mx-auto px-4 md:px-12 pt-24 pb-32">
+<!-- Hero Section: Map Strategy -->
+<section class="mb-16">
+<div class="flex flex-col md:flex-row gap-8 items-center mb-12">
+<div class="flex-1">
+<h2 class="font-headline text-4xl md:text-5xl font-bold text-secondary mb-4">The Ascent Architecture</h2>
+<p class="font-body text-lg text-on-surface-variant max-w-2xl">
+                        Navigating the Spire requires more than just martial prowess. It demands a scholar's eye for the shifting geometry of fate. Every node is a calculated risk, every branch a divergent future.
+                    </p>
+</div>
+<div class="w-full md:w-1/3 aspect-square relative rounded-xl overflow-hidden tome-border">
+<div class="absolute inset-0 bg-gradient-to-t from-deep-forest to-transparent z-10"></div>
+<img class="w-full h-full object-cover" data-alt="A detailed close-up of an ancient, enchanted parchment map with glowing ink tracing intricate routes through a dark, ethereal tower. The map sits on a heavy mahogany desk surrounded by flickering candles and scattered quills. The lighting is low-key and atmospheric, with deep forest greens and golden highlights reflecting the magical essence of the Spire. The style is tactile and high-fantasy, evoking a sense of mystery and strategic depth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAckPybvAGpMyQ4S33nCNTdyDoEdmzYdzXhvzC97hNgVGlS87dUzFB5d91FTlLVsXPTveyCx69JiVipUzqUbz2VQkg0R2ThI7hfw0sRz8IsPUpqve1XVJNnKcv2sFQWaWm5ybpBYTunppOJzpCC4gByCrfhZ1wNk77pp9jyuv_lU7bjtsferdK_kaG8Gu9b7nwRme5pds_f-naplNabl_m2rsYdi0hsFrPnuqfGkYoPlt3kz07BBiggicvrJdE__oj3Ok8oHiWTcfnP"/>
+</div>
+</div>
+<!-- Bento Grid: Pathing Strategies -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-2 bento-card p-6 rounded-lg tome-border">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-secondary" data-icon="account_tree">account_tree</span>
+<h3 class="font-headline text-2xl text-ethereal-white">Pathing Philosophy</h3>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div>
+<h4 class="text-secondary font-bold text-sm uppercase tracking-widest mb-2">The Aggressive Path</h4>
+<p class="text-body-md text-on-surface-variant">Prioritize Elites early in the Act to secure Rare Relics. Requires high early-game burst damage and health management.</p>
+</div>
+<div>
+<h4 class="text-secondary font-bold text-sm uppercase tracking-widest mb-2">The Scholar's Route</h4>
+<p class="text-body-md text-on-surface-variant">Maximum Event nodes (?) to find rare card transformations and unique relics. Less predictable but higher potential for high-rolls.</p>
+</div>
+</div>
+</div>
+<div class="bento-card p-6 rounded-lg tome-border flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-secondary" data-icon="payments">payments</span>
+<h3 class="font-headline text-2xl text-ethereal-white">Merchant Rates</h3>
+</div>
+<ul class="space-y-3">
+<li class="flex justify-between border-b border-white/5 pb-1">
+<span class="text-on-surface-variant">Common Card</span>
+<span class="text-gold-shimmer">45-55g</span>
+</li>
+<li class="flex justify-between border-b border-white/5 pb-1">
+<span class="text-on-surface-variant">Rare Relic</span>
+<span class="text-gold-shimmer">280-320g</span>
+</li>
+<li class="flex justify-between border-b border-white/5 pb-1">
+<span class="text-on-surface-variant">Removal Service</span>
+<span class="text-gold-shimmer">75g*</span>
+</li>
+</ul>
+</div>
+<p class="text-xs text-on-tertiary-container mt-4 italic">*Increases by 25g per use</p>
+</div>
+</div>
+</section>
+<!-- Events Catalog -->
+<section>
+<div class="flex items-center justify-between mb-8 border-b border-secondary/20 pb-4">
+<h2 class="font-headline text-3xl font-bold text-secondary">Chronicle of Encounters</h2>
+<div class="flex gap-2">
+<span class="px-3 py-1 rounded-full text-xs font-bold border border-secondary/30 text-secondary bg-secondary/5">Act I</span>
+<span class="px-3 py-1 rounded-full text-xs font-bold border border-white/10 text-on-surface-variant">Act II</span>
+<span class="px-3 py-1 rounded-full text-xs font-bold border border-white/10 text-on-surface-variant">Act III</span>
+</div>
+</div>
+<div class="space-y-12">
+<!-- Event 1 -->
+<div class="flex flex-col lg:flex-row gap-8 items-start group">
+<div class="w-full lg:w-96 shrink-0 aspect-[4/3] rounded-lg overflow-hidden tome-border group-hover:tome-border-active transition-all">
+<img class="w-full h-full object-cover" data-alt="A mysterious, glowing blue shrine hidden within a dense, bioluminescent forest at night. Ethereal spirits drift around a cracked stone altar where a single crystalline sword is embedded. The color palette features deep indigo, spectral cyan, and the signature dark forest green of the Spire. The atmosphere is one of profound silence and ancient magic, rendered in a crisp, painterly fantasy style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGLKxxyCU9lJ8VD2GSw06gayWnbIROTPA7H8xb_96eZ9VMZMhIFxJVJPKjdEgfCAFq42I09SE5b5VcekID38MNKe2bd2OsxaJWTmzEqsX1TWUuxJ4ucODGNTFgko-yPfIfZ6CsTkE1WzhsA3US8HlwAzaR3udIyslZSEayTpXok2TZyMRX32STEGGNMxYd6gl6dt1TiUheYqp94gTJs4gqVS3T9atopuKJs3a7Bml4Y4zzJEzDbsIPcJKr1XfWplLpw_h5AvHgRymX"/>
+</div>
+<div class="flex-1 space-y-6">
+<div>
+<div class="flex items-center gap-4 mb-2">
+<h3 class="font-headline text-3xl text-gold-shimmer">The Crystalline Shrine</h3>
+<span class="text-xs px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-bold tracking-widest uppercase">Rare Event</span>
+</div>
+<p class="text-body-md text-on-surface-variant italic leading-relaxed">
+                                "The air hums with a frequency that makes your teeth ache. A structure of pure geometry pulses before you, refracting light that shouldn't exist in this darkness. Will you offer a piece of your journey to the glass?"
+                            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="p-4 rounded bg-surface-container border-l-4 border-secondary/50">
+<h4 class="text-secondary font-bold text-sm mb-1 uppercase tracking-tighter">Option 1: Shatter</h4>
+<p class="text-sm text-on-surface mb-2 italic">Break the crystal for immediate gain.</p>
+<div class="flex items-center gap-2 text-xs font-bold text-green-400">
+<span class="material-symbols-outlined text-xs" data-icon="add_circle">add_circle</span>
+                                    Gain 150 Gold. Lose 15 Max HP.
+                                </div>
+</div>
+<div class="p-4 rounded bg-surface-container border-l-4 border-primary/50">
+<h4 class="text-primary font-bold text-sm mb-1 uppercase tracking-tighter">Option 2: Attune</h4>
+<p class="text-sm text-on-surface mb-2 italic">Commune with the structure's song.</p>
+<div class="flex items-center gap-2 text-xs font-bold text-blue-400">
+<span class="material-symbols-outlined text-xs" data-icon="auto_awesome">auto_awesome</span>
+                                    Upgrade 3 Random Cards. Gain 1 Curse: Echoes.
+                                </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Event 2 -->
+<div class="flex flex-col lg:flex-row-reverse gap-8 items-start group">
+<div class="w-full lg:w-96 shrink-0 aspect-[4/3] rounded-lg overflow-hidden tome-border group-hover:tome-border-active transition-all">
+<img class="w-full h-full object-cover" data-alt="A shadowy merchant figure cloaked in tattered purple silks, standing behind a stall filled with cursed-looking artifacts and glowing green potions. The background is a claustrophobic cavern wall made of pulsating, organic-looking rock. The lighting is dominated by a sickly green luminescence from the relics, casting long, dramatic shadows. The style is dark, detailed, and evocative of a high-fantasy underworld." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0xlEn6Besx8V05s6Nt3GjdA2GJiect36z3Bwm0SAWkfT0kqYS7luwaLH2IkjTD-OFXQR_0aB0SUP3cE2Kz_WV6N3L67sQJBB33fFO0wd9T-re4bvTBVy6tGGIfAX0QOae9echzN-EqNCLNXTqCqLrdWPyE5rsIs-gK_WOFUwIqESWN1pbkDV5W6VZRoad4Qs5a3NYUBHw4umhnkcRm6isb8C30sDzTVv7RXdznQ-DgzpiQB08mqBNgWs0D3WxP6LxW4t0qIoYOeYM"/>
+</div>
+<div class="flex-1 space-y-6">
+<div>
+<div class="flex items-center gap-4 mb-2">
+<h3 class="font-headline text-3xl text-gold-shimmer">The Hollow Peddler</h3>
+<span class="text-xs px-2 py-0.5 rounded bg-error-container text-on-error-container font-bold tracking-widest uppercase">Shady Deal</span>
+</div>
+<p class="text-body-md text-on-surface-variant italic leading-relaxed">
+                                "The merchant has no face, only a collection of masks that shift and whisper to one another. 'A fair trade,' they croak, gesturing to a tray of organs that look suspiciously like yours."
+                            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="p-4 rounded bg-surface-container border-l-4 border-secondary/50">
+<h4 class="text-secondary font-bold text-sm mb-1 uppercase tracking-tighter">Option 1: Barter Flesh</h4>
+<p class="text-sm text-on-surface mb-2 italic">Trade vitality for power.</p>
+<div class="flex items-center gap-2 text-xs font-bold text-green-400">
+<span class="material-symbols-outlined text-xs" data-icon="hardware">hardware</span>
+                                    Gain Relic: Blood-Soaked Ledger. Lose 20% Current HP.
+                                </div>
+</div>
+<div class="p-4 rounded bg-surface-container border-l-4 border-on-surface-variant/50">
+<h4 class="text-on-surface-variant font-bold text-sm mb-1 uppercase tracking-tighter">Option 2: Walk Away</h4>
+<p class="text-sm text-on-surface mb-2 italic">The price is too steep today.</p>
+<div class="flex items-center gap-2 text-xs font-bold text-gray-400">
+<span class="material-symbols-outlined text-xs" data-icon="close">close</span>
+                                    No effect. Continue your ascent.
+                                </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Event 3 -->
+<div class="flex flex-col lg:flex-row gap-8 items-start group">
+<div class="w-full lg:w-96 shrink-0 aspect-[4/3] rounded-lg overflow-hidden tome-border group-hover:tome-border-active transition-all relative">
+<img class="w-full h-full object-cover" data-alt="A swirling cosmic rift opening in the center of an ancient stone library. Books and scrolls are being pulled toward a vortex of starlight and nebula gases. The colors are deep purples, golds, and blacks, reflecting a celestial and mystical theme. The lighting is dynamic, with the rift acting as the primary light source, illuminating the dusty, dark wooden shelves of the surrounding room. The style is grand and epic fantasy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVP3QnjxHuM5qFsfNBcuK3npdOoZ-53stVid4-DhtcivBgJCiPRw2RjeJWKURZoNKHq9nJv85-M8EOI9lHk2boFF6z1wJgbDRir_K4UnvWdQ9PsWCvEsrVXRi-BRaSaWGrBIH--rbXUuHsxjF7JKmbfE1z3DbZSP9j4w2sMAoY44C8YBs9YCDcuBcwlWzJyOiynTmp0HnLuf__XbNUwQWW0OpwKZonx5hYkI4EwZyHRbuREkJkYYsuasflFKJ-FrbnSlZMilrZf0_X"/>
+</div>
+<div class="flex-1 space-y-6">
+<div>
+<div class="flex items-center gap-4 mb-2">
+<h3 class="font-headline text-3xl text-gold-shimmer">The Star-Iron Forge</h3>
+<span class="text-xs px-2 py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-bold tracking-widest uppercase">Combat Event</span>
+</div>
+<p class="text-body-md text-on-surface-variant italic leading-relaxed">
+                                "The heat here is not of fire, but of gravity. An anvil made of collapsed stars rests in the center of the room, guarded by a sentry whose armor bleeds constellations."
+                            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="p-4 rounded bg-surface-container border-l-4 border-error/50">
+<h4 class="text-error font-bold text-sm mb-1 uppercase tracking-tighter">Option 1: Challenge</h4>
+<p class="text-sm text-on-surface mb-2 italic">Defeat the Star-Guard for their craft.</p>
+<div class="flex items-center gap-2 text-xs font-bold text-red-400">
+<span class="material-symbols-outlined text-xs" data-icon="swords">swords</span>
+                                    Combat: Elite Sentry. Reward: Star-Forged Hammer.
+                                </div>
+</div>
+<div class="p-4 rounded bg-surface-container border-l-4 border-primary/50">
+<h4 class="text-primary font-bold text-sm mb-1 uppercase tracking-tighter">Option 2: Study</h4>
+<p class="text-sm text-on-surface mb-2 italic">Learn the techniques from afar.</p>
+<div class="flex items-center gap-2 text-xs font-bold text-blue-400">
+<span class="material-symbols-outlined text-xs" data-icon="menu_book">menu_book</span>
+                                    Add 1 Colorless Rare Card to your deck.
+                                </div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col lg:flex-row-reverse gap-8 items-start group"><div class="w-full lg:w-96 shrink-0 aspect-[4/3] rounded-lg overflow-hidden tome-border group-hover:tome-border-active transition-all"><img alt="The Sapphire Key" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA12pn_uEmzQbCRqdz2c8VD5OzJtNn7pKSfWKT6JoIdzoK34vT75z5tzzL1dobpuuMviiE4dmm_IRuUsLzTkUSRuh-Ha6rZsfpyT_fA1yZuh2c7CvOQEE8LlbxlzcorZiD-kTCXNPuBLZcZqgl_hkDMlPdm0XU-px5WKwXps-vozFZtWYxCpnk4t5CCKZJDIYBICJfoHN_E9O6TTcM5fEIwpQ0E4K9T0aEQmQW82lTZQWUNBwZX_EQWDx94uALJcYT_RiNOIsRgjTlX"/></div><div class="flex-1 space-y-6"><div><div class="flex items-center gap-4 mb-2"><h3 class="font-headline text-3xl text-gold-shimmer">The Sapphire Key</h3><span class="text-xs px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-bold tracking-widest uppercase">Event</span></div><p class="text-body-md text-on-surface-variant italic leading-relaxed">"A glowing gemstone sits atop a pedestal of shifting iron. To claim it is to mark yourself for a greater trial, yet to return it is to be rewarded by the Spire's own mechanical mercy."</p></div><div class="grid grid-cols-1 md:grid-cols-2 gap-4"><div class="p-4 rounded bg-surface-container border-l-4 border-secondary/50"><h4 class="text-secondary font-bold text-sm mb-1 uppercase tracking-tighter">Option 1: Return the Key</h4><p class="text-sm text-on-surface mb-2 italic">Gain 100 Gold.</p><div class="flex items-center gap-2 text-xs font-bold text-green-400"><span class="material-symbols-outlined text-xs">add_circle</span>Gain 100 Gold.</div></div><div class="p-4 rounded bg-surface-container border-l-4 border-error/50"><h4 class="text-error font-bold text-sm mb-1 uppercase tracking-tighter">Option 2: Keep the Key</h4><p class="text-sm text-on-surface mb-2 italic">Combat: Elite Sentinel. Reward: The Sapphire Key (Required for The Heart).</p><div class="flex items-center gap-2 text-xs font-bold text-red-400"><span class="material-symbols-outlined text-xs">swords</span>Combat: Elite Sentinel. Reward: The Sapphire Key.</div></div></div></div></div></div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-surface-container dark:bg-surface-container border-t border-secondary/30 flex justify-around items-center px-2 pb-safe py-2 z-50">
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-gold-shimmer" href="index.html">
+<span class="material-symbols-outlined" data-icon="book_2">book_2</span>
+<span class="font-label text-[10px]">Library</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-gold-shimmer" href="meta-progression.html">
+<span class="material-symbols-outlined" data-icon="history_edu">history_edu</span>
+<span class="font-label text-[10px]">Run Log</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container/20 text-gold-shimmer rounded-xl p-2 scale-90 transition-transform" href="symbols.html">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-label text-[10px]">Compendium</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-gold-shimmer" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label text-[10px]">Settings</span>
+</a>
+</nav>
+<!-- Decorative Elements -->
+<div class="fixed top-0 left-0 w-full h-full pointer-events-none opacity-5 mix-blend-overlay bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')] z-[60]"></div>
+<script>
+        // Subtle Parallax / Interaction effects
+        document.addEventListener('mousemove', (e) => {
+            const cards = document.querySelectorAll('.bento-card');
+            const mouseX = e.clientX;
+            const mouseY = e.clientY;
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                const cardX = rect.left + rect.width / 2;
+                const cardY = rect.top + rect.height / 2;
+
+                const angleX = (mouseY - cardY) / 100;
+                const angleY = (cardX - mouseX) / 100;
+                // card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg)`;
+            });
+        });
+        // Icon weight handling for Material Symbols
+        document.querySelectorAll('.material-symbols-outlined').forEach(span => {
+            if (span.getAttribute('data-weight') === 'fill') {
+                span.style.fontVariationSettings = "'FILL' 1";
+            }
+        });
+    </script>
+</body></html>

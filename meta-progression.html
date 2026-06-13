@@ -1,0 +1,400 @@
+<!-- Meta-Progression - Spire Tome Wiki -->
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Meta-Progression &amp; Ascension | Spire Tome</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed": "#0f1e21",
+                        "inverse-primary": "#4e6359",
+                        "on-surface": "#ebe0e0",
+                        "outline-variant": "#424845",
+                        "surface-container-low": "#1f1a1a",
+                        "tertiary-container": "#1d2c30",
+                        "background": "#171212",
+                        "on-primary": "#20342c",
+                        "secondary-fixed": "#ffe17c",
+                        "secondary-fixed-dim": "#e7c442",
+                        "tertiary": "#b9c9ce",
+                        "surface-container-high": "#2e2929",
+                        "on-tertiary": "#243337",
+                        "surface-container": "#231e1e",
+                        "on-primary-container": "#80968b",
+                        "secondary-container": "#ad8e00",
+                        "on-secondary-container": "#332900",
+                        "inverse-on-surface": "#352f2f",
+                        "outline": "#8c928e",
+                        "surface": "#171212",
+                        "on-primary-fixed-variant": "#374b42",
+                        "on-primary-fixed": "#0b1f18",
+                        "surface-bright": "#3e3838",
+                        "primary-fixed-dim": "#b5ccc0",
+                        "surface-tint": "#b5ccc0",
+                        "on-surface-variant": "#c2c8c3",
+                        "on-background": "#ebe0e0",
+                        "secondary": "#e7c442",
+                        "on-tertiary-container": "#849498",
+                        "primary-container": "#1a2e26",
+                        "on-secondary-fixed-variant": "#564500",
+                        "inverse-surface": "#ebe0e0",
+                        "surface-container-lowest": "#110d0d",
+                        "tertiary-fixed": "#d5e5ea",
+                        "surface-variant": "#393333",
+                        "tertiary-fixed-dim": "#b9c9ce",
+                        "on-error": "#690005",
+                        "on-secondary-fixed": "#231b00",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-highest": "#393333",
+                        "error-container": "#93000a",
+                        "primary-fixed": "#d0e8dc",
+                        "surface-dim": "#171212",
+                        "primary": "#b5ccc0",
+                        "on-tertiary-fixed-variant": "#3a494d",
+                        "on-secondary": "#3b2f00",
+                        "error": "#ffb4ab",
+                        "gold-shimmer": "#FFD000",
+                        "ethereal-white": "#E6E6E6",
+                        "deep-forest": "#0D1A15",
+                        "relic-bronze": "#7A6200"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Eb Garamond"],
+                        "display": ["Eb Garamond"],
+                        "body": ["Hanken Grotesk"],
+                        "label": ["Hanken Grotesk"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Hanken Grotesk', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'EB Garamond', serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .parchment-texture {
+            background-image: url("https://www.transparenttextures.com/patterns/dark-matter.png");
+            background-blend-mode: overlay;
+        }
+        .scroll-mask {
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+        .gold-border-gradient {
+            border-image: linear-gradient(to bottom, #ad8e00, #e7c442, #ad8e00) 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface selection:bg-secondary/30">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 border-b border-secondary/30 bg-surface-container shadow-sm">
+<div class="flex items-center justify-between px-4 h-16 max-w-screen-xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-2xl">menu_book</span>
+<span class="font-headline text-headline-lg font-bold text-secondary italic tracking-tight">Spire Tome</span>
+</div>
+<nav class="hidden md:flex gap-8">
+<a class="font-label text-label-md font-semibold text-on-surface-variant hover:text-gold-shimmer transition-colors duration-300" href="glossary.html">Glossary</a>
+<a class="font-label text-label-md font-semibold text-on-surface-variant hover:text-gold-shimmer transition-colors duration-300" href="necrobinder-cards.html">Cards</a>
+<a class="font-label text-label-md font-semibold text-on-surface-variant hover:text-gold-shimmer transition-colors duration-300" href="relics.html">Relics</a>
+<a class="font-label text-label-md font-semibold text-on-surface-variant hover:text-gold-shimmer transition-colors duration-300" href="bestiary.html">Bestiary</a>
+</nav>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer active:scale-95 transition-transform">search</span>
+<span class="material-symbols-outlined text-primary cursor-pointer md:hidden">menu</span>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 max-w-screen-xl mx-auto px-4 md:px-12">
+<!-- Hero Section -->
+<section class="relative mb-16 rounded-xl overflow-hidden min-h-[300px] flex items-center justify-center border border-secondary/20 shadow-2xl">
+<img class="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-luminosity" data-alt="A cinematic, high-fantasy interior view of a vast, ancient library with towering stone pillars and glowing magical orbs floating between rows of enchanted books. The atmosphere is thick with dust motes caught in shafts of ethereal emerald light, evoking a sense of ancient wisdom and dangerous secrets. The style is moody and scholarly, with deep forest greens and golden highlights reflecting the Spire Tome aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt5E1fCp0hhoerSRiE_-pqz3As1ilFpSOOUQyodrnQ0pPvfOHx0FJDFJo42O4UQQ2oUhgGse-trpS0fn2HFlpxyjvBe5mYAvqmKVRBdaPE_96-gwWuBEXdOKgRkIGTBjCTMobGO3Sby7E5QTjhYCviN7nKcnRo-2Ib5WqWphMOl2Yl7gEUzDdeGoRKbAGJ9v4WtTMvVAYzJcjUzOgsvatwcTliMOnaeyfYLReT6vC8tm8f5TeGJrIexyUQuobHO8HmCfw5Fg_T354R"/>
+<div class="relative z-10 text-center px-6">
+<h1 class="text-4xl md:text-6xl font-bold text-secondary mb-4 tracking-tight">The Scholar's Path: Meta-Progression</h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto font-body">Recording the permanent evolution of the Spire, from character growth to the deepening shadows of Ascension.</p>
+<div class="mt-8 flex justify-center gap-4">
+<span class="h-1 w-24 bg-secondary/40 rounded-full"></span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="h-1 w-24 bg-secondary/40 rounded-full"></span>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Ascension Levels (Left Column) -->
+<div class="lg:col-span-4 space-y-6">
+<div class="bg-surface-container-low p-6 rounded-xl border border-secondary/10 parchment-texture">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-secondary">trending_up</span>
+<h2 class="text-2xl font-bold text-secondary-fixed">Ascension Levels</h2>
+</div>
+<div class="space-y-4">
+<!-- Ascension Card 1 -->
+<div class="group bg-surface-container p-4 rounded-lg border-l-4 border-secondary/50 hover:border-secondary transition-all cursor-default">
+<div class="flex justify-between items-start mb-1">
+<span class="font-headline text-lg font-bold text-primary">Level 1</span>
+<span class="material-symbols-outlined text-secondary/30 group-hover:text-secondary text-sm">lock_open</span>
+</div>
+<p class="text-sm text-on-surface-variant font-body leading-relaxed">Elites appear more often. High risk, high reward.</p>
+</div>
+<!-- Ascension Card 2 -->
+<div class="group bg-surface-container p-4 rounded-lg border-l-4 border-secondary/30 hover:border-secondary transition-all cursor-default">
+<div class="flex justify-between items-start mb-1">
+<span class="font-headline text-lg font-bold text-primary">Level 2</span>
+<span class="material-symbols-outlined text-secondary/30 group-hover:text-secondary text-sm">lock_open</span>
+</div>
+<p class="text-sm text-on-surface-variant font-body leading-relaxed">Normal enemies are deadlier. Every encounter tests your resolve.</p>
+</div>
+<!-- Ascension Card 3 -->
+<div class="group bg-surface-container p-4 rounded-lg border-l-4 border-secondary/10 hover:border-secondary transition-all opacity-70">
+<div class="flex justify-between items-start mb-1">
+<span class="font-headline text-lg font-bold text-on-surface-variant/50">Level 3</span>
+<span class="material-symbols-outlined text-secondary/10 text-sm">lock</span>
+</div>
+<p class="text-sm text-on-surface-variant/50 font-body leading-relaxed">Elites are deadlier. Their patterns grow more complex.</p>
+</div>
+<!-- View More -->
+<button class="w-full py-2 text-center text-label-sm font-bold text-secondary/70 hover:text-secondary uppercase tracking-widest transition-colors">
+                            Reveal Higher Spheres
+                        </button>
+</div>
+</div>
+<!-- Triumphs / XP Tracker -->
+<div class="bg-primary-container p-6 rounded-xl border border-primary/20">
+<h3 class="text-xl font-headline text-primary mb-4">Character Enlightenment</h3>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between text-xs font-bold uppercase tracking-tighter text-on-primary-container mb-2">
+<span>The Ironclad</span>
+<span>Lv. 15 / 20</span>
+</div>
+<div class="h-2 bg-background rounded-full overflow-hidden">
+<div class="h-full bg-primary w-3/4 shadow-[0_0_10px_rgba(181,204,192,0.5)]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs font-bold uppercase tracking-tighter text-on-primary-container mb-2">
+<span>The Silent</span>
+<span>Lv. 8 / 20</span>
+</div>
+<div class="h-2 bg-background rounded-full overflow-hidden">
+<div class="h-full bg-primary w-1/3 opacity-60"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Content Area -->
+<div class="lg:col-span-8 space-y-8">
+<!-- Unlocks & Triumphs -->
+<section class="bg-surface-container-high rounded-xl p-8 border border-secondary/20 shadow-xl overflow-hidden relative">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-8xl">military_tech</span>
+</div>
+<h2 class="text-3xl font-bold text-secondary mb-8 flex items-center gap-3">
+<span class="material-symbols-outlined">emoji_events</span>
+                        Unlocks &amp; Triumphs
+                    </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Achievement 1 -->
+<div class="flex items-center gap-4 p-4 rounded-lg bg-surface-container border border-outline-variant/30 hover:border-secondary/40 transition-colors">
+<div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center border border-secondary/30 shrink-0">
+<span class="material-symbols-outlined text-secondary-fixed text-3xl" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+<div>
+<h4 class="font-headline text-lg text-ethereal-white">Eternal One</h4>
+<p class="text-xs text-on-surface-variant">Complete all other achievements and ascend beyond time.</p>
+<div class="mt-2 inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-secondary-container text-on-secondary-container tracking-wider uppercase">Rare</div>
+</div>
+</div>
+<!-- Achievement 2 -->
+<div class="flex items-center gap-4 p-4 rounded-lg bg-surface-container border border-outline-variant/30 hover:border-secondary/40 transition-colors">
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center border border-primary/30 shrink-0">
+<span class="material-symbols-outlined text-primary text-3xl">heart_broken</span>
+</div>
+<div>
+<h4 class="font-headline text-lg text-ethereal-white">Ruby+</h4>
+<p class="text-xs text-on-surface-variant">Complete a run with the Ironclad at Ascension 20.</p>
+<div class="mt-2 inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-primary-container text-on-primary-container tracking-wider uppercase">Mastery</div>
+</div>
+</div>
+<!-- Achievement 3 -->
+<div class="flex items-center gap-4 p-4 rounded-lg bg-surface-container border border-outline-variant/30 hover:border-secondary/40 transition-colors">
+<div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center border border-outline-variant shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant text-3xl">history_edu</span>
+</div>
+<div>
+<h4 class="font-headline text-lg text-ethereal-white">The End?</h4>
+<p class="text-xs text-on-surface-variant">Defeat the Corrupt Heart for the first time.</p>
+<div class="mt-2 inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-surface-variant text-on-surface-variant tracking-wider uppercase">Story</div>
+</div>
+</div>
+<!-- Achievement 4 -->
+<div class="flex items-center gap-4 p-4 rounded-lg bg-surface-container border border-outline-variant/30 hover:border-secondary/40 transition-colors opacity-60 grayscale hover:grayscale-0 transition-all">
+<div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center border border-outline-variant shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant text-3xl">skull</span>
+</div>
+<div>
+<h4 class="font-headline text-lg text-ethereal-white">Speed Climber</h4>
+<p class="text-xs text-on-surface-variant">Defeat the Spire in under 20 minutes.</p>
+<div class="mt-2 inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-surface-variant text-on-surface-variant tracking-wider uppercase">Challenge</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Hall of Records -->
+<section class="space-y-6">
+<div class="flex items-end justify-between border-b border-secondary/30 pb-4">
+<h2 class="text-3xl font-bold text-secondary flex items-center gap-3">
+<span class="material-symbols-outlined">history</span>
+                            Hall of Records
+                        </h2>
+<a class="text-label-sm text-primary hover:text-gold-shimmer font-bold uppercase tracking-widest transition-colors" href="#">View All Chronology</a>
+</div>
+<div class="space-y-4">
+<!-- Record Entry 1 -->
+<div class="bg-surface-container p-6 rounded-xl border border-outline-variant/20 grid grid-cols-1 md:grid-cols-4 gap-6 items-center">
+<div class="md:col-span-1">
+<span class="block text-xs font-bold text-on-surface-variant uppercase mb-1">Date recorded</span>
+<span class="font-body text-ethereal-white">12 Oct, 1024 AE</span>
+</div>
+<div class="md:col-span-1">
+<span class="block text-xs font-bold text-on-surface-variant uppercase mb-1">Archetype</span>
+<span class="font-headline text-lg text-secondary">The Silent</span>
+</div>
+<div class="md:col-span-1">
+<span class="block text-xs font-bold text-on-surface-variant uppercase mb-1">Fate</span>
+<span class="flex items-center gap-2 text-primary font-bold">
+<span class="material-symbols-outlined text-sm">check_circle</span> Victory
+                                </span>
+</div>
+<div class="md:col-span-1 flex justify-end">
+<button class="px-4 py-2 border border-secondary/40 text-secondary text-sm font-bold rounded hover:bg-secondary hover:text-background transition-all">Details</button>
+</div>
+</div>
+<!-- Record Entry 2 -->
+<div class="bg-surface-container p-6 rounded-xl border border-outline-variant/20 grid grid-cols-1 md:grid-cols-4 gap-6 items-center">
+<div class="md:col-span-1">
+<span class="block text-xs font-bold text-on-surface-variant uppercase mb-1">Date recorded</span>
+<span class="font-body text-ethereal-white">09 Oct, 1024 AE</span>
+</div>
+<div class="md:col-span-1">
+<span class="block text-xs font-bold text-on-surface-variant uppercase mb-1">Archetype</span>
+<span class="font-headline text-lg text-secondary">The Ironclad</span>
+</div>
+<div class="md:col-span-1">
+<span class="block text-xs font-bold text-on-surface-variant uppercase mb-1">Fate</span>
+<span class="flex items-center gap-2 text-error font-bold">
+<span class="material-symbols-outlined text-sm">cancel</span> Defeat (Act 3)
+                                </span>
+</div>
+<div class="md:col-span-1 flex justify-end">
+<button class="px-4 py-2 border border-secondary/40 text-secondary text-sm font-bold rounded hover:bg-secondary hover:text-background transition-all">Details</button>
+</div>
+</div>
+<!-- Record Entry 3 -->
+<div class="bg-surface-container p-6 rounded-xl border border-outline-variant/20 grid grid-cols-1 md:grid-cols-4 gap-6 items-center opacity-70">
+<div class="md:col-span-1">
+<span class="block text-xs font-bold text-on-surface-variant uppercase mb-1">Date recorded</span>
+<span class="font-body text-ethereal-white">05 Oct, 1024 AE</span>
+</div>
+<div class="md:col-span-1">
+<span class="block text-xs font-bold text-on-surface-variant uppercase mb-1">Archetype</span>
+<span class="font-headline text-lg text-secondary">The Defect</span>
+</div>
+<div class="md:col-span-1">
+<span class="block text-xs font-bold text-on-surface-variant uppercase mb-1">Fate</span>
+<span class="flex items-center gap-2 text-primary font-bold">
+<span class="material-symbols-outlined text-sm">check_circle</span> Victory
+                                </span>
+</div>
+<div class="md:col-span-1 flex justify-end">
+<button class="px-4 py-2 border border-secondary/40 text-secondary text-sm font-bold rounded hover:bg-secondary hover:text-background transition-all">Details</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Meta Progression Infobox (Bento style) -->
+<section class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container-highest p-8 rounded-2xl border border-secondary/30 relative overflow-hidden group">
+<div class="absolute -right-4 -bottom-4 opacity-5 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[120px]">psychology</span>
+</div>
+<h4 class="text-secondary font-headline text-2xl mb-2 italic">Scholarly Wisdom</h4>
+<p class="text-on-surface-variant text-sm font-body italic leading-relaxed">"True power lies not in the sword, but in the memory of the blade's failure." — High Chronicler Aethelgard</p>
+</div>
+<div class="md:col-span-2 bg-gradient-to-br from-surface-container to-deep-forest p-8 rounded-2xl border border-primary/20 shadow-inner">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-primary text-4xl">local_library</span>
+<h4 class="text-ethereal-white font-headline text-2xl">The Library's Reach</h4>
+</div>
+<p class="text-on-surface-variant text-md leading-relaxed mb-4">Permanent unlocks modify the very structure of the Spire. Every failed run contributes XP toward unlocking more potent cards and relics for future incarnations. Ascension levels further refine this crucible, distilling the essence of strategy through increasingly hostile environments.</p>
+<div class="flex gap-4">
+<div class="bg-primary/10 px-3 py-1 rounded-full border border-primary/30 text-primary text-xs font-bold uppercase">4,290 Total XP</div>
+<div class="bg-secondary/10 px-3 py-1 rounded-full border border-secondary/30 text-secondary text-xs font-bold uppercase">124 Runs Documented</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center h-20 px-2 pb-safe border-t border-secondary/30 bg-surface-container-high z-50 shadow-lg md:hidden">
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-70 hover:opacity-100 hover:text-primary transition-all active:scale-90 duration-150" href="glossary.html">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-label text-label-sm font-semibold">Glossary</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-70 hover:opacity-100 hover:text-primary transition-all active:scale-90 duration-150" href="necrobinder-cards.html">
+<span class="material-symbols-outlined">style</span>
+<span class="font-label text-label-sm font-semibold">Cards</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-70 hover:opacity-100 hover:text-primary transition-all active:scale-90 duration-150" href="relics.html">
+<span class="material-symbols-outlined">auto_awesome</span>
+<span class="font-label text-label-sm font-semibold">Relics</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-70 hover:opacity-100 hover:text-primary transition-all active:scale-90 duration-150" href="bestiary.html">
+<span class="material-symbols-outlined">pest_control_rodent</span>
+<span class="font-label text-label-sm font-semibold">Bestiary</span>
+</a>
+</nav>
+<script>
+        // Subtle interactive effect for progress bars
+        document.querySelectorAll('.h-2.bg-background').forEach(bar => {
+            bar.addEventListener('mouseenter', () => {
+                const inner = bar.querySelector('div');
+                inner.style.filter = 'brightness(1.5) drop-shadow(0 0 5px currentColor)';
+                inner.style.transition = 'all 0.3s ease';
+            });
+            bar.addEventListener('mouseleave', () => {
+                const inner = bar.querySelector('div');
+                inner.style.filter = 'none';
+            });
+        });
+        // Toggle mobile menu (simulated)
+        const menuIcon = document.querySelector('.material-symbols-outlined.md\\:hidden');
+        if (menuIcon) {
+            menuIcon.onclick = () => {
+                alert('Chronicle index opening...');
+            }
+        }
+    </script>
+</body></html>
