@@ -23,6 +23,10 @@ Slay the Spire 2 Wiki — "Spire Tome", a static deck-building reference wiki.
 | `boss-patterns.html` | Boss Stratagems — boss phases and counters |
 | `ascension-levels.html` | Ascension Levels — stacking difficulty modifiers |
 | `achievements.html` | Achievements — Hall of Records & trophies |
+| `necrobinder-keywords.html` | Necrobinder Keyword Reference (Soul Weaving, etc.) |
+| `relic-pool.html` | Relic Pool — full rarity catalog (common→boss) |
+| `custom-run.html` | Custom Run Modifiers — boons, handicaps, structural |
+| `character-achievements.html` | Scroll of Valor — character-specific achievements |
 
 All pages are self-contained static HTML styled with Tailwind (via CDN), EB Garamond / Hanken Grotesk fonts, and Material Symbols icons. Top/side navigation links are wired between pages by their visible labels (e.g. Library, Cards, Relics, Bestiary, Map, Merchant). A few labels with no dedicated page yet (Settings, Lore) remain placeholder anchors.
 

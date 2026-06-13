@@ -1,0 +1,465 @@
+<!-- Relic Pool - Spire Tome Wiki -->
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Relic Pool | Spire Tome Wiki</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&amp;family=Hanken+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline": "#8c928e",
+                    "tertiary-fixed": "#d5e5ea",
+                    "primary-fixed-dim": "#b5ccc0",
+                    "on-background": "#ebe0e0",
+                    "surface-tint": "#b5ccc0",
+                    "secondary": "#e7c442",
+                    "on-tertiary-fixed": "#0f1e21",
+                    "on-secondary-fixed-variant": "#564500",
+                    "surface-dim": "#171212",
+                    "inverse-surface": "#ebe0e0",
+                    "inverse-on-surface": "#352f2f",
+                    "background": "#171212",
+                    "on-secondary-fixed": "#231b00",
+                    "on-surface": "#ebe0e0",
+                    "primary-fixed": "#d0e8dc",
+                    "tertiary-fixed-dim": "#b9c9ce",
+                    "surface-container-low": "#1f1a1a",
+                    "surface-container-high": "#2e2929",
+                    "primary": "#b5ccc0",
+                    "on-error-container": "#ffdad6",
+                    "surface-variant": "#393333",
+                    "surface-bright": "#3e3838",
+                    "on-error": "#690005",
+                    "on-tertiary": "#243337",
+                    "surface-container": "#231e1e",
+                    "on-surface-variant": "#c2c8c3",
+                    "on-primary-fixed-variant": "#374b42",
+                    "outline-variant": "#424845",
+                    "tertiary-container": "#1d2c30",
+                    "surface": "#171212",
+                    "on-tertiary-container": "#849498",
+                    "on-secondary": "#3b2f00",
+                    "secondary-container": "#ad8e00",
+                    "on-primary": "#20342c",
+                    "surface-container-highest": "#393333",
+                    "on-tertiary-fixed-variant": "#3a494d",
+                    "tertiary": "#b9c9ce",
+                    "on-primary-fixed": "#0b1f18",
+                    "secondary-fixed-dim": "#e7c442",
+                    "on-primary-container": "#80968b",
+                    "secondary-fixed": "#ffe17c",
+                    "on-secondary-container": "#332900",
+                    "surface-container-lowest": "#110d0d",
+                    "inverse-primary": "#4e6359",
+                    "error-container": "#93000a",
+                    "error": "#ffb4ab",
+                    "primary-container": "#1a2e26",
+                    "gold-shimmer": "#FFD000",
+                    "ethereal-white": "#E6E6E6",
+                    "deep-forest": "#0D1A15",
+                    "relic-bronze": "#7A6200"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["EB Garamond"],
+                    "display": ["EB Garamond"],
+                    "body": ["Hanken Grotesk"],
+                    "label": ["Hanken Grotesk"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body {
+            background-color: #171212;
+            color: #ebe0e0;
+            font-family: 'Hanken Grotesk', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .font-headline { font-family: 'EB Garamond', serif; }
+        .relic-card-glow {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .relic-card-glow:hover {
+            box-shadow: 0 0 20px rgba(231, 196, 66, 0.15);
+            border-color: rgba(231, 196, 66, 1);
+        }
+        .relic-card-glow::after {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 50%; height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255, 208, 0, 0.05), transparent);
+            transform: skewX(-25deg);
+            transition: 0.75s;
+        }
+        .relic-card-glow:hover::after {
+            left: 125%;
+        }
+        .scroll-hide::-webkit-scrollbar { display: none; }
+        .corner-accent {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-color: #e7c442;
+        }
+        .corner-tl { top: 4px; left: 4px; border-top-width: 1px; border-left-width: 1px; }
+        .corner-br { bottom: 4px; right: 4px; border-bottom-width: 1px; border-right-width: 1px; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-surface-container border-b border-secondary/30">
+<div class="flex justify-between items-center w-full px-4 md:px-12 max-w-[1280px] mx-auto h-16">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary hover:text-gold-shimmer transition-colors active:scale-95">menu</button>
+<h1 class="font-headline text-2xl font-bold text-secondary">Relic Pool</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary hover:text-gold-shimmer transition-colors active:scale-95">search</button>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-4 md:px-12 max-w-[1280px] mx-auto">
+<!-- Hero Intro Section -->
+<section class="mb-16 relative overflow-hidden rounded-xl border border-secondary/20 bg-surface-container-low p-8 md:p-12">
+<div class="relative z-10 max-w-2xl">
+<span class="text-secondary font-label text-sm font-bold tracking-widest uppercase mb-4 block">Archive 042</span>
+<h2 class="font-headline text-4xl md:text-5xl font-semibold mb-6 text-on-surface">The Ancient Reliquary</h2>
+<p class="text-body-lg text-on-surface-variant leading-relaxed mb-8">
+                    Within the shifting halls of Aethelgard, these mysterious artifacts provide the strength to defy destiny. Cataloged by rarity and resonance, the Relic Pool represents the culminated power of fallen heroes and cosmic entities.
+                </p>
+<div class="flex flex-wrap gap-4">
+<div class="flex items-center gap-2 px-4 py-2 bg-primary-container/30 border border-primary/20 rounded-full">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="text-label-md">Total Relics: 178</span>
+</div>
+<div class="flex items-center gap-2 px-4 py-2 bg-primary-container/30 border border-primary/20 rounded-full">
+<span class="w-2 h-2 rounded-full bg-gold-shimmer"></span>
+<span class="text-label-md">Sync Rate: 100%</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Common Relics -->
+<section class="mb-16">
+<div class="flex items-center gap-4 mb-8 border-l-4 border-outline-variant pl-4">
+<h3 class="font-headline text-3xl font-semibold">Common Relics</h3>
+<span class="text-label-md text-on-surface-variant bg-surface-container-highest px-3 py-1 rounded">Basics</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Vajra -->
+<div class="relic-card-glow bg-surface-container border border-secondary/30 rounded-lg p-5 flex flex-col gap-4 relative">
+<div class="corner-accent corner-tl"></div>
+<div class="corner-accent corner-br"></div>
+<div class="flex gap-4 items-center">
+<div class="w-16 h-16 rounded-full border-2 border-secondary/40 bg-deep-forest overflow-hidden flex items-center justify-center p-2">
+<img class="w-full h-full object-contain" data-alt="A detailed digital painting of the Vajra relic from Slay the Spire, appearing as a golden ritual weapon with glowing blue energy sparks. The art style is high-fantasy, featuring intricate etchings on a metallic surface, set against a dark, atmospheric forest green background with dramatic cinematic lighting that highlights its sharp edges." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdZeUbDljxI07RZo1TTZWhblW3W-vZ_LfKvy5hB8xjDRNGi9S-8YPJuRqOMrpPkQgGOpe0-1JiWz7ZFoXTcU4btkVFrA_TuZHtiLEFQjzXbkldsumlH7hiFMOEkykwWbJkXPbcSTdDZoL2wcaAE8G0kJfsl7ZsjJ0vSrQs7ljhCcl2oPp4xQeseHces8g5PU2FlOklCzPfXAKZkcN7ypa_s96wKiQKrGJ4SEaDh2j8dLBGfSNIKLFSURj9ehL9Hr6z9ssQBsHUkVnq"/>
+</div>
+<div>
+<h4 class="font-headline text-xl font-bold text-secondary">Vajra</h4>
+<span class="text-[10px] font-bold uppercase tracking-wider text-on-surface-variant border border-outline-variant px-1.5 rounded">Common</span>
+</div>
+</div>
+<p class="text-body-md text-on-surface-variant">At the start of each combat, gain 1 <span class="text-secondary font-bold">Strength</span>.</p>
+</div>
+<!-- Oddly Smooth Stone -->
+<div class="relic-card-glow bg-surface-container border border-secondary/30 rounded-lg p-5 flex flex-col gap-4 relative">
+<div class="corner-accent corner-tl"></div>
+<div class="corner-accent corner-br"></div>
+<div class="flex gap-4 items-center">
+<div class="w-16 h-16 rounded-full border-2 border-secondary/40 bg-deep-forest overflow-hidden flex items-center justify-center p-2">
+<img class="w-full h-full object-contain" data-alt="A digital illustration of the Oddly Smooth Stone relic, a perfectly polished river stone reflecting a mystical aurora light. The style is painterly and tactile, with soft glows emanating from the stone's center. It rests on a dark obsidian pedestal within a scholarly fantasy setting, illuminated by a warm gold shimmer." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLVXKIaaAbwmhfcKdyzUyq7-xP5MWe7wsC3wuLIJtLIqZVf04EO8kNS35yGrBB9eU9qJUmXL0Bug-GfdGoX8YsK9kQfngjpoLZIT3AMi8ecObJm1Llr79Pv1ndNL7g0Yc8jUVEN7sH4lHCGO3Sn_1rNK5o8vfeYBBwU8JKH5_Z3DxzduEVMCdxpklS1XsBiw_6MPXXiT84tZ2JS7X24zjRUeXwZO6eoWvDG0yOUgEnIZcupI_XN-b0QHxFwtvYbTd0dBgxiEq1YgjR"/>
+</div>
+<div>
+<h4 class="font-headline text-xl font-bold text-secondary">Oddly Smooth Stone</h4>
+<span class="text-[10px] font-bold uppercase tracking-wider text-on-surface-variant border border-outline-variant px-1.5 rounded">Common</span>
+</div>
+</div>
+<p class="text-body-md text-on-surface-variant">At the start of each combat, gain 1 <span class="text-primary font-bold">Dexterity</span>.</p>
+</div>
+<!-- Akabeko -->
+<div class="relic-card-glow bg-surface-container border border-secondary/30 rounded-lg p-5 flex flex-col gap-4 relative">
+<div class="corner-accent corner-tl"></div>
+<div class="corner-accent corner-br"></div>
+<div class="flex gap-4 items-center">
+<div class="w-16 h-16 rounded-full border-2 border-secondary/40 bg-deep-forest overflow-hidden flex items-center justify-center p-2">
+<img class="w-full h-full object-contain" data-alt="A stylized digital art piece of the Akabeko relic, a traditional red cow toy with a bobbing head, imbued with magical golden runes. The lighting is moody and low-key, emphasizing the saturated reds and the magical particles floating around it, consistent with a dark fantasy gaming wiki aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb3UVd5ogof_hlLjiap1oETHSd733WaRhnvK7t0dCzedJYzCMKHDR80mUSb2ULz7EBW4grhGeVQ4RJmdtTELHrhHbwnOIVXyyDSJLZozWyGiMBPJ3VlI-QQB3Le8WyYx78WfOZXBGPanFZuW61onrRp8eqBs2_TexWGU3q7q3JMH_MQVnb-vY1MqA7rTc7Jfh54ewcRo2doDygzqiMLRddhv_6gEdx_XEhD3nmMwshQKeXocD8GX49rf2nRQojPBNXFlTwjFrgfuj0"/>
+</div>
+<div>
+<h4 class="font-headline text-xl font-bold text-secondary">Akabeko</h4>
+<span class="text-[10px] font-bold uppercase tracking-wider text-on-surface-variant border border-outline-variant px-1.5 rounded">Common</span>
+</div>
+</div>
+<p class="text-body-md text-on-surface-variant">Your first attack each combat deals 8 additional damage.</p>
+</div>
+</div>
+</section>
+<!-- Uncommon Relics -->
+<section class="mb-16">
+<div class="flex items-center gap-4 mb-8 border-l-4 border-secondary/60 pl-4">
+<h3 class="font-headline text-3xl font-semibold">Uncommon Relics</h3>
+<span class="text-label-md text-on-surface-variant bg-surface-container-highest px-3 py-1 rounded">Intermediate</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Eternal Feather -->
+<div class="relic-card-glow bg-surface-container border border-secondary/30 rounded-lg p-5 flex flex-col gap-4 relative">
+<div class="corner-accent corner-tl"></div>
+<div class="corner-accent corner-br"></div>
+<div class="flex gap-4 items-center">
+<div class="w-16 h-16 rounded-full border-2 border-secondary/40 bg-deep-forest overflow-hidden flex items-center justify-center p-2">
+<img class="w-full h-full object-contain" data-alt="A glowing ethereal white feather floating in a void of deep forest green. The feather has shimmering gold edges and appears to pulse with a soft light. The digital painting style is elegant and detailed, focusing on the delicate texture of the barbs and the magical aura it projects." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP_2r9o2vrgGiSSVdXf9qsKnl0rB4Bp1BjEltGtLbvLsJ58fQ5N3q-lFU_CgqKwXe8zStnPwLA7Z_1rvkROb_p1_YfBZvVYxWJH75Dz8GawZ0xAUp1vdY6RVzLUIVwb-lZUGon6JAkEqasVkYarXFUrWJ3Nv7atHphONjsjH3fy57xdaVjqoW30zrTuRzkFecDVmp37xrkpK1kYFgbh8U2OF6J2wPlHHnrjKUdah_D5-WLLEkrIN-Bc6stSMD8EsyEE0IHNOdKYMjJ"/>
+</div>
+<div>
+<h4 class="font-headline text-xl font-bold text-secondary">Eternal Feather</h4>
+<span class="text-[10px] font-bold uppercase tracking-wider text-on-surface-variant border border-secondary/30 px-1.5 rounded">Uncommon</span>
+</div>
+</div>
+<p class="text-body-md text-on-surface-variant">For every 5 cards in your deck, heal 3 HP whenever you enter a Rest Site.</p>
+</div>
+<!-- Kunai -->
+<div class="relic-card-glow bg-surface-container border border-secondary/30 rounded-lg p-5 flex flex-col gap-4 relative">
+<div class="corner-accent corner-tl"></div>
+<div class="corner-accent corner-br"></div>
+<div class="flex gap-4 items-center">
+<div class="w-16 h-16 rounded-full border-2 border-secondary/40 bg-deep-forest overflow-hidden flex items-center justify-center p-2">
+<img class="w-full h-full object-contain" data-alt="A high-quality digital rendering of three sharp kunai daggers bound by a gold chain. The blades are cold steel with a faint teal reflection, and the background is a dark, shadowy forest floor. The image captures a sense of deadly precision and ancient craftsmanship, fitting for a legendary weapon archive." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-pa6aeFWVZDRkbe_HhK58AoB1_qaQGmoRzFLIOYiEyeSa8QruHCg2sQ8dIcXNyrN5O5lIQvanDCa3Sft12ZSEzpQ_IrsTJZ0sjxuxOBYqEKPz5PNfvLwTPrvCudCJSo-I1LBJ_YkXlJ7AcOUMvaPJSsk__G04yhHy_QC9Mmw9BcK1nZhBEva7_JVLUcXM_HEcL66FqMWibxj7ghsik6-lExOAqZN7R_ANePMU3OxJuZUkB_aAn-v15l50DRf7OX54XpuH2eVbPWam"/>
+</div>
+<div>
+<h4 class="font-headline text-xl font-bold text-secondary">Kunai</h4>
+<span class="text-[10px] font-bold uppercase tracking-wider text-on-surface-variant border border-secondary/30 px-1.5 rounded">Uncommon</span>
+</div>
+</div>
+<p class="text-body-md text-on-surface-variant">Every time you play 3 Attacks in a single turn, gain 1 Dexterity.</p>
+</div>
+<!-- Shuriken -->
+<div class="relic-card-glow bg-surface-container border border-secondary/30 rounded-lg p-5 flex flex-col gap-4 relative">
+<div class="corner-accent corner-tl"></div>
+<div class="corner-accent corner-br"></div>
+<div class="flex gap-4 items-center">
+<div class="w-16 h-16 rounded-full border-2 border-secondary/40 bg-deep-forest overflow-hidden flex items-center justify-center p-2">
+<img class="w-full h-full object-contain" data-alt="A intricate throwing star relic with glowing runes etched into its four blades. The shuriken is captured in a dynamic angle, suspended in a dark, atmospheric space with particles of gold dust floating around it. The overall look is professional gaming UI art, sharp and mystical." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAga7YXFZ2O7ZVG6XlTqpp5RT5tKjcQTFemem8sAn56sxLS56Cp90NWtoaXyGhsaztFVjIiNOcqj0XaN2jZX8JPBeHymdWQqdwP-mIQGvX-cjm9VmdqKWvSdgBQygAzrZWiVWsUbonk4XRbqz6LjOvPCgCUHZnh9EkcIozOVb-q1cyaj8MzdYz1IJm8k_PMJlww4b_VkWU5zzPr4S9FYZkvCNOXqwXnM5Uz3R4DVbc_hBnAaK13Ntff_OPQ9tPg2Z93GDQfG0edmpK"/>
+</div>
+<div>
+<h4 class="font-headline text-xl font-bold text-secondary">Shuriken</h4>
+<span class="text-[10px] font-bold uppercase tracking-wider text-on-surface-variant border border-secondary/30 px-1.5 rounded">Uncommon</span>
+</div>
+</div>
+<p class="text-body-md text-on-surface-variant">Every time you play 3 Attacks in a single turn, gain 1 Strength.</p>
+</div>
+</div>
+</section>
+<!-- Rare Relics -->
+<section class="mb-16">
+<div class="flex items-center gap-4 mb-8 border-l-4 border-gold-shimmer pl-4">
+<h3 class="font-headline text-3xl font-semibold">Rare Relics</h3>
+<span class="text-label-md text-on-surface-variant bg-surface-container-highest px-3 py-1 rounded">Advanced</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Ice Cream -->
+<div class="relic-card-glow bg-surface-container border border-gold-shimmer/50 rounded-lg p-5 flex flex-col gap-4 relative shadow-[0_0_15px_rgba(255,208,0,0.1)]">
+<div class="corner-accent corner-tl"></div>
+<div class="corner-accent corner-br"></div>
+<div class="flex gap-4 items-center">
+<div class="w-16 h-16 rounded-full border-2 border-gold-shimmer bg-deep-forest overflow-hidden flex items-center justify-center p-2">
+<img class="w-full h-full object-contain" data-alt="A magical floating bowl of crystalline, glowing blue ice cream that emits cold vapors and sparkles. The bowl is made of ornate relic bronze. The scene is set in a dark, mystical cavern with sharp contrasts between the cold blue light of the relic and the deep obsidian shadows of the environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9-Bxzir4mFvSPe9AM1jlZOCoUGJQ_FzGQUgZT-rqEKLOmJojBrNiCZvjMrPwPzHuHhseR0zjXPcel1jGuy1hyivfckNnIlvnNE8DFbsM2eUFbVOV4MPekBJdOrARaXmvdjQjZfmak0LksgRKqZpdkzY1TpCv1jgeyFElR_wbKMEMGfP_38qOfd7Z6KrryqeCKnXEwrSzNK_qc63pzzJ6vwLdwlS3VpyVplmxhBWfWR8xhjZ65i7DU0JPspyXIlcmU954F_vPjCZ1M"/>
+</div>
+<div>
+<h4 class="font-headline text-xl font-bold text-gold-shimmer">Ice Cream</h4>
+<span class="text-[10px] font-bold uppercase tracking-wider text-gold-shimmer bg-gold-shimmer/10 px-1.5 rounded border border-gold-shimmer/30">Rare</span>
+</div>
+</div>
+<p class="text-body-md text-on-surface-variant">Energy is now conserved between turns.</p>
+</div>
+<!-- Ginger -->
+<div class="relic-card-glow bg-surface-container border border-gold-shimmer/50 rounded-lg p-5 flex flex-col gap-4 relative">
+<div class="corner-accent corner-tl"></div>
+<div class="corner-accent corner-br"></div>
+<div class="flex gap-4 items-center">
+<div class="w-16 h-16 rounded-full border-2 border-gold-shimmer bg-deep-forest overflow-hidden flex items-center justify-center p-2">
+<img class="w-full h-full object-contain" data-alt="A digital painting of a petrified ginger root that glows with a faint green bio-luminescent light. It is presented on a dark stone slab, surrounded by small magical vials and scrolls. The style is detailed and scholarly, reflecting the premium fantasy theme of the Spire Aethelgard design system." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa-QX0ivozOM1rHdZFPEvd8eKNf8Fk3dOIvgnVfc9XbGFQ65-KWBNiQsKy0euLyVWk7HGWXV4C5debNLRq479ICHkl3su7jLgxWO-Va5J8rs9uVwnPuFJw70ItC4yCUb7vLSn1CTWw4-w4uAGsoh7bmVbdgnbZQL8rSLq1B5Xi3G4lxLDqLwj-ZDFfw1JjThI1Yq9mc6_pTGob17kPYH8nyjr1vCkWKntqo_f1AtxuO_qwlO3dmw6q3ZK1C1k6_mfMUK2AFD8Rsnm2"/>
+</div>
+<div>
+<h4 class="font-headline text-xl font-bold text-gold-shimmer">Ginger</h4>
+<span class="text-[10px] font-bold uppercase tracking-wider text-gold-shimmer bg-gold-shimmer/10 px-1.5 rounded border border-gold-shimmer/30">Rare</span>
+</div>
+</div>
+<p class="text-body-md text-on-surface-variant">You can no longer become <span class="text-error font-bold">Weakened</span>.</p>
+</div>
+<!-- Unceasing Top -->
+<div class="relic-card-glow bg-surface-container border border-gold-shimmer/50 rounded-lg p-5 flex flex-col gap-4 relative">
+<div class="corner-accent corner-tl"></div>
+<div class="corner-accent corner-br"></div>
+<div class="flex gap-4 items-center">
+<div class="w-16 h-16 rounded-full border-2 border-gold-shimmer bg-deep-forest overflow-hidden flex items-center justify-center p-2">
+<img class="w-full h-full object-contain" data-alt="A golden spinning top relic hovering in mid-air, surrounded by motion blur and streaks of yellow light. The top is covered in intricate, glowing runes. The environment is a dark, abstract space that emphasizes the relic's constant motion and magical energy. Painterly, high-fantasy art style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFYUG5lH0Vbi9T4LsZCDH-uS8t-1wVMReeAMsYdzCWqc86HXEGEBEnZe6sv6erYNgZpPUBTHc7wT5dCJaZwQ1FmGAeD_A5PUp7cW1SwNm0Is-e0znaQzF0tLHpXkSzxNMZwoIBNqKahGmDCjvgm4CL5LaCid3dPguwcbtiL74Fvnj5ZM_IbvdAQGLymY0aYdY3eaY7TtSUhECwkt0YBLXurarfyPCM_pj4vQ_egHRgqXJt060oGvNmLiHoRk7-Xcbh6pohSPa34yVu"/>
+</div>
+<div>
+<h4 class="font-headline text-xl font-bold text-gold-shimmer">Unceasing Top</h4>
+<span class="text-[10px] font-bold uppercase tracking-wider text-gold-shimmer bg-gold-shimmer/10 px-1.5 rounded border border-gold-shimmer/30">Rare</span>
+</div>
+</div>
+<p class="text-body-md text-on-surface-variant">Whenever you have no cards in hand during your turn, draw a card.</p>
+</div>
+</div>
+</section>
+<!-- Boss Relics (Asymmetric Layout) -->
+<section class="mb-16">
+<div class="flex items-center gap-4 mb-8 border-l-4 border-error pl-4">
+<h3 class="font-headline text-3xl font-semibold">Boss Relics</h3>
+<span class="text-label-md text-error bg-error/10 border border-error/20 px-3 py-1 rounded">Corrupted</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Fusion Hammer -->
+<div class="md:col-span-7 relic-card-glow bg-surface-container-high border border-secondary/20 rounded-xl p-8 flex flex-col md:flex-row gap-8 items-center relative overflow-hidden">
+<div class="absolute -right-12 -top-12 w-48 h-48 bg-secondary/5 rounded-full blur-3xl"></div>
+<div class="w-32 h-32 flex-shrink-0 rounded-full border-4 border-secondary/50 bg-deep-forest overflow-hidden shadow-2xl">
+<img class="w-full h-full object-contain p-4" data-alt="A massive, glowing forge hammer relic crackling with blue electrical energy and molten gold veins. The hammer is depicted in a heavy, industrial fantasy style, looking powerful and ancient. The background is a dark, smoky smithy with embers floating in the air. High contrast cinematic lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqXiW8YWFw30riKaaZiyEi45yniZum9y51d0WLtkknMYSRjWRj1ZnpLdUhb8IPsrtc_VfCBWAlgIq7yet1NZfAnmaThL8u3j2nNkNVuBF_TFC-AMVU35OuYIXgFyPCYRBlFVrQe36IYRq9oeb--PYZeeEngmbG_hzDIc8dh7n2LsA5vbGRot_GD4SBenQ6X8m7Hij0TY0EjS0-5DI9dq_OZInIw3sCxEFYMf3tA1pHyPqzRObAeXKr1lTCUOyjVrLyaa_WkTd9Ypyy"/>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<h4 class="font-headline text-3xl font-bold text-secondary">Fusion Hammer</h4>
+<span class="text-label-sm font-bold bg-secondary/10 text-secondary border border-secondary/30 px-2 py-0.5 rounded">Boss</span>
+</div>
+<p class="text-body-lg text-on-surface-variant">Gain 1 Energy at the start of each turn. You can no longer Smith at Rest Sites.</p>
+<div class="flex gap-2">
+<span class="text-[10px] bg-primary-container text-primary px-2 py-1 rounded-full uppercase font-bold tracking-widest">Energy+</span>
+<span class="text-[10px] bg-error-container/20 text-error px-2 py-1 rounded-full uppercase font-bold tracking-widest">No Upgrades</span>
+</div>
+</div>
+</div>
+<!-- Side grid for more boss relics -->
+<div class="md:col-span-5 grid grid-cols-1 gap-6">
+<div class="relic-card-glow bg-surface-container border border-secondary/20 rounded-lg p-5 flex items-center gap-4">
+<div class="w-12 h-12 rounded-full border-2 border-secondary/40 bg-deep-forest flex-shrink-0">
+<img class="w-full h-full object-contain p-2" data-alt="A digital art piece of the Cursed Key relic, an ornate obsidian key wrapped in shadowy purple tendrils and glowing red eyes. The style is dark and malevolent, perfectly fitting the boss relic category of the wiki. The key is centered in a high-fantasy, moody composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzmRTO8rwTQzWjZLcZ7EcokFu4EO9MPbbxilzNsoqfgVGwgyMhnaZoW-UR-cUcnPk9Q5OY7nvwQEIQH0wz7CxfjweCl-YUv4eXgtfk2tDe9uGntNlK6t46NGPpu-Wv3ZZqhTMzEaUenymRNuloWW72VRV6ZJwte2g2EyiwZvEIwJD4GMM0gHc6vCx64ttVNiGGu99wtjExEqPWdS-jahTp8VKVgrzc2EElsRn3j_a4Sq7ts48Ve7auVfRiFSCHIDU5HawA-xajUkSv"/>
+</div>
+<div>
+<h5 class="font-headline text-lg font-bold text-secondary">Cursed Key</h5>
+<p class="text-label-sm text-on-surface-variant line-clamp-1">Gain 1 Energy. Whenever you open a chest, obtain a Curse.</p>
+</div>
+</div>
+<div class="relic-card-glow bg-surface-container border border-secondary/20 rounded-lg p-5 flex items-center gap-4">
+<div class="w-12 h-12 rounded-full border-2 border-secondary/40 bg-deep-forest flex-shrink-0">
+<img class="w-full h-full object-contain p-2" data-alt="A shattered golden crown relic with a single bright light shining from its center. The crown is cracked and worn, telling a story of fallen royalty and sacrificed power. The art is detailed, with a focus on metallic textures and light refraction through the cracks. Set against a dark, forest-green background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDXZm0rJj6B_6HCNtLN1rc_c1sycW2KhZ2Fu0lw_vObyMIHL9NYhsNz-Rgiag1F4nQoFrBf7x-knsi_YHXqC_EKy2RmpKCPqwJzFjPaokRhZ91LagKdSMmzA26T7sovJS8AhmDVT04wVh-X-az-npdxoceWOnASQeIQp-_Nq_gZZUxguFuqUkCsj9OxwL962D-0P9R9jv8NGw3IAaYtKVChfmEGywz5Hu7LsbqCDy1Ves1Pm-3jTL2zM6R2K0MjgCASUt1TOlrWyl-"/>
+</div>
+<div>
+<h5 class="font-headline text-lg font-bold text-secondary">Busted Crown</h5>
+<p class="text-label-sm text-on-surface-variant line-clamp-1">Gain 1 Energy. Card rewards have 2 fewer choices.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Shop & Special Section -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<div>
+<div class="flex items-center gap-4 mb-8 border-l-4 border-primary pl-4">
+<h3 class="font-headline text-2xl font-semibold">Shop Exclusives</h3>
+</div>
+<div class="bg-surface-container-low rounded-xl border border-primary/20 p-6 space-y-4">
+<div class="flex justify-between items-center p-3 hover:bg-surface-container transition-colors rounded">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">shopping_cart</span>
+<span class="font-headline font-bold text-on-surface">Medkit</span>
+</div>
+<span class="text-label-sm text-on-surface-variant">143 Gold</span>
+</div>
+<div class="flex justify-between items-center p-3 hover:bg-surface-container transition-colors rounded">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">shopping_cart</span>
+<span class="font-headline font-bold text-on-surface">Lee's Waffle</span>
+</div>
+<span class="text-label-sm text-on-surface-variant">162 Gold</span>
+</div>
+<div class="flex justify-between items-center p-3 hover:bg-surface-container transition-colors rounded">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">shopping_cart</span>
+<span class="font-headline font-bold text-on-surface">Abacus</span>
+</div>
+<span class="text-label-sm text-on-surface-variant">158 Gold</span>
+</div>
+</div>
+</div>
+<div>
+<div class="flex items-center gap-4 mb-8 border-l-4 border-tertiary pl-4">
+<h3 class="font-headline text-2xl font-semibold">Special Event Relics</h3>
+</div>
+<div class="bg-surface-container-low rounded-xl border border-tertiary/20 p-6 space-y-4">
+<div class="flex justify-between items-center p-3 hover:bg-surface-container transition-colors rounded">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary">auto_awesome</span>
+<span class="font-headline font-bold text-on-surface">Nloth's Gift</span>
+</div>
+<span class="text-label-sm text-tertiary">Event</span>
+</div>
+<div class="flex justify-between items-center p-3 hover:bg-surface-container transition-colors rounded">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary">auto_awesome</span>
+<span class="font-headline font-bold text-on-surface">Necronomicon</span>
+</div>
+<span class="text-label-sm text-tertiary">Cursed</span>
+</div>
+<div class="flex justify-between items-center p-3 hover:bg-surface-container transition-colors rounded">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary">auto_awesome</span>
+<span class="font-headline font-bold text-on-surface">Mutagenic Strength</span>
+</div>
+<span class="text-label-sm text-tertiary">Augment</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-surface-container-high border-t border-secondary/30 flex justify-around items-center px-2 py-3">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-variant transition-all duration-200 p-2 rounded-lg" href="characters.html">
+<span class="material-symbols-outlined">groups</span>
+<span class="font-label text-[10px] font-bold">Characters</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-primary rounded-full px-4 py-1 transition-all duration-200 scale-95" href="relics.html">
+<span class="material-symbols-outlined">auto_awesome</span>
+<span class="font-label text-[10px] font-bold">Relics</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-variant transition-all duration-200 p-2 rounded-lg" href="necrobinder-cards.html">
+<span class="material-symbols-outlined">style</span>
+<span class="font-label text-[10px] font-bold">Cards</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-variant transition-all duration-200 p-2 rounded-lg" href="bestiary.html">
+<span class="material-symbols-outlined">skull</span>
+<span class="font-label text-[10px] font-bold">Enemies</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-variant transition-all duration-200 p-2 rounded-lg" href="symbols.html">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-label text-[10px] font-bold">Compendium</span>
+</a>
+</nav>
+<script>
+        // Simple micro-interaction for cards
+        document.querySelectorAll('.relic-card-glow').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                // Potential for adding audio cues or complex animations
+            });
+        });
+    </script>
+</body></html>

@@ -1,11 +1,11 @@
-<!-- Necrobinder Card Library - Spire Tome Wiki (Synergies Added) -->
+<!-- Necrobinder Starter Deck & Synergies - Spire Tome Wiki -->
 <!DOCTYPE html>
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Necrobinder Card Library | Spire Tome</title>
+<title>Necrobinder Cards | Spire Tome Wiki</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&amp;family=Hanken+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700;800&amp;family=Hanken+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
@@ -14,53 +14,53 @@
         theme: {
           extend: {
             "colors": {
-                    "on-tertiary-fixed": "#0f1e21",
-                    "inverse-primary": "#4e6359",
-                    "on-surface": "#ebe0e0",
-                    "outline-variant": "#424845",
-                    "surface-container-low": "#1f1a1a",
-                    "tertiary-container": "#1d2c30",
-                    "background": "#171212",
-                    "on-primary": "#20342c",
+                    "inverse-surface": "#ebe0e0",
                     "secondary-fixed": "#ffe17c",
-                    "secondary-fixed-dim": "#e7c442",
-                    "tertiary": "#b9c9ce",
-                    "surface-container-high": "#2e2929",
-                    "on-tertiary": "#243337",
-                    "surface-container": "#231e1e",
-                    "on-primary-container": "#80968b",
-                    "secondary-container": "#ad8e00",
-                    "inverse-on-surface": "#352f2f",
-                    "outline": "#8c928e",
-                    "surface": "#171212",
+                    "tertiary-container": "#1d2c30",
+                    "surface-container-lowest": "#110d0d",
                     "on-primary-fixed-variant": "#374b42",
+                    "tertiary-fixed": "#d5e5ea",
+                    "surface-container-highest": "#393333",
+                    "primary-container": "#1a2e26",
+                    "surface-dim": "#171212",
+                    "inverse-on-surface": "#352f2f",
+                    "surface-container-low": "#1f1a1a",
+                    "surface-container-high": "#2e2929",
+                    "on-primary-container": "#80968b",
                     "on-primary-fixed": "#0b1f18",
+                    "background": "#171212",
+                    "tertiary": "#b9c9ce",
                     "surface-bright": "#3e3838",
-                    "primary-fixed-dim": "#b5ccc0",
-                    "surface-tint": "#b5ccc0",
+                    "on-surface": "#ebe0e0",
+                    "on-secondary-fixed": "#231b00",
+                    "outline": "#8c928e",
+                    "primary": "#b5ccc0",
+                    "inverse-primary": "#4e6359",
+                    "on-secondary-fixed-variant": "#564500",
                     "on-surface-variant": "#c2c8c3",
-                    "on-background": "#ebe0e0",
+                    "surface-container": "#231e1e",
+                    "error-container": "#93000a",
+                    "outline-variant": "#424845",
+                    "primary-fixed": "#d0e8dc",
+                    "on-primary": "#20342c",
+                    "error": "#ffb4ab",
+                    "secondary-container": "#ad8e00",
+                    "secondary-fixed-dim": "#e7c442",
+                    "surface-tint": "#b5ccc0",
+                    "on-secondary-container": "#332900",
+                    "on-error-container": "#ffdad6",
+                    "on-error": "#690005",
+                    "on-tertiary-fixed": "#0f1e21",
+                    "on-secondary": "#3b2f00",
+                    "on-tertiary": "#243337",
+                    "tertiary-fixed-dim": "#b9c9ce",
                     "secondary": "#e7c442",
                     "on-tertiary-container": "#849498",
-                    "primary-container": "#1a2e26",
-                    "on-secondary-container": "#332900",
-                    "on-secondary-fixed-variant": "#564500",
-                    "inverse-surface": "#ebe0e0",
-                    "surface-container-lowest": "#110d0d",
-                    "tertiary-fixed": "#d5e5ea",
-                    "surface-variant": "#393333",
-                    "tertiary-fixed-dim": "#b9c9ce",
-                    "on-error": "#690005",
-                    "on-secondary-fixed": "#231b00",
-                    "on-error-container": "#ffdad6",
-                    "surface-container-highest": "#393333",
-                    "error-container": "#93000a",
-                    "primary-fixed": "#d0e8dc",
-                    "surface-dim": "#171212",
-                    "primary": "#b5ccc0",
+                    "on-background": "#ebe0e0",
+                    "surface": "#171212",
+                    "primary-fixed-dim": "#b5ccc0",
                     "on-tertiary-fixed-variant": "#3a494d",
-                    "on-secondary": "#3b2f00",
-                    "error": "#ffb4ab",
+                    "surface-variant": "#393333",
                     "gold-shimmer": "#FFD000",
                     "ethereal-white": "#E6E6E6",
                     "deep-forest": "#0D1A15",
@@ -83,25 +83,13 @@
       }
     </script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .card-glow:hover {
-            box-shadow: 0 0 15px rgba(231, 196, 66, 0.2);
-            border-color: #e7c442 !important;
-        }
-        .glass-panel {
-            background: rgba(26, 46, 38, 0.8);
-            backdrop-filter: blur(8px);
-        }
-        body {
-            background-color: #171212;
-            color: #ebe0e0;
-            font-family: 'Hanken Grotesk', sans-serif;
-        }
-        h1, h2, h3, .font-headline {
-            font-family: 'EB Garamond', serif;
-        }
+        body { font-family: 'Hanken Grotesk', sans-serif; background-color: #171212; color: #ebe0e0; }
+        .font-headline { font-family: 'EB Garamond', serif; }
+        .card-inner-glow { box-shadow: inset 0 0 20px rgba(181, 204, 192, 0.05); }
+        .rare-glow { box-shadow: 0 0 15px rgba(231, 196, 66, 0.2); }
+        .necro-scroll::-webkit-scrollbar { width: 6px; }
+        .necro-scroll::-webkit-scrollbar-track { background: #110d0d; }
+        .necro-scroll::-webkit-scrollbar-thumb { background: #ad8e00; border-radius: 10px; }
     </style>
 <style>
     body {
@@ -109,208 +97,298 @@
     }
   </style>
 </head>
-<body class="bg-background selection:bg-secondary/30">
+<body class="bg-background min-h-screen pb-24">
 <!-- TopAppBar -->
-<nav class="fixed top-0 w-full z-50 border-b border-secondary/30 bg-surface-container shadow-sm">
-<div class="flex items-center justify-between px-4 h-16 max-w-screen-xl mx-auto">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary text-2xl">menu_book</span>
-<span class="font-headline text-headline-lg font-bold text-secondary italic tracking-tight">Spire Tome</span>
-</div>
-<div class="hidden md:flex items-center space-x-8">
-<a class="font-label text-label-md font-semibold text-secondary hover:text-gold-shimmer transition-colors" href="glossary.html">Glossary</a>
-<a class="font-label text-label-md font-semibold text-on-surface-variant hover:text-gold-shimmer transition-colors" href="necrobinder-cards.html">Cards</a>
-<a class="font-label text-label-md font-semibold text-on-surface-variant hover:text-gold-shimmer transition-colors" href="relics.html">Relics</a>
-<a class="font-label text-label-md font-semibold text-on-surface-variant hover:text-gold-shimmer transition-colors" href="bestiary.html">Bestiary</a>
-</div>
+<header class="bg-surface-container dark:bg-surface-container border-b border-secondary/30 docked full-width top-0 z-50 sticky">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-[1280px] mx-auto">
 <div class="flex items-center gap-4">
-<button class="material-symbols-outlined text-on-surface-variant active:scale-95 transition-transform">search</button>
+<span class="material-symbols-outlined text-primary dark:text-primary cursor-pointer hover:text-gold-shimmer transition-colors">menu_book</span>
+<h1 class="font-headline text-headline-lg font-bold text-ethereal-white tracking-tight">Necrobinder Cards</h1>
 </div>
-</div>
+<nav class="hidden md:flex gap-8">
+<a class="font-label text-label-md font-bold uppercase tracking-wider text-on-surface-variant dark:text-on-surface-variant hover:text-gold-shimmer transition-colors" href="glossary.html">Glossary</a>
+<a class="font-label text-label-md font-bold uppercase tracking-wider text-secondary dark:text-secondary hover:text-gold-shimmer transition-colors border-b-2 border-secondary" href="index.html">Library</a>
+<a class="font-label text-label-md font-bold uppercase tracking-wider text-on-surface-variant dark:text-on-surface-variant hover:text-gold-shimmer transition-colors" href="relics.html">Relics</a>
+<a class="font-label text-label-md font-bold uppercase tracking-wider text-on-surface-variant dark:text-on-surface-variant hover:text-gold-shimmer transition-colors" href="bestiary.html">Bestiary</a>
 </nav>
-<!-- Main Content Canvas -->
-<main class="pt-24 pb-32 px-4 max-w-screen-xl mx-auto">
-<!-- Header Section: The Necrobinder's Grimoire -->
-<header class="mb-12 relative overflow-hidden rounded-xl border border-secondary/20 p-8 lg:p-12 bg-deep-forest">
-<div class="relative z-10 max-w-2xl">
-<h1 class="text-4xl md:text-5xl font-bold text-secondary mb-4 leading-tight">The Necrobinder's Grimoire</h1>
-<p class="text-lg md:text-xl text-on-surface-variant font-body leading-relaxed">
-                    A scholarly examination of the dark arts practiced by the <span class="text-primary italic">Necrobinder</span>. Within these pages lie the secrets of soul-harvesting, bone-conjuring, and the delicate manipulation of life force to ascend the Spire's heights. Each card represents a forbidden pact etched in spectral ink.
-                </p>
-<div class="mt-6 flex gap-4">
-<span class="inline-flex items-center gap-2 px-3 py-1 bg-primary-container text-primary text-xs font-bold rounded border border-primary/30 uppercase tracking-widest">Soul Mechanic</span>
-<span class="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container/20 text-secondary text-xs font-bold rounded border border-secondary/30 uppercase tracking-widest">Bone Spells</span>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary dark:text-primary cursor-pointer hover:text-gold-shimmer transition-colors">search</span>
 </div>
 </div>
 </header>
-<!-- Filter Bar -->
-<section class="mb-10 flex flex-wrap items-center justify-between gap-4 sticky top-20 z-40 bg-background/80 backdrop-blur-md py-4 border-y border-outline-variant/30">
-<div class="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar">
-<button class="px-6 py-2 rounded-full bg-secondary text-on-secondary font-label text-label-md font-bold shadow-md hover:brightness-110 transition-all">All Cards</button>
-<button class="px-6 py-2 rounded-full border border-outline hover:bg-surface-container transition-colors font-label text-label-md text-on-surface">Attack</button>
-<button class="px-6 py-2 rounded-full border border-outline hover:bg-surface-container transition-colors font-label text-label-md text-on-surface">Skill</button>
-<button class="px-6 py-2 rounded-full border border-outline hover:bg-surface-container transition-colors font-label text-label-md text-on-surface">Power</button>
-<button class="px-6 py-2 rounded-full border border-outline hover:bg-surface-container transition-colors font-label text-label-md text-on-surface text-error border-error/50">Curse</button>
+<main class="max-w-[1280px] mx-auto px-6 py-12">
+<!-- Hero Section -->
+<section class="mb-16 relative overflow-hidden rounded-xl border border-secondary/20 bg-surface-container-low p-8 md:p-12">
+<div class="relative z-10 max-w-2xl">
+<h2 class="font-headline text-5xl md:text-6xl font-bold text-secondary mb-6 leading-tight">The Necro-Arts: <br/>Card Catalog</h2>
+<p class="font-body text-body-lg text-on-surface-variant leading-relaxed">
+                    The Necrobinder wields the forgotten threads of existence. Master the art of <span class="text-secondary font-semibold">Soul Weaving</span> to manipulate the essence of fallen foes, or establish <span class="text-primary font-semibold">Spectral Dominion</span> by summoning haunting manifestations that persist across the battlefield. This tome catalogs every spell, ritual, and hex known to the Binder.
+                </p>
 </div>
-<div class="flex items-center gap-4">
-<label class="font-label text-label-sm text-on-surface-variant uppercase tracking-widest">Sort By:</label>
-<select class="bg-surface-container border border-outline-variant text-on-surface rounded-lg px-4 py-2 font-label text-label-md focus:ring-2 ring-secondary/50 outline-none">
-<option>Rarity</option>
-<option>Cost</option>
-<option>Alphabetical</option>
+</section>
+<!-- Search & Filter Controls -->
+<section class="mb-12 sticky top-[80px] z-40 bg-background/80 backdrop-blur-md py-4 border-b border-outline-variant/30">
+<div class="flex flex-col gap-6">
+<!-- Search Bar -->
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-secondary/60 group-focus-within:text-gold-shimmer">search</span>
+<input class="w-full bg-deep-forest border border-secondary/30 rounded-lg py-4 pl-12 pr-4 text-ethereal-white focus:outline-none focus:border-gold-shimmer transition-all placeholder:text-on-surface-variant/50 font-body" placeholder="Search for cards by name or keyword..." type="text"/>
+</div>
+<!-- Filters -->
+<div class="flex flex-wrap items-center gap-4">
+<div class="flex flex-col gap-2 min-w-[140px]">
+<label class="font-label text-label-sm uppercase text-secondary/70 ml-1">Rarity</label>
+<select class="bg-surface-container-high border border-outline-variant rounded-md py-2 px-3 text-on-surface font-body text-sm focus:ring-1 focus:ring-secondary">
+<option>All Rarities</option>
+<option>Starter</option>
+<option>Common</option>
+<option>Uncommon</option>
+<option>Rare</option>
 </select>
 </div>
+<div class="flex flex-col gap-2 min-w-[140px]">
+<label class="font-label text-label-sm uppercase text-secondary/70 ml-1">Cost</label>
+<select class="bg-surface-container-high border border-outline-variant rounded-md py-2 px-3 text-on-surface font-body text-sm focus:ring-1 focus:ring-secondary">
+<option>All Costs</option>
+<option>0 Energy</option>
+<option>1 Energy</option>
+<option>2 Energy</option>
+<option>3+ Energy</option>
+</select>
+</div>
+<div class="flex flex-col gap-2 min-w-[140px]">
+<label class="font-label text-label-sm uppercase text-secondary/70 ml-1">Type</label>
+<select class="bg-surface-container-high border border-outline-variant rounded-md py-2 px-3 text-on-surface font-body text-sm focus:ring-1 focus:ring-secondary">
+<option>All Types</option>
+<option>Attack</option>
+<option>Skill</option>
+<option>Power</option>
+<option>Status</option>
+</select>
+</div>
+<button class="mt-auto mb-[2px] px-6 py-2.5 bg-secondary text-on-secondary font-label text-sm uppercase font-bold rounded-md hover:bg-gold-shimmer transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">filter_list</span>
+                        Apply Ritual
+                    </button>
+</div>
+</div>
 </section>
-<!-- Card Grid (Bento Style) -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<!-- Card Entry 1: Soul Reap -->
-<article class="group relative flex flex-col bg-primary-container border border-secondary/30 rounded-xl overflow-hidden transition-all duration-300 card-glow h-full">
-<div class="aspect-[4/3] w-full relative overflow-hidden bg-surface-container-highest">
-<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A dark fantasy illustration of a spectral scythe slicing through a glowing soul orb in a foggy, ancient graveyard. The lighting is dominated by eerie greens and deep forest shadows, reflecting the Necrobinder class aesthetic. High-detail digital art style with golden ethereal particles floating in the air." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0XVAJWaY6q3ROuDCNkTld5ZY6uAKYsPqsXhuIFWna3zIQdeAYP2hmYYDodFA_i3ELbn9JXuic_KULMC0cSjRal4s-GirZVTw1TkN6MetorRgFoyAvWe487f_aky-HIEsTUQ8xPN4w7afhon8FSgE2TUw7JHlXb_nx0RLcO_QCvHLPi1ngEThPSq7-LxS_L2UKOKAn4WKJnVSbXEH1UpYn21jxL7tzP13_OmngYRilRHNrMYD9RWSIik7tF9aSkw4rgjaYvciOenhh"/>
-<div class="absolute top-4 right-4 flex flex-col items-center justify-center w-10 h-10 rounded-full bg-secondary text-on-secondary font-bold text-lg shadow-lg border border-gold-shimmer">1</div>
-<div class="absolute bottom-0 left-0 w-full p-3 bg-gradient-to-t from-deep-forest to-transparent">
-<span class="inline-block px-2 py-0.5 bg-blue-900/80 text-blue-100 text-[10px] font-bold uppercase tracking-widest rounded border border-blue-400/30">Uncommon</span>
+<!-- Cards Bento Grid -->
+<section class="mb-16"><div class="flex items-center gap-4 mb-8"><span class="material-symbols-outlined text-secondary">playing_cards</span><h2 class="font-headline text-3xl font-bold text-ethereal-white tracking-tight">Starter Deck</h2></div><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"><div class="bg-surface-container-low border border-outline-variant/30 p-4 rounded-lg flex flex-col gap-2"><div class="flex justify-between items-center"><span class="font-headline text-xl text-secondary">Strike</span><span class="text-[10px] font-bold text-primary border border-primary/40 px-2 rounded">1</span></div><p class="text-sm text-on-surface-variant">Deal 6 damage.</p></div><div class="bg-surface-container-low border border-outline-variant/30 p-4 rounded-lg flex flex-col gap-2"><div class="flex justify-between items-center"><span class="font-headline text-xl text-secondary">Defend</span><span class="text-[10px] font-bold text-primary border border-primary/40 px-2 rounded">1</span></div><p class="text-sm text-on-surface-variant">Gain 5 Block.</p></div><div class="bg-surface-container-low border border-outline-variant/30 p-4 rounded-lg flex flex-col gap-2"><div class="flex justify-between items-center"><span class="font-headline text-xl text-secondary">Haunt</span><span class="text-[10px] font-bold text-primary border border-primary/40 px-2 rounded">1</span></div><p class="text-sm text-on-surface-variant">Apply 1 Weak. <span class="text-primary italic">Ethereal.</span></p></div><div class="bg-surface-container-low border border-outline-variant/30 p-4 rounded-lg flex flex-col gap-2"><div class="flex justify-between items-center"><span class="font-headline text-xl text-secondary">Grave Call</span><span class="text-[10px] font-bold text-primary border border-primary/40 px-2 rounded">0</span></div><p class="text-sm text-on-surface-variant">Gain 1 Soul. Exhaust.</p></div></div></section><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+<!-- Card 1: Soul Bolt -->
+<div class="group relative bg-primary-container border border-secondary/30 rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:border-secondary hover:shadow-[0_10px_30px_-10px_rgba(181,204,192,0.3)]">
+<div class="h-48 relative overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100" data-alt="A cinematic digital illustration of a concentrated bolt of spectral teal energy crackling with ethereal lightning. The light from the bolt illuminates a dark, cavernous environment filled with jagged obsidian spikes. The style is sharp and stylized fantasy with high contrast and bioluminescent green highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDM8nD_ybWq_m2tMn-f06Srf_LYYTBtJC-o-xZeWEO2cSX-4m79Iwwr9JuJ1v4V8iwqfdVSUiPcomGAmnMVSDaQWnV4vAEnS2U9JGS-3zH4SyvgMOapfNfgxabwd1FI_VL88OL-PvPPLs5i7rtdaexLtIGwo84qsXnb2pORE_LRHZjfbhAGB4oUCG-lW_LvNntuUJTVALGH1yvc9BFbdmPFB0fEngRok6oihcJVyTcbAcBYhUu6o8FZpdmblyj1JjRwlXj6EbI62-h5"/>
+<div class="absolute top-3 right-3 w-10 h-10 rounded-full bg-background border-2 border-primary flex items-center justify-center font-headline text-xl font-bold text-primary">1</div>
+<div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-background to-transparent">
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary bg-background/60 px-2 py-0.5 rounded border border-primary/40">Attack</span>
 </div>
 </div>
-<div class="p-6 flex-grow flex flex-col">
-<div class="flex justify-between items-start mb-2">
-<h3 class="text-2xl font-bold text-secondary">Soul Reap</h3>
-<span class="text-xs font-label uppercase tracking-widest text-on-surface-variant mt-1">Attack</span>
+<div class="p-5 flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<h3 class="font-headline text-2xl font-bold text-ethereal-white leading-none">Soul Bolt</h3>
+<span class="text-[10px] font-bold text-on-surface-variant/70 uppercase">Common</span>
 </div>
-<p class="text-on-surface mb-6 font-body leading-relaxed">
-                        Deal <span class="text-secondary font-bold">9</span> damage. If this kills an enemy, gain <span class="text-primary font-bold">1 Soul</span>.
+<p class="font-body text-sm text-on-surface-variant leading-snug h-12">
+                        Deal 8 damage. If you have 3+ <span class="text-secondary">Souls</span>, deal 4 additional damage.
                     </p>
-<div class="mt-auto pt-4 border-t border-secondary/10 flex items-center justify-between text-[11px] font-label text-on-surface-variant uppercase tracking-tighter italic">
-<span>Harvesting phase</span>
-<span>Codex p. 14</span>
-</div>
-<div class="mt-4 flex flex-wrap gap-2"><span class="px-2 py-0.5 bg-secondary/20 text-secondary text-[10px] font-bold uppercase tracking-widest rounded border border-secondary/30">Synergy: Harvest Phase, Strength</span></div></div>
-<!-- Decorative L-bracket corner -->
-<div class="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-secondary/40"></div>
-</article>
-<!-- Card Entry 2: Bone Wall -->
-<article class="group relative flex flex-col bg-primary-container border border-secondary/30 rounded-xl overflow-hidden transition-all duration-300 card-glow h-full">
-<div class="aspect-[4/3] w-full relative overflow-hidden bg-surface-container-highest">
-<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A cinematic painting of massive, interconnected rib bones rising from the earth to form a defensive wall against a barrage of magical arrows. The scene is set in a dark subterranean crypt with hints of golden luminescent moss and deep forest green atmosphere. Intricate bone textures and high-fantasy scholarly style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBkDsjZJZXhm-Mz6JpoCFjI_Kgb5aOVsAmavnJdV_imuCt7utHve9V14SvpcAtNBdmcgm4sL_oS0DzolwK5QtisfV1FgfE-RTDCz9jgojSTXhrNnuRyiaWxokmsdD7GfQOi6Ab04KJYziF03n6jIdCc3eVLZGUA_1rRfJ2-CcrzRGfNbBxXRv-psFkw0na-vmasJ0qtpsgw1fX_vn6sjh720FN7DxvZCgG-gnuZuKNwFVwPDq3f-3kxid5vLUpGDgQAqW7ZR3JwcYE"/>
-<div class="absolute top-4 right-4 flex flex-col items-center justify-center w-10 h-10 rounded-full bg-secondary text-on-secondary font-bold text-lg shadow-lg border border-gold-shimmer">1</div>
-<div class="absolute bottom-0 left-0 w-full p-3 bg-gradient-to-t from-deep-forest to-transparent">
-<span class="inline-block px-2 py-0.5 bg-gray-600/80 text-gray-100 text-[10px] font-bold uppercase tracking-widest rounded border border-gray-400/30">Common</span>
+<div class="flex flex-wrap gap-2 mt-2">
+<span class="px-2 py-0.5 rounded-full border border-primary/20 text-[10px] font-bold text-primary bg-primary/5 uppercase">Soul Weaving</span>
 </div>
 </div>
-<div class="p-6 flex-grow flex flex-col">
-<div class="flex justify-between items-start mb-2">
-<h3 class="text-2xl font-bold text-secondary">Bone Wall</h3>
-<span class="text-xs font-label uppercase tracking-widest text-on-surface-variant mt-1">Skill</span>
+<div class="absolute inset-0 pointer-events-none border border-gold-shimmer/0 group-hover:border-gold-shimmer/20 transition-all rounded-xl"></div>
 </div>
-<p class="text-on-surface mb-6 font-body leading-relaxed">
-                        Gain <span class="text-primary font-bold">7 Block</span>. Gain <span class="text-secondary font-bold">2</span> additional Block for each <span class="text-primary font-bold">Soul</span> held.
+<!-- Card 2: Spectral Shield -->
+<div class="group relative bg-primary-container border border-secondary/30 rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:border-secondary hover:shadow-[0_10px_30px_-10px_rgba(181,204,192,0.3)]">
+<div class="h-48 relative overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100" data-alt="A powerful fantasy illustration of a translucent ghostly shield manifesting in front of a shadowy figure. The shield is composed of swirling ectoplasmic smoke and ancient runes that glow with a faint cyan light. The atmosphere is dark and oppressive, emphasizing the protective aura of the spell." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAry4d8bHrlqa3do5OLYLJCdNaxGvT4jhj4lfKb98GtH9srIvHHZJwDKtCbGFiTpTtv2jRfDWyYEqGZ5q1X-T6IoTvBW4t2bC1nphLTLp0zdipqPyoiLNbRYNOuUIWwdf5MSrS0AnZsrpUML80LQUPnr3OxISePoIilwbsvMDBy4YTXA9draZawhTMnXvw_LirYNNrmxQ0Z6VmbLVXw8cUcmXGD6t7DwVG_dz1Tzn63mo6Sz0PKznDQ9HYZ5OEbvtdCqZdD79uFJmb-"/>
+<div class="absolute top-3 right-3 w-10 h-10 rounded-full bg-background border-2 border-primary flex items-center justify-center font-headline text-xl font-bold text-primary">1</div>
+<div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-background to-transparent">
+<span class="text-[10px] font-bold uppercase tracking-widest text-secondary bg-background/60 px-2 py-0.5 rounded border border-secondary/40">Skill</span>
+</div>
+</div>
+<div class="p-5 flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<h3 class="font-headline text-2xl font-bold text-ethereal-white leading-none">Spectral Shield</h3>
+<span class="text-[10px] font-bold text-on-surface-variant/70 uppercase">Starter</span>
+</div>
+<p class="font-body text-sm text-on-surface-variant leading-snug h-12">
+                        Gain 5 Block. <span class="text-primary italic">Ethereal.</span> When this card is Exhausted, gain 1 Soul.
                     </p>
-<div class="mt-auto pt-4 border-t border-secondary/10 flex items-center justify-between text-[11px] font-label text-on-surface-variant uppercase tracking-tighter italic">
-<span>Conjuration ritual</span>
-<span>Codex p. 22</span>
-</div>
-<div class="mt-4 flex flex-wrap gap-2"><span class="px-2 py-0.5 bg-secondary/20 text-secondary text-[10px] font-bold uppercase tracking-widest rounded border border-secondary/30">Synergy: Soul Accumulation, Defense</span></div></div>
-<div class="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-secondary/40"></div>
-</article>
-<!-- Card Entry 3: Eternal Harvest -->
-<article class="group relative flex flex-col bg-primary-container border border-secondary/30 rounded-xl overflow-hidden transition-all duration-300 card-glow h-full">
-<div class="aspect-[4/3] w-full relative overflow-hidden bg-surface-container-highest">
-<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A masterwork digital painting of an ornate, golden hourglass filled with swirling green soul mist. The background is a scholarly study filled with ancient books and mystic reagents. The aesthetic is dark forest green with vibrant gold shimmer highlights, creating a sense of powerful, rare magic and eternal life cycles." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7H55wcKMpwnqWUdaKrWeu1Ny-r7WacPaffv8LkE0CDLH6ZoGzFUL5BxYqIDSiLxtfkCBIxc_3OyNmhOId4VZAd4iGgOpciZ5uoK3X5TcqwbK8tKAYf8fOfdaXb293WVoFoCPJRE1lJRVxIiGROavNQZsdzpW2l5nuoEWOkF_NATqoMmtYu8mEMYePpNeptJp6XXuzpcnAsUrvWk--NxomKSGZ4NltCVkU89DUtPrRUmZmV_22pTjpYzStwgjM0NTRW-5OKhnlXMGg"/>
-<div class="absolute top-4 right-4 flex flex-col items-center justify-center w-10 h-10 rounded-full bg-secondary text-on-secondary font-bold text-lg shadow-lg border border-gold-shimmer">3</div>
-<div class="absolute bottom-0 left-0 w-full p-3 bg-gradient-to-t from-deep-forest to-transparent">
-<span class="inline-block px-2 py-0.5 bg-gold-shimmer/80 text-on-secondary font-bold text-[10px] uppercase tracking-widest rounded border border-secondary shadow-sm">Rare</span>
+<div class="flex flex-wrap gap-2 mt-2">
+<span class="px-2 py-0.5 rounded-full border border-primary/20 text-[10px] font-bold text-primary bg-primary/5 uppercase">Ethereal</span>
+<span class="px-2 py-0.5 rounded-full border border-primary/20 text-[10px] font-bold text-primary bg-primary/5 uppercase">Graveyard</span>
 </div>
 </div>
-<div class="p-6 flex-grow flex flex-col">
-<div class="flex justify-between items-start mb-2">
-<h3 class="text-2xl font-bold text-secondary">Eternal Harvest</h3>
-<span class="text-xs font-label uppercase tracking-widest text-on-surface-variant mt-1">Power</span>
 </div>
-<p class="text-on-surface mb-6 font-body leading-relaxed">
-                        At the <span class="italic">start of your turn</span>, gain <span class="text-primary font-bold">1 Soul</span>.
+<!-- Card 3: Harvest Moon (Rare) -->
+<div class="group relative bg-primary-container border border-secondary/60 rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:border-gold-shimmer hover:shadow-[0_0_40px_-5px_rgba(255,208,0,0.2)]">
+<div class="h-48 relative overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100" data-alt="An atmospheric fantasy landscape featuring a massive, blood-red moon hanging low over a misty graveyard. The moonlight casts long, dramatic shadows over ancient, weathered tombstones. Wisps of ghostly green spirits rise from the ground, drawn toward the celestial event. The style is moody, painterly, and evocative of gothic horror." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNHUkc50Ab60RlXn8co8ywHPnH9zIn5LBRMzfaBLtwT0LpEtxvelfb7ZCpVAcqaIKLOWCbToW6wb5JH3dxW2zTloGiC2xUJA7SLYNXtJ-mbpdCJ3NVlXCs3uhOtaATWSOAQuPMe8CE4PKRFA4TTUvOWUC6hoIZkwTBXSJxePWHcM3AzQyrMhC7xfZsJ6cyLtaSmdAItBeR3fFGM1WF42CWeDzXM6BzA30JJ6e6Xjrkw0DDq3pIqjwkkRS3X-Xyuac6Qu6KHN0SaYuU"/>
+<div class="absolute top-3 right-3 w-10 h-10 rounded-full bg-background border-2 border-gold-shimmer flex items-center justify-center font-headline text-xl font-bold text-gold-shimmer rare-glow">3</div>
+<div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-background to-transparent">
+<span class="text-[10px] font-bold uppercase tracking-widest text-gold-shimmer bg-background/60 px-2 py-0.5 rounded border border-gold-shimmer/40">Power</span>
+</div>
+</div>
+<div class="p-5 flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<h3 class="font-headline text-2xl font-bold text-gold-shimmer leading-none">Harvest Moon</h3>
+<span class="text-[10px] font-bold text-gold-shimmer uppercase tracking-tighter">Rare</span>
+</div>
+<p class="font-body text-sm text-on-surface-variant leading-snug h-12">
+                        At the start of your turn, gain 2 Souls. Your <span class="text-primary italic">Soul Weaving</span> cards cost 0 this turn.
                     </p>
-<div class="mt-auto pt-4 border-t border-secondary/10 flex items-center justify-between text-[11px] font-label text-on-surface-variant uppercase tracking-tighter italic">
-<span>Ascended mastery</span>
-<span>Codex p. 89</span>
+<div class="flex flex-wrap gap-2 mt-2">
+<span class="px-2 py-0.5 rounded-full border border-secondary/20 text-[10px] font-bold text-secondary bg-secondary/5 uppercase">Soul Weaving</span>
+<span class="px-2 py-0.5 rounded-full border border-secondary/20 text-[10px] font-bold text-secondary bg-secondary/5 uppercase">Elite</span>
 </div>
-<div class="mt-4 flex flex-wrap gap-2"><span class="px-2 py-0.5 bg-secondary/20 text-secondary text-[10px] font-bold uppercase tracking-widest rounded border border-secondary/30">Synergy: Power-heavy builds</span></div></div>
-<div class="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-secondary/40"></div>
-</article>
 </div>
-<!-- Sidebar / Additional Context (Wiki Style) -->
-<section class="mt-20 grid grid-cols-1 lg:grid-cols-3 gap-8">
-<div class="lg:col-span-2">
-<h2 class="text-3xl font-bold text-secondary mb-6 flex items-center gap-3">
-<span class="material-symbols-outlined text-primary">auto_awesome</span>
-                    The Soul Mechanic
-                </h2>
-<div class="bg-surface-container border-l-4 border-primary p-6 rounded-r-lg">
-<p class="text-on-surface-variant mb-4 font-body italic leading-relaxed">
-                        "The soul is not a singular essence, but a currency of the beyond. To bind it is to command the very threads of existence." — Arch-Necrobinder Malakor
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold-shimmer/50 to-transparent"></div>
+</div>
+<!-- Card 4: Ghostly Presence -->
+<div class="group relative bg-primary-container border border-secondary/30 rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:border-secondary hover:shadow-[0_10px_30px_-10px_rgba(181,204,192,0.3)]">
+<div class="h-48 relative overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100" data-alt="A shadowy, hooded figure standing in a dark forest, their form partially dissolving into black mist and swirling embers. Glowing eyes peek from the darkness of the hood. The forest floor is covered in glowing mushrooms that cast a pale green light on the figure's translucent cloak. High-detail digital painting with heavy focus on light and shadow." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJHGJcbKooTxq_d6LWv8CWU9HTIUd9Vcfs1kWkxAlGoNBsU5cHOKhMFEKNr5oevuhdQB3Yl8z74MCqYgZU8BD_hIoRtnB6iF0NFQCxBgixhy7fwUaQsq6lAmIrbsNjZNq3j62T0KnxrlDGRxlH4BvsfoGfVktHOXWveK6ccTatsiwkcZZ2jlzYmfeY9L47Lk_JA7hpWuhmzi6qb5d1AXPYvcLqVsqqhoWnEmG_b2xckHFpRD4wW4DXON7l7p52MzbZiyOVETs3SJPw"/>
+<div class="absolute top-3 right-3 w-10 h-10 rounded-full bg-background border-2 border-primary flex items-center justify-center font-headline text-xl font-bold text-primary">0</div>
+<div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-background to-transparent">
+<span class="text-[10px] font-bold uppercase tracking-widest text-secondary bg-background/60 px-2 py-0.5 rounded border border-secondary/40">Skill</span>
+</div>
+</div>
+<div class="p-5 flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<h3 class="font-headline text-2xl font-bold text-ethereal-white leading-none">Ghostly Presence</h3>
+<span class="text-[10px] font-bold text-on-surface-variant/70 uppercase">Uncommon</span>
+</div>
+<p class="font-body text-sm text-on-surface-variant leading-snug h-12">
+                        Draw 2 cards. If you have no cards in your discard pile, gain 1 <span class="text-gold-shimmer">Energy</span>.
                     </p>
-<p class="text-on-surface font-body leading-relaxed">
-                        Souls are a unique resource for the Necrobinder class. Unlike Energy, Souls persist between turns but are cleared at the end of combat. Many cards either generate Souls (Harvest cards) or consume them for devastating effects (Blight cards). Managing your Soul count is vital for navigating Elite encounters and Boss battles.
+<div class="flex flex-wrap gap-2 mt-2">
+<span class="px-2 py-0.5 rounded-full border border-primary/20 text-[10px] font-bold text-primary bg-primary/5 uppercase">Ethereal</span>
+</div>
+</div>
+</div>
+<!-- Card 5: Bone Shatter -->
+<div class="group relative bg-primary-container border border-secondary/30 rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:border-secondary hover:shadow-[0_10px_30px_-10px_rgba(181,204,192,0.3)]">
+<div class="h-48 relative overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100" data-alt="A dramatic close-up of a skull being crushed by invisible psychic force, with fragments and shards of bone exploding outward in slow motion. The background is a void of dark teal and charcoal smoke. Cinematic lighting highlights the texture of the bone and the violent energy of the shatter effect." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEvL63S1eZzzTGhX06Qx78BmA67jrA0D25AmsGPUBWqNx36H6loil1uKuYX6o3j-Cbd0RAmP078EDGLgvecK8Dtz8AGMWSUHxq0aP976rJpxPpjZm8oObcNnz74CFp6GZN4m307Zr-9_KCvHzZc9adRS3zFjw3wnwtPIAdk2_9eeHEfYdrqVbYWgIbY92aUmqV1RODtbq23i2K4KwhI-T1uym7IAh91q-fyB2GZ6hTj7kXtper70V1iyGIzlxN8yYPp5YYwqWqN9pJ"/>
+<div class="absolute top-3 right-3 w-10 h-10 rounded-full bg-background border-2 border-primary flex items-center justify-center font-headline text-xl font-bold text-primary">2</div>
+<div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-background to-transparent">
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary bg-background/60 px-2 py-0.5 rounded border border-primary/40">Attack</span>
+</div>
+</div>
+<div class="p-5 flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<h3 class="font-headline text-2xl font-bold text-ethereal-white leading-none">Bone Shatter</h3>
+<span class="text-[10px] font-bold text-on-surface-variant/70 uppercase">Common</span>
+</div>
+<p class="font-body text-sm text-on-surface-variant leading-snug h-12">
+                        Deal 14 damage. Apply 2 <span class="text-error">Vulnerable</span>. If the enemy dies, heal 3 HP.
                     </p>
+<div class="flex flex-wrap gap-2 mt-2">
+<span class="px-2 py-0.5 rounded-full border border-primary/20 text-[10px] font-bold text-primary bg-primary/5 uppercase">Graveyard</span>
 </div>
 </div>
-<aside class="space-y-6">
-<div class="bg-surface-container-high p-6 rounded-lg border border-secondary/20">
-<h3 class="text-xl font-bold text-secondary mb-4 uppercase tracking-widest text-sm">Class Statistics</h3>
-<ul class="space-y-3 font-label text-label-md">
-<li class="flex justify-between border-b border-outline-variant/30 pb-2">
-<span class="text-on-surface-variant">Starting HP</span>
-<span class="text-primary">68 / 68</span>
-</li>
-<li class="flex justify-between border-b border-outline-variant/30 pb-2">
-<span class="text-on-surface-variant">Initial Gold</span>
-<span class="text-primary">99</span>
-</li>
-<li class="flex justify-between border-b border-outline-variant/30 pb-2">
-<span class="text-on-surface-variant">Card Pool</span>
-<span class="text-primary">72 Cards</span>
-</li>
-</ul>
 </div>
-<div class="bg-surface-container-high p-6 rounded-lg border border-secondary/20">
-<h3 class="text-xl font-bold text-secondary mb-4 uppercase tracking-widest text-sm">Keywords</h3>
-<div class="flex flex-wrap gap-2">
-<span class="px-2 py-1 bg-deep-forest border border-secondary/50 rounded text-xs text-on-surface">Soul</span>
-<span class="px-2 py-1 bg-deep-forest border border-secondary/50 rounded text-xs text-on-surface">Bone</span>
-<span class="px-2 py-1 bg-deep-forest border border-secondary/50 rounded text-xs text-on-surface">Blight</span>
-<span class="px-2 py-1 bg-deep-forest border border-secondary/50 rounded text-xs text-on-surface">Exhaust</span>
+<!-- Card 6: Reanimate -->
+<div class="group relative bg-primary-container border border-secondary/30 rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:border-secondary hover:shadow-[0_10px_30px_-10px_rgba(181,204,192,0.3)]">
+<div class="h-48 relative overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100" data-alt="A skeletal hand reaching up from a pile of dark, loamy soil under a cold blue light. The soil is churning as more of the skeleton begins to emerge. Ghostly trails of energy connect the hand to an unseen source of necromantic power. The style is detailed and gritty, with a strong sense of movement and unnatural life." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCILz4-fedpzQoXxLYYNB4hV1hXL4CadgwUqfH_cIVN2KMiPdRgdWUq7lgvu4hb_SMyhtnxuvlDt_f6XER5xNwspIdL28FlvhpULOAB5TV7KeNvZuNc3rRXu0efdrxp_Tf2UBDFpUdRYzN7_bwKC76EGTDqNNv3pYSSUGkIjALewZPRb110JxcCgGFDbQQcUSzQKyJBMAd3CkhRkbu_GUMYpi8aiJJBC1XkyI6CVyExIOKPiAi6qwDNBwBetrJTfOftWzeOip2e1tAi"/>
+<div class="absolute top-3 right-3 w-10 h-10 rounded-full bg-background border-2 border-primary flex items-center justify-center font-headline text-xl font-bold text-primary">1</div>
+<div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-background to-transparent">
+<span class="text-[10px] font-bold uppercase tracking-widest text-secondary bg-background/60 px-2 py-0.5 rounded border border-secondary/40">Skill</span>
 </div>
 </div>
-</aside>
-</section>
+<div class="p-5 flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<h3 class="font-headline text-2xl font-bold text-ethereal-white leading-none">Reanimate</h3>
+<span class="text-[10px] font-bold text-on-surface-variant/70 uppercase">Uncommon</span>
+</div>
+<p class="font-body text-sm text-on-surface-variant leading-snug h-12">
+                        Put a random <span class="text-primary italic">Attack</span> from your discard pile into your hand. It costs 0 this turn.
+                    </p>
+<div class="flex flex-wrap gap-2 mt-2">
+<span class="px-2 py-0.5 rounded-full border border-primary/20 text-[10px] font-bold text-primary bg-primary/5 uppercase">Soul Weaving</span>
+</div>
+</div>
+</div>
+<!-- Card 7: Grave Pact -->
+<div class="group relative bg-primary-container border border-secondary/60 rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:border-gold-shimmer hover:shadow-[0_0_40px_-5px_rgba(255,208,0,0.2)]">
+<div class="h-48 relative overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100" data-alt="A ritualistic scene showing two skeletal hands clasped together over an ancient, glowing tome. Gold dust and eldritch runes float in the air around the pact. The lighting is low-key, with a warm golden glow emanating from the book, contrasting with the cold, dark greens of the necromancer's chamber." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzdvDMvGxkH_E-x6Tg35u7eckQalGVnHoBAs_uSe5wSUxwDnWy7HNGMffrFZTvQ1b3qJRCaBpYSCMhR20CzMT4e5EWMnjtjCSZW1chIBtnGcuyIGUo81BZE385lb4JX5Amygq66ZsbNKp_9CtmmYDGQU6hVNUSFLMIX_slQSiRphCqK5NtGIScZ33VfWu_oBvna9EpkWrBHg4KoU0_D6S91q_6OcjJWWMLQOSTMJZIGf5g_Rj9br5wq0-D-u3BZ2988xDnLJjpXICl"/>
+<div class="absolute top-3 right-3 w-10 h-10 rounded-full bg-background border-2 border-gold-shimmer flex items-center justify-center font-headline text-xl font-bold text-gold-shimmer rare-glow">2</div>
+<div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-background to-transparent">
+<span class="text-[10px] font-bold uppercase tracking-widest text-gold-shimmer bg-background/60 px-2 py-0.5 rounded border border-gold-shimmer/40">Power</span>
+</div>
+</div>
+<div class="p-5 flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<h3 class="font-headline text-2xl font-bold text-gold-shimmer leading-none">Grave Pact</h3>
+<span class="text-[10px] font-bold text-gold-shimmer uppercase tracking-tighter">Rare</span>
+</div>
+<p class="font-body text-sm text-on-surface-variant leading-snug h-12">
+                        Whenever an <span class="text-primary italic">Ethereal</span> card is Exhausted, gain 4 Block and 1 <span class="text-secondary">Soul</span>.
+                    </p>
+<div class="flex flex-wrap gap-2 mt-2">
+<span class="px-2 py-0.5 rounded-full border border-secondary/20 text-[10px] font-bold text-secondary bg-secondary/5 uppercase">Graveyard</span>
+<span class="px-2 py-0.5 rounded-full border border-secondary/20 text-[10px] font-bold text-secondary bg-secondary/5 uppercase">Ethereal</span>
+</div>
+</div>
+</div>
+<!-- Card 8: Wight's Breath -->
+<div class="group relative bg-primary-container border border-secondary/30 rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:border-secondary hover:shadow-[0_10px_30px_-10px_rgba(181,204,192,0.3)]">
+<div class="h-48 relative overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100" data-alt="A chilling digital art piece showing a cloud of freezing, pale blue mist being exhaled from a shadowy, formless maw. Frost patterns crawl across the surface of the image. The lighting is cold and clinical, highlighting the jagged, icy particles within the breath. The style is minimalist yet texture-rich." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT4Qn2j2c7fxINBrNgbaASdRmPxURt8l_jSWDWKUc5rsPKgRmtXB9FhQ159H2zT6mRiUeCsHoI1_0oF7-VF48ZPSqhW65ZiaVyFkEo7ah2QnNeXxa7OeRFaxNwXrlzcq_jG7IWBRIlkEDxiUtZJ-Xtrt6yrUkaOXCoW-MoVaVcsD-8VVIyYaZ_z8Ca_NMghS-Qw_51lrQofG5Kvuzk6h2HsXtvCHRT0qSwMTfQS1SAI5oIXH2c1uJGU8abLH2EVpLsruqE_9pQsFz2"/>
+<div class="absolute top-3 right-3 w-10 h-10 rounded-full bg-background border-2 border-primary flex items-center justify-center font-headline text-xl font-bold text-primary">1</div>
+<div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-background to-transparent">
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary bg-background/60 px-2 py-0.5 rounded border border-primary/40">Attack</span>
+</div>
+</div>
+<div class="p-5 flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<h3 class="font-headline text-2xl font-bold text-ethereal-white leading-none">Wight's Breath</h3>
+<span class="text-[10px] font-bold text-on-surface-variant/70 uppercase">Uncommon</span>
+</div>
+<p class="font-body text-sm text-on-surface-variant leading-snug h-12">
+                        Deal 6 damage. Apply 2 <span class="text-primary">Weak</span>. <span class="text-secondary italic">Spectral Dominion:</span> If you have a minion, apply to all enemies.
+                    </p>
+<div class="flex flex-wrap gap-2 mt-2">
+<span class="px-2 py-0.5 rounded-full border border-primary/20 text-[10px] font-bold text-primary bg-primary/5 uppercase">Spectral Dominion</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Load More Section -->
+<section class="mt-20 p-8 rounded-xl border border-primary/20 bg-primary/5"><div class="flex items-center gap-4 mb-6"><span class="material-symbols-outlined text-primary">auto_awesome</span><h2 class="font-headline text-3xl font-bold text-ethereal-white tracking-tight">Relic Synergies</h2></div><div class="grid grid-cols-1 md:grid-cols-2 gap-8"><div class="flex gap-4"><div class="w-12 h-12 rounded bg-surface-container-highest flex items-center justify-center shrink-0 border border-secondary/30"><span class="material-symbols-outlined text-secondary">lightbulb</span></div><div><h4 class="font-headline text-xl text-secondary mb-1">Lantern</h4><p class="text-sm text-on-surface-variant leading-relaxed">Gain 1 Energy at the start of each combat. Perfect for setting up expensive <span class="text-primary">Spectral Dominion</span> manifestations early.</p></div></div><div class="flex gap-4"><div class="w-12 h-12 rounded bg-surface-container-highest flex items-center justify-center shrink-0 border border-secondary/30"><span class="material-symbols-outlined text-secondary">origami</span></div><div><h4 class="font-headline text-xl text-secondary mb-1">Paper Crane</h4><p class="text-sm text-on-surface-variant leading-relaxed">Enemies with <span class="text-primary">Weak</span> deal 40% less damage. Synergizes with <span class="text-ethereal-white">Wight's Breath</span> to provide massive survivability.</p></div></div></div></section><div class="mt-20 flex justify-center">
+<button class="relative px-12 py-4 bg-transparent border-2 border-secondary text-secondary font-headline text-xl font-bold rounded-lg group transition-all hover:bg-secondary hover:text-on-secondary active:scale-95">
+<span class="relative z-10">Expand the Necropolis</span>
+<div class="absolute inset-0 bg-gold-shimmer opacity-0 group-hover:opacity-10 transition-opacity blur-xl"></div>
+</button>
+</div>
 </main>
 <!-- BottomNavBar -->
-<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center h-20 px-2 pb-safe border-t border-secondary/30 bg-surface-container-high z-50">
-<button class="flex flex-col items-center justify-center text-on-surface-variant opacity-70 hover:opacity-100 transition-all">
-<span class="material-symbols-outlined">menu_book</span>
-<span class="font-label text-label-sm font-semibold">Glossary</span>
-</button>
-<button class="flex flex-col items-center justify-center text-secondary bg-primary-container/40 rounded-xl px-3 py-1">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">style</span>
-<span class="font-label text-label-sm font-semibold">Cards</span>
-</button>
-<button class="flex flex-col items-center justify-center text-on-surface-variant opacity-70 hover:opacity-100 transition-all">
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-2 bg-surface-container-high border-t border-secondary/30 shadow-2xl md:hidden">
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-container-highest transition-all active:scale-90 duration-150" href="glossary.html">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="font-label text-[10px] font-bold uppercase tracking-wider mt-1">Glossary</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary-fixed bg-primary-container rounded-xl p-2 hover:bg-surface-container-highest transition-all active:scale-90 duration-150" href="index.html">
+<span class="material-symbols-outlined">style</span>
+<span class="font-label text-[10px] font-bold uppercase tracking-wider mt-1">Library</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-container-highest transition-all active:scale-90 duration-150" href="relics.html">
 <span class="material-symbols-outlined">auto_awesome</span>
-<span class="font-label text-label-sm font-semibold">Relics</span>
-</button>
-<button class="flex flex-col items-center justify-center text-on-surface-variant opacity-70 hover:opacity-100 transition-all">
-<span class="material-symbols-outlined">pest_control_rodent</span>
-<span class="font-label text-label-sm font-semibold">Bestiary</span>
-</button>
+<span class="font-label text-[10px] font-bold uppercase tracking-wider mt-1">Relics</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-container-highest transition-all active:scale-90 duration-150" href="bestiary.html">
+<span class="material-symbols-outlined">skull</span>
+<span class="font-label text-[10px] font-bold uppercase tracking-wider mt-1">Bestiary</span>
+</a>
 </nav>
-<!-- Interactive script for some hover flair -->
 <script>
-        document.querySelectorAll('article').forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                card.style.setProperty('--mouse-x', `${x}px`);
-                card.style.setProperty('--mouse-y', `${y}px`);
+        // Micro-interactions for hover states
+        document.querySelectorAll('.group').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                // Potential for JS based atmospheric particle effects inside card
             });
         });
     </script>

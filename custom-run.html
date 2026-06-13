@@ -1,0 +1,328 @@
+<!-- Custom Run Modifiers - Spire Tome Wiki -->
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Custom Run Modifiers - Spire Tome Wiki</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&amp;family=Hanken+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "#690005",
+                    "on-primary": "#20342c",
+                    "tertiary": "#b9c9ce",
+                    "on-tertiary-fixed": "#0f1e21",
+                    "primary-container": "#1a2e26",
+                    "on-primary-fixed-variant": "#374b42",
+                    "surface-variant": "#393333",
+                    "on-error-container": "#ffdad6",
+                    "inverse-surface": "#ebe0e0",
+                    "error": "#ffb4ab",
+                    "inverse-primary": "#4e6359",
+                    "on-tertiary": "#243337",
+                    "tertiary-fixed-dim": "#b9c9ce",
+                    "surface-tint": "#b5ccc0",
+                    "surface-container-low": "#1f1a1a",
+                    "on-secondary-container": "#332900",
+                    "outline": "#8c928e",
+                    "primary-fixed-dim": "#b5ccc0",
+                    "tertiary-fixed": "#d5e5ea",
+                    "surface-dim": "#171212",
+                    "on-secondary-fixed": "#231b00",
+                    "secondary": "#e7c442",
+                    "surface-container-highest": "#393333",
+                    "inverse-on-surface": "#352f2f",
+                    "outline-variant": "#424845",
+                    "on-tertiary-container": "#849498",
+                    "secondary-container": "#ad8e00",
+                    "on-tertiary-fixed-variant": "#3a494d",
+                    "surface-container-high": "#2e2929",
+                    "primary-fixed": "#d0e8dc",
+                    "on-background": "#ebe0e0",
+                    "on-surface": "#ebe0e0",
+                    "error-container": "#93000a",
+                    "secondary-fixed-dim": "#e7c442",
+                    "surface-bright": "#3e3838",
+                    "surface": "#171212",
+                    "on-secondary-fixed-variant": "#564500",
+                    "tertiary-container": "#1d2c30",
+                    "on-primary-container": "#80968b",
+                    "surface-container": "#231e1e",
+                    "surface-container-lowest": "#110d0d",
+                    "on-primary-fixed": "#0b1f18",
+                    "background": "#171212",
+                    "secondary-fixed": "#ffe17c",
+                    "primary": "#b5ccc0",
+                    "on-secondary": "#3b2f00",
+                    "on-surface-variant": "#c2c8c3",
+                    "gold-shimmer": "#FFD000",
+                    "ethereal-white": "#E6E6E6",
+                    "deep-forest": "#0D1A15",
+                    "relic-bronze": "#7A6200"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["EB Garamond", "serif"],
+                    "display": ["EB Garamond", "serif"],
+                    "body": ["Hanken Grotesk", "sans-serif"],
+                    "label": ["Hanken Grotesk", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #171212;
+            color: #ebe0e0;
+            font-family: 'Hanken Grotesk', sans-serif;
+        }
+        .font-headline { font-family: 'EB Garamond', serif; }
+        .font-body { font-family: 'Hanken Grotesk', sans-serif; }
+
+        /* Subtle texture for cards */
+        .card-texture {
+            background-image: url("https://www.transparenttextures.com/patterns/dark-matter.png");
+            background-repeat: repeat;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="bg-surface-container-low border-b border-secondary/30 docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-screen-xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl">menu_book</span>
+<h1 class="font-headline text-headline-lg font-bold text-secondary">Spire Aethelgard</h1>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex gap-8">
+<a class="text-on-surface-variant hover:text-gold-shimmer transition-colors duration-200 font-label text-label-md uppercase tracking-widest" href="symbols.html">Compendium</a>
+<a class="text-secondary font-bold hover:text-gold-shimmer transition-colors duration-200 font-label text-label-md uppercase tracking-widest" href="custom-run.html">Custom Run</a>
+<a class="text-on-surface-variant hover:text-gold-shimmer transition-colors duration-200 font-label text-label-md uppercase tracking-widest" href="index.html">Library</a>
+</nav>
+<button class="material-symbols-outlined text-primary text-2xl active:scale-95 transition-transform">search</button>
+</div>
+</div>
+</header>
+<main class="max-w-4xl mx-auto px-6 mt-12 mb-20">
+<!-- Hero / Headline Section -->
+<div class="text-center mb-16 relative">
+<div class="absolute -top-12 left-1/2 -translate-x-1/2 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[160px]">auto_awesome</span>
+</div>
+<h2 class="font-headline text-5xl md:text-6xl font-bold mb-4 tracking-tight">Reality Warping Lexicon</h2>
+<p class="text-on-surface-variant font-body text-lg max-w-2xl mx-auto italic">
+                A comprehensive guide to the mystical strings that bind the Spire's reality. Adjust these modifers to forge your own path or face a certain doom.
+            </p>
+</div>
+<!-- Search Bar -->
+<div class="relative mb-16 max-w-2xl mx-auto group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-secondary/50 group-focus-within:text-gold-shimmer transition-colors">filter_list</span>
+<input class="w-full bg-deep-forest border border-secondary/30 rounded-xl py-4 pl-12 pr-4 text-ethereal-white placeholder:text-on-surface-variant/40 focus:ring-2 focus:ring-secondary/50 focus:border-gold-shimmer outline-none transition-all font-body" placeholder="Filter modifiers by name or effect..." type="text"/>
+</div>
+<!-- Section: Boons -->
+<section class="mb-16">
+<div class="flex items-center gap-4 mb-8 border-l-4 border-primary pl-4">
+<span class="material-symbols-outlined text-primary text-3xl">stat_3</span>
+<h3 class="font-headline text-3xl font-semibold">Positive Modifiers (Boons)</h3>
+</div>
+<div class="space-y-4">
+<!-- Draft -->
+<div class="group relative bg-surface-container border border-secondary/20 rounded-xl p-6 hover:border-primary/60 transition-all card-texture overflow-hidden">
+<div class="flex items-start gap-5">
+<div class="bg-primary-container p-3 rounded-lg text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">cards</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-center mb-2">
+<h4 class="font-headline text-2xl text-ethereal-white">Draft</h4>
+<span class="px-3 py-1 bg-primary/10 border border-primary/30 text-primary rounded-full text-xs font-bold font-label tracking-tighter">BOON</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed">Choose your starting deck by drafting from several sets of cards. Allows for high-synergy archetypes from floor one.</p>
+</div>
+</div>
+</div>
+<!-- Sealed Deck -->
+<div class="group relative bg-surface-container border border-secondary/20 rounded-xl p-6 hover:border-primary/60 transition-all card-texture overflow-hidden">
+<div class="flex items-start gap-5">
+<div class="bg-primary-container p-3 rounded-lg text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">inventory</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-center mb-2">
+<h4 class="font-headline text-2xl text-ethereal-white">Sealed Deck</h4>
+<span class="px-3 py-1 bg-primary/10 border border-primary/30 text-primary rounded-full text-xs font-bold font-label tracking-tighter">BOON</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed">Open 10 booster packs and build a deck of 30 cards from the pool. Provides immediate strategic depth.</p>
+</div>
+</div>
+</div>
+<!-- Shiny -->
+<div class="group relative bg-surface-container border border-gold-shimmer/30 rounded-xl p-6 hover:border-gold-shimmer transition-all card-texture overflow-hidden shadow-inner">
+<div class="flex items-start gap-5">
+<div class="bg-secondary/20 p-3 rounded-lg text-gold-shimmer group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-center mb-2">
+<h4 class="font-headline text-2xl text-gold-shimmer">Shiny</h4>
+<span class="px-3 py-1 bg-secondary/10 border border-gold-shimmer text-gold-shimmer rounded-full text-xs font-bold font-label tracking-tighter">RARE BOON</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed">All card rewards are guaranteed to be Rare. Transform your deck into a collection of legends.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Handicaps -->
+<section class="mb-16">
+<div class="flex items-center gap-4 mb-8 border-l-4 border-error pl-4">
+<span class="material-symbols-outlined text-error text-3xl">trending_down</span>
+<h3 class="font-headline text-3xl font-semibold">Negative Modifiers (Handicaps)</h3>
+</div>
+<div class="space-y-4">
+<!-- Cursed -->
+<div class="group relative bg-surface-container border border-error/20 rounded-xl p-6 hover:border-error/60 transition-all card-texture overflow-hidden">
+<div class="flex items-start gap-5">
+<div class="bg-error-container p-3 rounded-lg text-error group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">skull</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-center mb-2">
+<h4 class="font-headline text-2xl text-ethereal-white">Cursed</h4>
+<span class="px-3 py-1 bg-error/10 border border-error/30 text-error rounded-full text-xs font-bold font-label tracking-tighter uppercase">Handicap</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed">Start the run with two random Curses. Every boss chest will also contain an additional Curse.</p>
+</div>
+</div>
+</div>
+<!-- Deadly Events -->
+<div class="group relative bg-surface-container border border-error/20 rounded-xl p-6 hover:border-error/60 transition-all card-texture overflow-hidden">
+<div class="flex items-start gap-5">
+<div class="bg-error-container p-3 rounded-lg text-error group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">warning</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-center mb-2">
+<h4 class="font-headline text-2xl text-ethereal-white">Deadly Events</h4>
+<span class="px-3 py-1 bg-error/10 border border-error/30 text-error rounded-full text-xs font-bold font-label tracking-tighter uppercase">Handicap</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed">Unknown nodes are significantly more likely to contain Elites or high-damage combat encounters.</p>
+</div>
+</div>
+</div>
+<!-- Terminal -->
+<div class="group relative bg-surface-container border border-error/20 rounded-xl p-6 hover:border-error/60 transition-all card-texture overflow-hidden">
+<div class="flex items-start gap-5">
+<div class="bg-error-container p-3 rounded-lg text-error group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">timer_off</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-center mb-2">
+<h4 class="font-headline text-2xl text-ethereal-white">Terminal</h4>
+<span class="px-3 py-1 bg-error/10 border border-error/30 text-error rounded-full text-xs font-bold font-label tracking-tighter uppercase">Handicap</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed">Whenever you enter a new room, lose 1 Max HP. Time is your greatest enemy in the Spire.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Structural -->
+<section class="mb-16">
+<div class="flex items-center gap-4 mb-8 border-l-4 border-secondary pl-4">
+<span class="material-symbols-outlined text-secondary text-3xl">account_tree</span>
+<h3 class="font-headline text-3xl font-semibold">Neutral/Structural</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Endless -->
+<div class="group bg-surface-container-high border border-secondary/20 rounded-xl p-6 hover:bg-surface-bright transition-all card-texture h-full flex flex-col">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-secondary text-2xl">all_inclusive</span>
+<h4 class="font-headline text-xl text-ethereal-white">Endless</h4>
+</div>
+<p class="text-on-surface-variant text-sm flex-grow mb-4">The run does not end after defeating the final boss. Enemies scale infinitely as you loop through the Spire.</p>
+<span class="inline-block self-start px-3 py-1 bg-secondary/5 border border-secondary/20 text-on-surface-variant text-[10px] font-bold font-label tracking-widest uppercase">Structural</span>
+</div>
+<!-- Flight -->
+<div class="group bg-surface-container-high border border-secondary/20 rounded-xl p-6 hover:bg-surface-bright transition-all card-texture h-full flex flex-col">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-secondary text-2xl">air</span>
+<h4 class="font-headline text-xl text-ethereal-white">Flight</h4>
+</div>
+<p class="text-on-surface-variant text-sm flex-grow mb-4">You may move to any node on the next floor, regardless of connections. Freedom of choice is yours.</p>
+<span class="inline-block self-start px-3 py-1 bg-secondary/5 border border-secondary/20 text-on-surface-variant text-[10px] font-bold font-label tracking-widest uppercase">Structural</span>
+</div>
+<!-- Inception -->
+<div class="md:col-span-2 group bg-surface-container-high border border-secondary/20 rounded-xl p-6 hover:bg-surface-bright transition-all card-texture h-full flex flex-col">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-secondary text-2xl">cached</span>
+<h4 class="font-headline text-xl text-ethereal-white">Inception</h4>
+</div>
+<p class="text-on-surface-variant text-sm flex-grow mb-4">Start with the Unceasing Top relic. Every time your hand is empty, draw a card.</p>
+<span class="inline-block self-start px-3 py-1 bg-secondary/5 border border-secondary/20 text-on-surface-variant text-[10px] font-bold font-label tracking-widest uppercase">Structural</span>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-3 pb-safe bg-surface-container-lowest border-t border-secondary/30 shadow-2xl z-50 md:hidden">
+<div class="flex flex-col items-center justify-center text-on-surface-variant opacity-70">
+<span class="material-symbols-outlined">stat_3</span>
+<span class="font-label text-label-sm font-bold uppercase tracking-wider">Boons</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant opacity-70">
+<span class="material-symbols-outlined">trending_down</span>
+<span class="font-label text-label-sm font-bold uppercase tracking-wider">Handicaps</span>
+</div>
+<div class="flex flex-col items-center justify-center text-secondary bg-primary-container/20 rounded-xl px-4 py-1">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">account_tree</span>
+<span class="font-label text-label-sm font-bold uppercase tracking-wider">Structural</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant opacity-70">
+<span class="material-symbols-outlined">search</span>
+<span class="font-label text-label-sm font-bold uppercase tracking-wider">Search</span>
+</div>
+</nav>
+<!-- FAB (Contextual for Custom Run) -->
+<button class="fixed right-6 bottom-24 md:bottom-12 w-16 h-16 bg-secondary text-on-secondary rounded-full shadow-2xl flex items-center justify-center active:scale-90 transition-transform hover:bg-gold-shimmer z-40">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<script>
+        // Simple search filtering logic
+        const searchInput = document.querySelector('input[type="text"]');
+        const cards = document.querySelectorAll('section > div > div');
+        searchInput.addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            cards.forEach(card => {
+                const text = card.innerText.toLowerCase();
+                if (text.includes(term)) {
+                    card.style.display = 'block';
+                    card.classList.add('animate-in');
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body></html>

@@ -1,4 +1,4 @@
-<!-- Compendium of Symbols - Spire Tome Wiki -->
+<!-- Symbols - Spire Tome Wiki (Combat Statuses Added) -->
 <!DOCTYPE html>
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
@@ -269,6 +269,14 @@
 <h4 class="font-headline text-lg text-ethereal-white mb-1">Rest Site</h4>
 <p class="text-on-surface-variant text-label-md">Allows the character to Rest (heal 30% HP) or Smith (upgrade a card). Other actions may be unlocked via relics.</p>
 </div>
+</div><div class="bento-card rounded-xl p-6 flex items-start gap-4 group">
+<div class="w-12 h-12 flex-shrink-0 bg-surface-container-high border border-outline-variant rounded-lg flex items-center justify-center text-secondary group-hover:bg-gold-shimmer group-hover:text-surface transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="featured_play_list">featured_play_list</span>
+</div>
+<div>
+<h4 class="font-headline text-lg text-ethereal-white mb-1">Treasure Room</h4>
+<p class="text-on-surface-variant text-label-md">A safe room containing a Chest with a Relic and often gold.</p>
+</div>
 </div>
 <!-- Boss/Stairs -->
 <div class="bento-card rounded-xl p-6 flex items-start gap-4 group">
@@ -282,7 +290,74 @@
 </div>
 </div>
 <!-- Reference Section -->
-<section class="mt-16 bg-surface-container-low rounded-xl p-8 border border-secondary/10">
+<!-- Category: Status Effects -->
+<div class="col-span-full mt-8 mb-2">
+<h3 class="font-headline text-2xl text-secondary border-l-4 border-secondary pl-4 flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="Skull">skull</span> Combat Status Effects
+</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+<!-- Vulnerable -->
+<div class="bento-card rounded-xl p-6 flex items-start gap-4 group">
+<div class="w-12 h-12 flex-shrink-0 bg-surface-container-high border border-outline-variant rounded-lg flex items-center justify-center text-error group-hover:bg-error group-hover:text-surface transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="flag">flag</span>
+</div>
+<div>
+<h4 class="font-headline text-lg text-ethereal-white mb-1">Vulnerable</h4>
+<p class="text-on-surface-variant text-label-md">The target takes 50% more damage from Attacks.</p>
+</div>
+</div>
+<!-- Weak -->
+<div class="bento-card rounded-xl p-6 flex items-start gap-4 group">
+<div class="w-12 h-12 flex-shrink-0 bg-surface-container-high border border-outline-variant rounded-lg flex items-center justify-center text-on-surface-variant group-hover:bg-secondary group-hover:text-surface transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="heart_broken">heart_broken</span>
+</div>
+<div>
+<h4 class="font-headline text-lg text-ethereal-white mb-1">Weak</h4>
+<p class="text-on-surface-variant text-label-md">The target deals 25% less damage with Attacks.</p>
+</div>
+</div>
+<!-- Frail -->
+<div class="bento-card rounded-xl p-6 flex items-start gap-4 group">
+<div class="w-12 h-12 flex-shrink-0 bg-surface-container-high border border-outline-variant rounded-lg flex items-center justify-center text-on-surface-variant group-hover:bg-primary group-hover:text-surface transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="shield_moon">shield_moon</span>
+</div>
+<div>
+<h4 class="font-headline text-lg text-ethereal-white mb-1">Frail</h4>
+<p class="text-on-surface-variant text-label-md">The target gains 25% less Block from cards.</p>
+</div>
+</div>
+<!-- Strength -->
+<div class="bento-card rounded-xl p-6 flex items-start gap-4 group">
+<div class="w-12 h-12 flex-shrink-0 bg-surface-container-high border border-outline-variant rounded-lg flex items-center justify-center text-error group-hover:bg-error group-hover:text-surface transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="swords">swords</span>
+</div>
+<div>
+<h4 class="font-headline text-lg text-ethereal-white mb-1">Strength</h4>
+<p class="text-on-surface-variant text-label-md">Increases damage dealt by Attacks.</p>
+</div>
+</div>
+<!-- Dexterity -->
+<div class="bento-card rounded-xl p-6 flex items-start gap-4 group">
+<div class="w-12 h-12 flex-shrink-0 bg-surface-container-high border border-outline-variant rounded-lg flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-surface transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="footprint">footprint</span>
+</div>
+<div>
+<h4 class="font-headline text-lg text-ethereal-white mb-1">Dexterity</h4>
+<p class="text-on-surface-variant text-label-md">Increases Block gained from cards.</p>
+</div>
+</div>
+<!-- Artifact -->
+<div class="bento-card rounded-xl p-6 flex items-start gap-4 group">
+<div class="w-12 h-12 flex-shrink-0 bg-surface-container-high border border-outline-variant rounded-lg flex items-center justify-center text-gold-shimmer group-hover:bg-gold-shimmer group-hover:text-surface transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="mask">mask</span>
+</div>
+<div>
+<h4 class="font-headline text-lg text-ethereal-white mb-1">Artifact</h4>
+<p class="text-on-surface-variant text-label-md">Negates the next de-buff applied.</p>
+</div>
+</div>
+</div><section class="mt-16 bg-surface-container-low rounded-xl p-8 border border-secondary/10">
 <h3 class="font-headline text-2xl text-secondary mb-6">Visual Style Reference</h3>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 <div class="space-y-3">
@@ -308,17 +383,6 @@
 <img alt="Sly Brand Mark" class="max-w-full h-12 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4xjvUymNSLujG-Z1Wr5OMo0gTBv-913b09CYnVry8jnr03Iz1Cf6qAEPiJL0StxWev4Lg9AgjEPS9sRdmELva10hbe3vretAygmyHvA3069OE_DJcPHxBLbIItoiMYh_KNqlv31B1hdurmwbSKEUhuUCfAEXXg9U1Zz2bT3Tj1g8jvoZy_uO_8-ItqdsEzHotHf_HabHpKKOZkszZexPr63Meraq7028y0EwUBxlCs-Zq9cG_aunheA30Lgf6O6Nbt06ucSGHPWlL"/>
 </div>
 <p class="text-label-sm text-center text-on-surface-variant italic">Ref 04: UI Branding (Sly.)</p>
-</div><div class="space-y-3">
-<div class="h-24 bg-surface-container flex items-center justify-center rounded-lg border border-outline-variant overflow-hidden">
-<img alt="Strategic Intent reference" class="max-w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9U0XT6JTdTQeTUS_LViC2EtptFT0Reu3buuHSfmEQkd3QDJPF8MEuCAyqxRnRNl8sZukz77KdZYdj8rqXzlS8xOMzkKWrxjIq0dkl2FZ8_Hmbf393o5JlNVEzN4cVRtOfd7ckvcHTcU3iRMfhiaDMHaKgjERwMlTO9-KGfKM5s306SoXXMNn1HTW7rBdCpNykSEhFxTtHKKSpD82_KOyj9vtIKMmcI_7gaM2tBAAEvmFgcns-tCSadwY8c_aO1_Uwlmlkf4d_yGW1"/>
-</div>
-<p class="text-label-sm text-center text-on-surface-variant italic">Ref 05: Strategic Intent</p>
-</div>
-<div class="space-y-3">
-<div class="h-24 bg-surface-container flex items-center justify-center rounded-lg border border-outline-variant overflow-hidden">
-<img alt="Debuff Iconography reference" class="max-w-full h-16 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxs1Ub4NFv9XJQKkAW7XM0_EsGy3Z6ak24qAA_4QNy7EqhczJk5mrqr4iHC1kJha4GxWVRAxtpow6RLAFOCGQfqC2gLLRbHsPtBIwQN7eK3RCdEzUbNos_QVc33T_eMZ2c9kvBmde_lGUp1xEEfoFPwy7T_OXHAo-DtIwAjOerooeTfaDajxhCep_2AGQ23fU08ixkzMlTINCMvnhsePHlrz3NY49Jx-_SVKfpQ256OdhDQxv19zJ39xQ7VqgcZG2-axhZ0Lg3-bDS"/>
-</div>
-<p class="text-label-sm text-center text-on-surface-variant italic">Ref 06: Debuff Iconography</p>
 </div></div>
 </section>
 </main>
