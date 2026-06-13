@@ -19,6 +19,10 @@ Slay the Spire 2 Wiki — "Spire Tome", a static deck-building reference wiki.
 | `merchant.html` | The Merchant's Bazaar — shop services and pricing |
 | `meta-progression.html` | Meta-Progression & Ascension — unlocks and run records |
 | `hud.html` | HUD & Exploration Mechanics — the Explorer's Interface |
+| `daily-challenges.html` | Daily Challenges & Global Modifiers |
+| `boss-patterns.html` | Boss Stratagems — boss phases and counters |
+| `ascension-levels.html` | Ascension Levels — stacking difficulty modifiers |
+| `achievements.html` | Achievements — Hall of Records & trophies |
 
 All pages are self-contained static HTML styled with Tailwind (via CDN), EB Garamond / Hanken Grotesk fonts, and Material Symbols icons. Top/side navigation links are wired between pages by their visible labels (e.g. Library, Cards, Relics, Bestiary, Map, Merchant). A few labels with no dedicated page yet (Settings, Lore) remain placeholder anchors.
 

@@ -1,0 +1,395 @@
+<!-- Boss Patterns - Spire Tome Bestiary -->
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Spire Tome | Boss Patterns</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&amp;family=Hanken+Grotesk:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#ad8e00",
+                    "surface-variant": "#393333",
+                    "on-primary": "#20342c",
+                    "surface-container-lowest": "#110d0d",
+                    "on-primary-container": "#80968b",
+                    "error": "#ffb4ab",
+                    "surface-container-high": "#2e2929",
+                    "tertiary": "#b9c9ce",
+                    "primary-fixed": "#d0e8dc",
+                    "on-surface-variant": "#c2c8c3",
+                    "secondary": "#e7c442",
+                    "on-surface": "#ebe0e0",
+                    "error-container": "#93000a",
+                    "on-secondary-fixed": "#231b00",
+                    "on-primary-fixed-variant": "#374b42",
+                    "surface": "#171212",
+                    "on-tertiary": "#243337",
+                    "background": "#171212",
+                    "on-error-container": "#ffdad6",
+                    "surface-tint": "#b5ccc0",
+                    "on-error": "#690005",
+                    "surface-bright": "#3e3838",
+                    "inverse-on-surface": "#352f2f",
+                    "on-primary-fixed": "#0b1f18",
+                    "inverse-primary": "#4e6359",
+                    "tertiary-container": "#1d2c30",
+                    "primary-fixed-dim": "#b5ccc0",
+                    "outline": "#8c928e",
+                    "on-tertiary-container": "#849498",
+                    "secondary-fixed-dim": "#e7c442",
+                    "tertiary-fixed-dim": "#b9c9ce",
+                    "on-tertiary-fixed-variant": "#3a494d",
+                    "surface-dim": "#171212",
+                    "inverse-surface": "#ebe0e0",
+                    "on-secondary-fixed-variant": "#564500",
+                    "on-tertiary-fixed": "#0f1e21",
+                    "primary-container": "#1a2e26",
+                    "on-secondary-container": "#332900",
+                    "tertiary-fixed": "#d5e5ea",
+                    "secondary-fixed": "#ffe17c",
+                    "on-secondary": "#3b2f00",
+                    "surface-container-highest": "#393333",
+                    "surface-container": "#231e1e",
+                    "primary": "#b5ccc0",
+                    "outline-variant": "#424845",
+                    "surface-container-low": "#1f1a1a",
+                    "on-background": "#ebe0e0",
+                    "gold-shimmer": "#FFD000",
+                    "ethereal-white": "#E6E6E6",
+                    "deep-forest": "#0D1A15",
+                    "relic-bronze": "#7A6200"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["EB Garamond", "serif"],
+                    "display": ["EB Garamond", "serif"],
+                    "body": ["Hanken Grotesk", "sans-serif"],
+                    "label": ["Hanken Grotesk", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .boss-card-glow:hover {
+            box-shadow: 0 0 15px rgba(231, 196, 66, 0.15);
+        }
+        .etched-border {
+            position: relative;
+        }
+        .etched-border::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #e7c4424d, transparent);
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body selection:bg-secondary-container selection:text-white">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center w-full px-4 md:px-12 h-16 border-b border-secondary/30 bg-surface fixed top-0 z-[100]">
+<div class="flex items-center gap-4">
+<a class="text-on-surface-variant hover:text-gold-shimmer transition-colors active:scale-95" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+</a>
+<span class="font-headline text-2xl font-bold text-secondary">Spire Tome</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex gap-4">
+<a class="font-label text-sm font-bold uppercase tracking-widest text-on-surface-variant hover:text-gold-shimmer transition-colors" href="index.html">Library</a>
+<a class="font-label text-sm font-bold uppercase tracking-widest text-gold-shimmer" href="bestiary.html">Bestiary</a>
+<a class="font-label text-sm font-bold uppercase tracking-widest text-on-surface-variant hover:text-gold-shimmer transition-colors" href="symbols.html">Compendium</a>
+</div>
+<button class="material-symbols-outlined text-primary active:scale-95 transition-transform">search</button>
+</div>
+</header>
+<main class="pt-24 pb-32 px-4 md:px-12 max-w-[1280px] mx-auto">
+<!-- Breadcrumb & Back Link -->
+<nav class="mb-8 flex items-center gap-2 group">
+<span class="material-symbols-outlined text-secondary text-sm">arrow_back</span>
+<a class="font-label text-sm font-semibold uppercase tracking-widest text-on-surface-variant group-hover:text-gold-shimmer transition-colors" href="bestiary.html">Back to Bestiary Archives</a>
+</nav>
+<!-- Page Header -->
+<header class="mb-12 border-l-4 border-secondary pl-6">
+<h1 class="font-headline text-5xl md:text-6xl font-bold text-on-surface mb-2">Boss Stratagems</h1>
+<p class="font-body text-lg text-on-surface-variant max-w-2xl italic">
+                Compiled observations of the Spire's most formidable entities. Study these sequences carefully; the Spire does not forgive ignorance.
+            </p>
+</header>
+<!-- Boss Content Grid (Bento Style) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Side Navigation / TOC -->
+<aside class="lg:col-span-3 space-y-4">
+<div class="bg-surface-container-low p-6 rounded-xl border border-secondary/20 shadow-xl sticky top-24">
+<h3 class="font-headline text-xl text-secondary mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined">skull</span> Archives
+                    </h3>
+<ul class="space-y-3">
+<li class="bg-primary-container text-secondary border-l-4 border-secondary p-3 flex items-center gap-3 cursor-pointer">
+<span class="material-symbols-outlined">precision_manufacturing</span>
+<span class="font-body font-semibold">The Bronze Warden</span>
+</li>
+<li class="p-3 text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface transition-colors flex items-center gap-3 cursor-pointer rounded-r-lg">
+<span class="material-symbols-outlined">hourglass_empty</span>
+<span class="font-body">Time-Eater Arkhos</span>
+</li>
+<li class="p-3 text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface transition-colors flex items-center gap-3 cursor-pointer rounded-r-lg">
+<span class="material-symbols-outlined">air</span>
+<span class="font-body">The Awakened One</span>
+</li>
+<li class="p-3 text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface transition-colors flex items-center gap-3 cursor-pointer rounded-r-lg opacity-50">
+<span class="material-symbols-outlined">lock</span>
+<span class="font-body italic">Corrupt Heart (Locked)</span>
+</li>
+</ul>
+</div>
+</aside>
+<!-- Main Documentation Canvas -->
+<section class="lg:col-span-9 space-y-12">
+<!-- Boss Entry: The Bronze Warden -->
+<div class="bg-surface-container p-1 md:p-8 rounded-xl border border-secondary/10 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-5">
+<span class="material-symbols-outlined text-[12rem]">settings</span>
+</div>
+<div class="relative z-10">
+<div class="flex flex-col md:flex-row justify-between items-start mb-8 gap-6">
+<div>
+<div class="flex items-center gap-3 mb-2">
+<span class="px-3 py-1 bg-secondary-container/20 text-secondary border border-secondary/40 rounded-full font-label text-xs font-bold uppercase tracking-tighter">Act II Apex</span>
+<span class="px-3 py-1 bg-error-container/20 text-error border border-error/40 rounded-full font-label text-xs font-bold uppercase tracking-tighter">Lethal Threat</span>
+</div>
+<h2 class="font-headline text-4xl font-bold text-on-surface">The Bronze Warden</h2>
+<p class="font-body text-on-surface-variant italic">Automated Sentinel of the Clockwork Spire</p>
+</div>
+<div class="bg-surface-container-high border border-secondary/30 p-4 rounded-lg flex gap-6 items-center shadow-inner">
+<div class="text-center">
+<p class="font-label text-[10px] text-on-surface-variant uppercase tracking-widest mb-1">Health</p>
+<p class="font-headline text-xl text-secondary">420 HP</p>
+</div>
+<div class="w-px h-8 bg-secondary/20"></div>
+<div class="text-center">
+<p class="font-label text-[10px] text-on-surface-variant uppercase tracking-widest mb-1">Defense</p>
+<p class="font-headline text-xl text-primary">Plated</p>
+</div>
+</div>
+</div>
+<!-- Phases -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+<!-- Phase 1 -->
+<div class="bg-surface-container-low border border-secondary/20 p-6 rounded-lg boss-card-glow transition-all">
+<h4 class="font-headline text-xl text-secondary mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">shield</span> Phase I: Guarding
+                                </h4>
+<div class="space-y-4">
+<div class="flex justify-between items-start border-b border-secondary/10 pb-3">
+<div>
+<p class="font-label text-xs text-on-primary-container font-bold">STASIS BEAM</p>
+<p class="text-sm text-on-surface-variant">Adds 2 'Dazed' to your deck.</p>
+</div>
+<span class="material-symbols-outlined text-primary text-sm">block</span>
+</div>
+<div class="flex justify-between items-start border-b border-secondary/10 pb-3">
+<div>
+<p class="font-label text-xs text-secondary font-bold">STEAM SMASH</p>
+<p class="text-sm text-on-surface-variant italic">12 x 2 Damage</p>
+</div>
+<span class="material-symbols-outlined text-error text-sm">swords</span>
+</div>
+<div class="flex justify-between items-start border-b border-secondary/10 pb-3">
+<div>
+<p class="font-label text-xs text-on-primary-container font-bold">CALIBRATE</p>
+<p class="text-sm text-on-surface-variant">Gain 3 Plated Armor.</p>
+</div>
+<span class="material-symbols-outlined text-primary text-sm">add_moderator</span>
+</div>
+</div>
+</div>
+<!-- Phase 2 -->
+<div class="bg-surface-container-low border border-error/20 p-6 rounded-lg boss-card-glow transition-all">
+<h4 class="font-headline text-xl text-error mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-error">priority_high</span> Phase II: Overdrive
+                                </h4>
+<p class="text-xs text-error/80 mb-4 font-label uppercase tracking-widest italic">Triggers below 50% HP</p>
+<div class="space-y-4">
+<div class="flex justify-between items-start border-b border-error/10 pb-3">
+<div>
+<p class="font-label text-xs text-error font-bold">HYPERBEAM</p>
+<p class="text-sm text-on-surface-variant">45 Damage. Stun self next turn.</p>
+</div>
+<span class="material-symbols-outlined text-error text-sm">bolt</span>
+</div>
+<div class="flex justify-between items-start border-b border-error/10 pb-3">
+<div>
+<p class="font-label text-xs text-secondary font-bold">WHIRLWIND</p>
+<p class="text-sm text-on-surface-variant">8 x 5 Damage. Hits all.</p>
+</div>
+<span class="material-symbols-outlined text-error text-sm">cyclone</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Strategic Advice -->
+<div class="bg-primary-container/30 border border-primary/20 p-6 rounded-lg">
+<h5 class="font-label text-sm text-primary font-bold uppercase tracking-widest mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined">lightbulb</span> Scholar's Strategy
+                            </h5>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                                The Warden prioritizes defense in the early rounds. Utilize <span class="text-secondary font-bold">Artifact</span> or <span class="text-secondary font-bold">Exhaust</span> cards to handle the 'Dazed' clutter. When it enters <span class="text-error font-bold">Hyperbeam Charge</span>, focus entirely on generating Block or use an Ethereal Potion. The stun window after Hyperbeam is your primary opening for high-cost attacks.
+                            </p>
+</div>
+</div>
+</div>
+<!-- Boss Entry: Time-Eater Arkhos -->
+<div class="bg-surface-container p-1 md:p-8 rounded-xl border border-secondary/10 relative overflow-hidden">
+<div class="absolute top-0 left-0 p-8 opacity-5">
+<span class="material-symbols-outlined text-[12rem]">hourglass_bottom</span>
+</div>
+<div class="relative z-10">
+<div class="flex flex-col md:flex-row justify-between items-start mb-8 gap-6">
+<div>
+<div class="flex items-center gap-3 mb-2">
+<span class="px-3 py-1 bg-secondary-container/20 text-secondary border border-secondary/40 rounded-full font-label text-xs font-bold uppercase tracking-tighter">Act III Final</span>
+<span class="px-3 py-1 bg-tertiary-container/20 text-tertiary border border-tertiary/40 rounded-full font-label text-xs font-bold uppercase tracking-tighter">Mystic Archetype</span>
+</div>
+<h2 class="font-headline text-4xl font-bold text-on-surface">Time-Eater Arkhos</h2>
+<p class="font-body text-on-surface-variant italic">Harvester of the Temporal Flow</p>
+</div>
+<div class="bg-surface-container-high border border-secondary/30 p-4 rounded-lg flex gap-6 items-center shadow-inner">
+<div class="text-center">
+<p class="font-label text-[10px] text-on-surface-variant uppercase tracking-widest mb-1">Health</p>
+<p class="font-headline text-xl text-secondary">560 HP</p>
+</div>
+<div class="w-px h-8 bg-secondary/20"></div>
+<div class="text-center">
+<p class="font-label text-[10px] text-on-surface-variant uppercase tracking-widest mb-1">Status</p>
+<p class="font-headline text-xl text-tertiary">Time Warp</p>
+</div>
+</div>
+</div>
+<!-- Special Mechanics (Triptych Layout) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+<div class="bg-surface-container-low p-4 border border-secondary/20 rounded-lg text-center">
+<span class="material-symbols-outlined text-secondary mb-2">history</span>
+<p class="font-label text-xs font-bold text-secondary uppercase mb-1">Time Warp</p>
+<p class="text-xs text-on-surface-variant">Every 12 cards played ends your turn immediately.</p>
+</div>
+<div class="bg-surface-container-low p-4 border border-secondary/20 rounded-lg text-center">
+<span class="material-symbols-outlined text-secondary mb-2">autorenew</span>
+<p class="font-label text-xs font-bold text-secondary uppercase mb-1">Ripple</p>
+<p class="text-xs text-on-surface-variant">When HP reaches 50%, heal back to 50% and clear debuffs.</p>
+</div>
+<div class="bg-surface-container-low p-4 border border-secondary/20 rounded-lg text-center">
+<span class="material-symbols-outlined text-secondary mb-2">tibia</span>
+<p class="font-label text-xs font-bold text-secondary uppercase mb-1">Frailty</p>
+<p class="text-xs text-on-surface-variant">Attacks frequently apply Vulnerable or Weakened.</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-lg border border-secondary/10">
+<h4 class="font-label text-sm text-secondary font-bold uppercase tracking-widest mb-6">Sequence Analysis</h4>
+<div class="space-y-6">
+<div class="flex items-center gap-6">
+<div class="h-10 w-10 shrink-0 bg-secondary-container/20 rounded-full flex items-center justify-center border border-secondary/30">
+<span class="font-headline font-bold text-secondary">01</span>
+</div>
+<div class="flex-1">
+<p class="font-body text-sm font-semibold text-on-surface">Temporal Siphon <span class="text-on-surface-variant font-normal">— 7 x 3 Damage</span></p>
+<div class="w-full h-1 bg-surface-container-highest mt-2 rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-1/3"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="h-10 w-10 shrink-0 bg-secondary-container/20 rounded-full flex items-center justify-center border border-secondary/30">
+<span class="font-headline font-bold text-secondary">02</span>
+</div>
+<div class="flex-1">
+<p class="font-body text-sm font-semibold text-on-surface">Chronos Shield <span class="text-on-surface-variant font-normal">— Gain 20 Block &amp; 2 Strength</span></p>
+<div class="w-full h-1 bg-surface-container-highest mt-2 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-2/3"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="h-10 w-10 shrink-0 bg-error-container/20 rounded-full flex items-center justify-center border border-error/30">
+<span class="font-headline font-bold text-error">03</span>
+</div>
+<div class="flex-1">
+<p class="font-body text-sm font-semibold text-on-surface">Grand Finale <span class="text-on-surface-variant font-normal">— 32 Damage</span></p>
+<div class="w-full h-1 bg-surface-container-highest mt-2 rounded-full overflow-hidden">
+<div class="h-full bg-error w-full"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Navigation Shell (Bottom) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-2 pb-safe bg-surface-container border-t border-secondary/30 shadow-lg md:hidden">
+<div class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-all p-2 rounded-lg">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="font-label text-[10px] font-bold uppercase tracking-wider">Library</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-all p-2 rounded-lg">
+<span class="material-symbols-outlined">history_edu</span>
+<span class="font-label text-[10px] font-bold uppercase tracking-wider">Run Log</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-primary-container text-secondary rounded-full px-4 py-1">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="font-label text-[10px] font-bold uppercase tracking-wider">Compendium</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-all p-2 rounded-lg">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label text-[10px] font-bold uppercase tracking-wider">Settings</span>
+</div>
+</nav>
+<!-- Floating Action Button (Supressed as per logic for detail/archives page) -->
+<script>
+        // Micro-interactions for boss list
+        document.querySelectorAll('aside ul li').forEach(item => {
+            item.addEventListener('click', function() {
+                // Toggle active states (demo only)
+                document.querySelectorAll('aside ul li').forEach(el => {
+                    el.classList.remove('bg-primary-container', 'text-secondary', 'border-l-4', 'border-secondary');
+                    el.classList.add('text-on-surface-variant');
+                });
+                this.classList.add('bg-primary-container', 'text-secondary', 'border-l-4', 'border-secondary');
+                this.classList.remove('text-on-surface-variant');
+            });
+        });
+        // Atmospheric parallax/glow effect on scroll
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            document.body.style.backgroundPositionY = -(scrolled * 0.1) + 'px';
+        });
+    </script>
+</body></html>
