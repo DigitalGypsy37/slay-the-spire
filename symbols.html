@@ -1,0 +1,401 @@
+<!-- Compendium of Symbols - Spire Tome Wiki -->
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Compendium of Symbols | Spire Tome</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&amp;family=Hanken+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "outline-variant": "#424845",
+                        "inverse-surface": "#ebe0e0",
+                        "inverse-primary": "#4e6359",
+                        "on-error-container": "#ffdad6",
+                        "inverse-on-surface": "#352f2f",
+                        "secondary-container": "#ad8e00",
+                        "surface-container": "#231e1e",
+                        "surface": "#171212",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed": "#231b00",
+                        "on-primary-fixed": "#0b1f18",
+                        "on-tertiary-fixed": "#0f1e21",
+                        "surface-container-low": "#1f1a1a",
+                        "on-tertiary": "#243337",
+                        "surface-bright": "#3e3838",
+                        "tertiary-fixed": "#d5e5ea",
+                        "on-primary-fixed-variant": "#374b42",
+                        "surface-tint": "#b5ccc0",
+                        "surface-container-lowest": "#110d0d",
+                        "secondary-fixed": "#ffe17c",
+                        "on-secondary-fixed-variant": "#564500",
+                        "surface-container-high": "#2e2929",
+                        "secondary-fixed-dim": "#e7c442",
+                        "tertiary-container": "#1d2c30",
+                        "on-error": "#690005",
+                        "tertiary": "#b9c9ce",
+                        "primary-fixed": "#d0e8dc",
+                        "on-primary-container": "#80968b",
+                        "on-secondary": "#3b2f00",
+                        "outline": "#8c928e",
+                        "on-surface": "#ebe0e0",
+                        "on-secondary-container": "#332900",
+                        "surface-container-highest": "#393333",
+                        "secondary": "#e7c442",
+                        "on-background": "#ebe0e0",
+                        "surface-dim": "#171212",
+                        "on-tertiary-fixed-variant": "#3a494d",
+                        "tertiary-fixed-dim": "#b9c9ce",
+                        "on-tertiary-container": "#849498",
+                        "error": "#ffb4ab",
+                        "primary-fixed-dim": "#b5ccc0",
+                        "background": "#171212",
+                        "surface-variant": "#393333",
+                        "primary": "#b5ccc0",
+                        "primary-container": "#1a2e26",
+                        "on-surface-variant": "#c2c8c3",
+                        "on-primary": "#20342c",
+                        "gold-shimmer": "#FFD000",
+                        "ethereal-white": "#E6E6E6",
+                        "deep-forest": "#0D1A15",
+                        "relic-bronze": "#7A6200"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    fontFamily: {
+                        "headline": ["EB Garamond", "serif"],
+                        "display": ["EB Garamond", "serif"],
+                        "body": ["Hanken Grotesk", "sans-serif"],
+                        "label": ["Hanken Grotesk", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #0D1A15;
+            color: #E6E6E6;
+            font-family: 'Hanken Grotesk', sans-serif;
+        }
+        .font-headline { font-family: 'EB Garamond', serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-nav-glow {
+            box-shadow: 0 0 15px rgba(231, 196, 66, 0.1);
+        }
+        .bento-card {
+            background: rgba(26, 46, 38, 0.6);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(231, 196, 66, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .bento-card:hover {
+            border-color: #FFD000;
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+        }
+        .search-inner-shadow {
+            box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+        }
+        .corner-accent {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border: 1px solid #e7c442;
+        }
+    </style>
+</head>
+<body class="bg-deep-forest text-on-surface">
+<!-- TopAppBar Shell -->
+<header class="fixed top-0 left-0 w-full z-[100] border-b border-secondary/30 bg-surface dark:bg-deep-forest flex justify-between items-center px-4 py-4">
+<div class="flex items-center gap-4">
+<button class="text-secondary hover:bg-primary-container/20 transition-colors p-2 rounded-lg active:scale-95 duration-100 ease-in-out">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-headline text-2xl font-semibold text-secondary dark:text-gold-shimmer tracking-tight">Spire Tome</h1>
+</div>
+<!-- Desktop Navigation Integration -->
+<nav class="hidden md:flex items-center gap-6">
+<a class="font-label text-label-md text-on-surface-variant hover:text-gold-shimmer transition-colors" href="characters.html">Characters</a>
+<a class="font-label text-label-md text-on-surface-variant hover:text-gold-shimmer transition-colors" href="relics.html">Relics</a>
+<a class="font-label text-label-md text-gold-shimmer font-bold" href="symbols.html">Compendium</a>
+<a class="font-label text-label-md text-on-surface-variant hover:text-gold-shimmer transition-colors" href="#">Log</a>
+</nav>
+<div class="flex items-center gap-3">
+<div class="relative hidden sm:block">
+<input class="bg-surface-container-lowest border border-outline-variant rounded-lg pl-10 pr-4 py-1.5 text-body-md focus:ring-1 focus:ring-secondary focus:border-secondary search-inner-shadow w-64 outline-none transition-all" placeholder="Search Symbols..." type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary text-sm" data-icon="search">search</span>
+</div>
+<button class="text-secondary p-2 md:hidden">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+</div>
+</header>
+<main class="max-w-[1280px] mx-auto pt-24 pb-32 px-4 md:px-12">
+<!-- Hero Title Section -->
+<section class="mb-12 relative overflow-hidden rounded-xl py-12 px-8">
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+<img alt="Symbol header decoration" class="w-full h-full object-cover grayscale brightness-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb2NOFrdMsIxUv48h_gADmadu1VJHldLVaYweCVSVuwOcRxDdREWh639bd9wsQqmcKBdjsmgU25FV9gNAIMwvD34XW66M-lVpGuw8MSIXDhMOR4HWjQkO-ItlfX3jUgwT6SoypO9Dxwg1q7r6u4651Y7_oxnHhJLYS7bZwVzOjK9sPdgCaFPsaR1huMRmUyB3xDSs6qrhX6cPw63wx6V3_E7XYuV7SG5pwwKMV2pwEo5tOqA5uOYfKhIqQuas551Xxw79mhaaroUKb"/>
+</div>
+<div class="relative z-10 text-center md:text-left">
+<p class="font-label text-secondary text-xs uppercase tracking-[0.2em] mb-2">Reference Guide</p>
+<h2 class="font-headline text-4xl md:text-6xl font-bold text-ethereal-white mb-4">Compendium of Symbols</h2>
+<p class="max-w-2xl text-on-surface-variant text-body-lg">
+                    The Spire is a place of arcane geometries and lethal signs. Decipher the iconography that dictates the flow of fate, from the blood of your health to the spark of your energy.
+                </p>
+</div>
+</section>
+<!-- Symbols Grid Section -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Category: Vitality -->
+<div class="col-span-full mb-2">
+<h3 class="font-headline text-2xl text-secondary border-l-4 border-secondary pl-4 flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="monitor_heart">monitor_heart</span> Vitality &amp; Wealth
+                </h3>
+</div>
+<!-- Health Symbol -->
+<div class="bento-card rounded-xl p-6 relative group">
+<div class="corner-accent top-2 left-2 border-r-0 border-b-0"></div>
+<div class="corner-accent bottom-2 right-2 border-l-0 border-t-0"></div>
+<div class="flex items-start gap-4">
+<div class="w-16 h-16 rounded-full bg-red-950/40 border border-error/30 flex items-center justify-center text-error group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<div>
+<h4 class="font-headline text-xl text-ethereal-white mb-1">Health (HP)</h4>
+<p class="text-on-surface-variant text-body-md">Represents the player's life force. When it reaches zero, the run ends. Can be restored at Rest Sites or through certain relics.</p>
+</div>
+</div>
+</div>
+<!-- Gold Symbol -->
+<div class="bento-card rounded-xl p-6 relative group">
+<div class="corner-accent top-2 left-2 border-r-0 border-b-0"></div>
+<div class="flex items-start gap-4">
+<div class="w-16 h-16 rounded-full bg-secondary/10 border border-secondary/30 flex items-center justify-center text-gold-shimmer group-hover:rotate-12 transition-transform">
+<span class="material-symbols-outlined text-4xl" data-icon="toll" style="font-variation-settings: 'FILL' 1;">toll</span>
+</div>
+<div>
+<h4 class="font-headline text-xl text-ethereal-white mb-1">Gold</h4>
+<p class="text-on-surface-variant text-body-md">Currency obtained from combat and events. Spent at Merchants for cards, relics, and potion removal.</p>
+</div>
+</div>
+</div>
+<!-- Energy Symbol -->
+<div class="bento-card rounded-xl p-6 relative group">
+<div class="flex items-start gap-4">
+<div class="w-16 h-16 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl" data-icon="bolt" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+<div>
+<h4 class="font-headline text-xl text-ethereal-white mb-1">Energy</h4>
+<p class="text-on-surface-variant text-body-md">Refills each turn in combat. Used to play cards. Max energy can be increased through specific Boss Relics.</p>
+</div>
+</div>
+</div><div class="bento-card rounded-xl p-6 relative group col-span-full">
+<div class="flex flex-col md:flex-row items-start md:items-center gap-6">
+<div class="w-full md:w-auto flex-shrink-0">
+<img alt="Extended Vitals Bar" class="rounded-lg border border-secondary/20 shadow-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMeIRkSI029kKjMUNeM3TaCx945pIsweG-j-MpOebN1t0gkbvUSBm5rWZwyywD2qx7YQhKVVwRV_ogSBvGhDgHG3II0E1wU8mbsFlostGgyANjhzlwmJD8_p-8d9Ckvzmok52v7Sbi7V6rNaeX22FB0SwaSTo69w6HuYZkiSZ-sbA86iNRzKmZO4XjzJIrfML6le3tTA0_PFQOf1SlEL4ZVKSxchT0YfINcSkM0GlW6oyJClHCy1RFwrLN1O9V-nwGFZoFiAvaFqhG"/>
+</div>
+<div>
+<h4 class="font-headline text-xl text-ethereal-white mb-1">Extended Vitals</h4>
+<p class="text-on-surface-variant text-body-md">The combat interface displays current HP alongside active status effects. Icons like the Red Flag (Vulnerable) or Sword (Strength) indicate temporary modifiers that dictate damage calculations.</p>
+</div>
+</div>
+</div>
+<!-- Category: The Map -->
+<div class="col-span-full mt-8 mb-2">
+<h3 class="font-headline text-2xl text-secondary border-l-4 border-secondary pl-4 flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="map">map</span> Pathfinding Icons
+                </h3>
+</div>
+<!-- Unknown/Event -->
+<div class="bento-card rounded-xl p-6 flex items-start gap-4 group">
+<div class="w-12 h-12 flex-shrink-0 bg-surface-container-high border border-outline-variant rounded-lg flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-surface transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="question_mark">question_mark</span>
+</div>
+<div>
+<h4 class="font-headline text-lg text-ethereal-white mb-1">Unknown (?)</h4>
+<p class="text-on-surface-variant text-label-md">An encounter that could be an Event, a Combat, or a Treasure Room. High variance but potentially high reward.</p>
+</div>
+</div>
+<!-- Combat -->
+<div class="bento-card rounded-xl p-6 flex items-start gap-4 group">
+<div class="w-12 h-12 flex-shrink-0 bg-surface-container-high border border-outline-variant rounded-lg flex items-center justify-center text-on-surface-variant group-hover:bg-error group-hover:text-surface transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="swords">swords</span>
+</div>
+<div>
+<h4 class="font-headline text-lg text-ethereal-white mb-1">Combat</h4>
+<p class="text-on-surface-variant text-label-md">Standard encounter with Spire denizens. Rewards gold and a choice of cards.</p>
+</div>
+</div>
+<!-- Merchant -->
+<div class="bento-card rounded-xl p-6 flex items-start gap-4 group">
+<div class="w-12 h-12 flex-shrink-0 bg-surface-container-high border border-outline-variant rounded-lg flex items-center justify-center text-secondary group-hover:bg-gold-shimmer group-hover:text-surface transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="storefront">storefront</span>
+</div>
+<div>
+<h4 class="font-headline text-lg text-ethereal-white mb-1">Merchant</h4>
+<p class="text-on-surface-variant text-label-md">A safe haven where gold can be traded for power. Essential for refining a deck's archetype.</p>
+</div>
+</div>
+<!-- Elite -->
+<div class="bento-card rounded-xl p-6 flex items-start gap-4 group">
+<div class="w-12 h-12 flex-shrink-0 bg-surface-container-high border border-outline-variant rounded-lg flex items-center justify-center text-error group-hover:bg-red-600 group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="skull">skull</span>
+</div>
+<div>
+<h4 class="font-headline text-lg text-ethereal-white mb-1">Elite</h4>
+<p class="text-on-surface-variant text-label-md">Dangerous combat encounters that guarantee a Relic upon victory. High risk, essential reward.</p>
+</div>
+</div>
+<!-- Rest Site -->
+<div class="bento-card rounded-xl p-6 flex items-start gap-4 group">
+<div class="w-12 h-12 flex-shrink-0 bg-surface-container-high border border-outline-variant rounded-lg flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-surface transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="fireplace">fireplace</span>
+</div>
+<div>
+<h4 class="font-headline text-lg text-ethereal-white mb-1">Rest Site</h4>
+<p class="text-on-surface-variant text-label-md">Allows the character to Rest (heal 30% HP) or Smith (upgrade a card). Other actions may be unlocked via relics.</p>
+</div>
+</div>
+<!-- Boss/Stairs -->
+<div class="bento-card rounded-xl p-6 flex items-start gap-4 group">
+<div class="w-12 h-12 flex-shrink-0 bg-surface-container-high border border-outline-variant rounded-lg flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-surface transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="stairs">stairs</span>
+</div>
+<div>
+<h4 class="font-headline text-lg text-ethereal-white mb-1">Next Act</h4>
+<p class="text-on-surface-variant text-label-md">The threshold of victory for the current floor. Leading to a boss or a higher elevation in the Spire.</p>
+</div>
+</div>
+</div>
+<!-- Reference Section -->
+<section class="mt-16 bg-surface-container-low rounded-xl p-8 border border-secondary/10">
+<h3 class="font-headline text-2xl text-secondary mb-6">Visual Style Reference</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="space-y-3">
+<div class="h-24 bg-surface-container flex items-center justify-center rounded-lg border border-outline-variant overflow-hidden">
+<img alt="Icon reference 1" class="max-w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNygg3RqxwSFzql8cYFlMdySS5TMm4RkkQ2Kg3E2dZFBDYENOkx43a_DJrexmXU770HwLMJdjOcY_i0Eo9TMivnW4Ugvpf2aPjZ_c3e1wXUy-m6zai54bv7hIoqLh53-op8RUttK8TIwV1dATItkP6Yr1IpXoglKhRJLHqunSodLFJNMxuD-xJI83crCo_WfS0sQ6bGdY_6JJoe_MtuGp0GT2IY-22hjvza73Uim0YHzOhvLq9z8MuU3TJJOnQVQJ-bME1oUY5sJ4m"/>
+</div>
+<p class="text-label-sm text-center text-on-surface-variant italic">Ref 01: Iconography Depth</p>
+</div>
+<div class="space-y-3">
+<div class="h-24 bg-surface-container flex items-center justify-center rounded-lg border border-outline-variant overflow-hidden">
+<img alt="Icon reference 2" class="max-w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjygfmVl12vthV_2pNK4TrSFiSaKJvWEaNEI3Jm_cKtvpkviPcdVQQl4WbuSNBjwmYi0m1P-sRxXpkSohlBCEQWUUxffdbBqPcRbzgRrkqSLcOkbVXuzO9oj0-lhVrKLww7eR7HYOMV6ajSVZzP2N-ihjnkFzu2A5Bpt30fQYgXy4wa9M4r5HuxdtyGaR-iLnaGXKoWHJXVGAj33Xq5dM089g4UW-FTjA-N4QChx9GL-aOsBL4ijEI2tDoxYA8aqTKjfBjD5yaHvYn"/>
+</div>
+<p class="text-label-sm text-center text-on-surface-variant italic">Ref 02: Character Tokens</p>
+</div>
+<div class="space-y-3">
+<div class="h-24 bg-surface-container flex items-center justify-center rounded-lg border border-outline-variant overflow-hidden">
+<img alt="Icon reference 3" class="max-w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb2NOFrdMsIxUv48h_gADmadu1VJHldLVaYweCVSVuwOcRxDdREWh639bd9wsQqmcKBdjsmgU25FV9gNAIMwvD34XW66M-lVpGuw8MSIXDhMOR4HWjQkO-ItlfX3jUgwT6SoypO9Dxwg1q7r6u4651Y7_oxnHhJLYS7bZwVzOjK9sPdgCaFPsaR1huMRmUyB3xDSs6qrhX6cPw63wx6V3_E7XYuV7SG5pwwKMV2pwEo5tOqA5uOYfKhIqQuas551Xxw79mhaaroUKb"/>
+</div>
+<p class="text-label-sm text-center text-on-surface-variant italic">Ref 03: UI Embellishments</p>
+</div>
+<div class="space-y-3">
+<div class="h-24 bg-surface-container flex items-center justify-center rounded-lg border border-outline-variant overflow-hidden">
+<img alt="Sly Brand Mark" class="max-w-full h-12 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4xjvUymNSLujG-Z1Wr5OMo0gTBv-913b09CYnVry8jnr03Iz1Cf6qAEPiJL0StxWev4Lg9AgjEPS9sRdmELva10hbe3vretAygmyHvA3069OE_DJcPHxBLbIItoiMYh_KNqlv31B1hdurmwbSKEUhuUCfAEXXg9U1Zz2bT3Tj1g8jvoZy_uO_8-ItqdsEzHotHf_HabHpKKOZkszZexPr63Meraq7028y0EwUBxlCs-Zq9cG_aunheA30Lgf6O6Nbt06ucSGHPWlL"/>
+</div>
+<p class="text-label-sm text-center text-on-surface-variant italic">Ref 04: UI Branding (Sly.)</p>
+</div><div class="space-y-3">
+<div class="h-24 bg-surface-container flex items-center justify-center rounded-lg border border-outline-variant overflow-hidden">
+<img alt="Strategic Intent reference" class="max-w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9U0XT6JTdTQeTUS_LViC2EtptFT0Reu3buuHSfmEQkd3QDJPF8MEuCAyqxRnRNl8sZukz77KdZYdj8rqXzlS8xOMzkKWrxjIq0dkl2FZ8_Hmbf393o5JlNVEzN4cVRtOfd7ckvcHTcU3iRMfhiaDMHaKgjERwMlTO9-KGfKM5s306SoXXMNn1HTW7rBdCpNykSEhFxTtHKKSpD82_KOyj9vtIKMmcI_7gaM2tBAAEvmFgcns-tCSadwY8c_aO1_Uwlmlkf4d_yGW1"/>
+</div>
+<p class="text-label-sm text-center text-on-surface-variant italic">Ref 05: Strategic Intent</p>
+</div>
+<div class="space-y-3">
+<div class="h-24 bg-surface-container flex items-center justify-center rounded-lg border border-outline-variant overflow-hidden">
+<img alt="Debuff Iconography reference" class="max-w-full h-16 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxs1Ub4NFv9XJQKkAW7XM0_EsGy3Z6ak24qAA_4QNy7EqhczJk5mrqr4iHC1kJha4GxWVRAxtpow6RLAFOCGQfqC2gLLRbHsPtBIwQN7eK3RCdEzUbNos_QVc33T_eMZ2c9kvBmde_lGUp1xEEfoFPwy7T_OXHAo-DtIwAjOerooeTfaDajxhCep_2AGQ23fU08ixkzMlTINCMvnhsePHlrz3NY49Jx-_SVKfpQ256OdhDQxv19zJ39xQ7VqgcZG2-axhZ0Lg3-bDS"/>
+</div>
+<p class="text-label-sm text-center text-on-surface-variant italic">Ref 06: Debuff Iconography</p>
+</div></div>
+</section>
+</main>
+<!-- Navigation Drawer (Desktop Hidden) -->
+<aside class="fixed top-0 left-0 h-full w-80 bg-surface-container-low z-[110] border-r border-secondary/20 -translate-x-full transition-transform duration-300 md:hidden" id="mobile-nav">
+<div class="flex flex-col h-full gap-2 p-4">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-headline text-xl text-secondary">Characters</h3>
+<button class="text-on-surface-variant" onclick="toggleNav()">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+<a class="flex items-center gap-3 p-3 text-on-surface hover:bg-primary-container/30 transition-all rounded-lg" href="characters.html">
+<span class="material-symbols-outlined" data-icon="swords">swords</span>
+<span>The Ironclad</span>
+</a>
+<a class="flex items-center gap-3 p-3 text-on-surface hover:bg-primary-container/30 transition-all rounded-lg" href="characters.html">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+<span>The Silent</span>
+</a>
+<a class="flex items-center gap-3 p-3 text-on-surface hover:bg-primary-container/30 transition-all rounded-lg" href="characters.html">
+<span class="material-symbols-outlined" data-icon="bolt">bolt</span>
+<span>The Defect</span>
+</a>
+<a class="flex items-center gap-3 p-3 text-on-surface hover:bg-primary-container/30 transition-all rounded-lg" href="characters.html">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+<span>The Watcher</span>
+</a>
+<a class="flex items-center gap-3 p-3 text-on-surface hover:bg-primary-container/30 transition-all rounded-lg" href="characters.html">
+<span class="material-symbols-outlined" data-icon="skull">skull</span>
+<span>The Necrobinder</span>
+</a>
+</div>
+</aside>
+<!-- BottomNavBar Shell (Mobile only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-surface-container border-t border-secondary/30 flex justify-around items-center px-2 pb-safe py-2">
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-gold-shimmer" href="index.html">
+<span class="material-symbols-outlined" data-icon="book_2">book_2</span>
+<span class="font-label text-[10px]">Library</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-gold-shimmer" href="#">
+<span class="material-symbols-outlined" data-icon="history_edu">history_edu</span>
+<span class="font-label text-[10px]">Run Log</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container/20 text-gold-shimmer rounded-xl p-2 active:scale-90 transition-transform" href="symbols.html">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-label text-[10px]">Compendium</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-gold-shimmer" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label text-[10px]">Settings</span>
+</a>
+</nav>
+<script>
+        function toggleNav() {
+            const nav = document.getElementById('mobile-nav');
+            const isOpen = nav.style.transform === 'translateX(0%)';
+            nav.style.transform = isOpen ? 'translateX(-100%)' : 'translateX(0%)';
+        }
+        // Search highlight functionality
+        document.querySelector('input').addEventListener('input', function(e) {
+            const term = e.target.value.toLowerCase();
+            const cards = document.querySelectorAll('.bento-card');
+
+            cards.forEach(card => {
+                const title = card.querySelector('h4').textContent.toLowerCase();
+                const text = card.querySelector('p').textContent.toLowerCase();
+
+                if (title.includes(term) || text.includes(term)) {
+                    card.style.display = 'block';
+                    card.style.opacity = '1';
+                } else {
+                    card.style.opacity = '0.2';
+                }
+            });
+        });
+        // Toggle menu button
+        document.querySelector('[data-icon="menu"]').parentElement.addEventListener('click', toggleNav);
+    </script>
+</body></html>
