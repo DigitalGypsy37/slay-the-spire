@@ -163,6 +163,10 @@
 <span class="material-symbols-outlined">air</span>
 <span class="font-body">The Awakened One</span>
 </li>
+<li class="p-3 text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface transition-colors flex items-center gap-3 cursor-pointer rounded-r-lg">
+<span class="material-symbols-outlined">phishing</span>
+<span class="font-body">Soul Fysh</span>
+</li>
 <li class="p-3 text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface transition-colors flex items-center gap-3 cursor-pointer rounded-r-lg opacity-50">
 <span class="material-symbols-outlined">lock</span>
 <span class="font-body italic">Corrupt Heart (Locked)</span>
@@ -355,18 +359,18 @@
 </main>
 <!-- Navigation Shell (Bottom) -->
 <nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-2 pb-safe bg-surface-container border-t border-secondary/30 shadow-lg md:hidden">
-<div class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-all p-2 rounded-lg">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-all p-2 rounded-lg" href="index.html">
 <span class="material-symbols-outlined">auto_stories</span>
 <span class="font-label text-[10px] font-bold uppercase tracking-wider">Library</span>
-</div>
-<div class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-all p-2 rounded-lg">
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-all p-2 rounded-lg" href="meta-progression.html">
 <span class="material-symbols-outlined">history_edu</span>
 <span class="font-label text-[10px] font-bold uppercase tracking-wider">Run Log</span>
-</div>
-<div class="flex flex-col items-center justify-center bg-primary-container text-secondary rounded-full px-4 py-1">
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-secondary rounded-full px-4 py-1" href="symbols.html">
 <span class="material-symbols-outlined">inventory_2</span>
 <span class="font-label text-[10px] font-bold uppercase tracking-wider">Compendium</span>
-</div>
+</a>
 <div class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-all p-2 rounded-lg">
 <span class="material-symbols-outlined">settings</span>
 <span class="font-label text-[10px] font-bold uppercase tracking-wider">Settings</span>
@@ -392,4 +396,5 @@
             document.body.style.backgroundPositionY = -(scrolled * 0.1) + 'px';
         });
     </script>
+<script src="assets/site.js"></script>
 </body></html>
